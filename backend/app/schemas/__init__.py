@@ -25,6 +25,18 @@ from backend.app.schemas.dataset import (
     ValidationRequest,
     ValidationSummary,
 )
+from backend.app.schemas.evaluation import (
+    DatasetEvaluationResponse,
+    DimensionAvailabilityStatus,
+    DimensionEvaluationProfile,
+    DimensionRegistryEntry,
+    DisciplineSampleAdequacy,
+    PlayerEvaluationResponse,
+    PlayerRole,
+    RoleClassificationResult,
+    RoleClassificationStatus,
+    SampleAdequacyStatus,
+)
 from backend.app.schemas.health import HealthResponse
 from backend.app.schemas.metrics import (
     MetricCategory,
@@ -68,4 +80,15 @@ __all__ = [
     "CalculationResponse",
     "DatasetMetricsSummaryResponse",
     "MetricRegistryResponse",
+    # Evaluation & Role Classification
+    "PlayerRole",
+    "RoleClassificationStatus",
+    "SampleAdequacyStatus",
+    "DimensionAvailabilityStatus",
+    "RoleClassificationResult",
+    "DimensionEvaluationProfile",
+    "DisciplineSampleAdequacy",
+    "PlayerEvaluationResponse",
+    "DatasetEvaluationResponse",
+    "DimensionRegistryEntry",
 ]
