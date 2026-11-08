@@ -5,8 +5,9 @@ import App from '../App';
 describe('VYNTIQ Application Shell & Navigation', () => {
   beforeEach(() => {
     // Mock global fetch for health check and initial workspace list
-    global.fetch = vi.fn().mockImplementation((url: string) => {
-      if (url.includes('/health')) {
+    globalThis.fetch = vi.fn().mockImplementation((url: string | URL | Request) => {
+      const urlStr = String(url);
+      if (urlStr.includes('/health')) {
         return Promise.resolve({
           ok: true,
           status: 200,
@@ -15,9 +16,9 @@ describe('VYNTIQ Application Shell & Navigation', () => {
             version: '1.0.0',
             environment: 'development',
           }),
-        });
+        } as Response);
       }
-      if (url.includes('/workspaces')) {
+      if (urlStr.includes('/workspaces')) {
         return Promise.resolve({
           ok: true,
           status: 200,
@@ -35,9 +36,9 @@ describe('VYNTIQ Application Shell & Navigation', () => {
               updated_at: '2026-11-08T12:00:00Z',
             },
           ],
-        });
+        } as Response);
       }
-      return Promise.reject(new Error(`Unhandled URL: ${url}`));
+      return Promise.reject(new Error(`Unhandled URL: ${urlStr}`));
     });
   });
 
@@ -63,3 +64,4 @@ describe('VYNTIQ Application Shell & Navigation', () => {
     expect(screen.getByText('Reports')).toBeInTheDocument();
   });
 });
+

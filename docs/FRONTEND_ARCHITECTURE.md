@@ -154,3 +154,4 @@ cd frontend
 npm run build
 ```
 Generates production-optimized assets in `frontend/dist/`.
+

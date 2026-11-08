@@ -38,8 +38,7 @@ export const ApplicationSidebar: React.FC<SidebarProps> = ({
       name: 'Player Explorer',
       href: '/players',
       icon: Users,
-      isAvailable: false,
-      badge: 'Phase A6',
+      isAvailable: true,
     },
     {
       name: 'Shortlists',
@@ -52,8 +51,7 @@ export const ApplicationSidebar: React.FC<SidebarProps> = ({
       name: 'Comparisons',
       href: '/comparisons',
       icon: GitCompare,
-      isAvailable: false,
-      badge: 'Backend API',
+      isAvailable: true,
     },
     {
       name: 'Reports',
@@ -192,3 +190,4 @@ export const ApplicationSidebar: React.FC<SidebarProps> = ({
     </>
   );
 };
+

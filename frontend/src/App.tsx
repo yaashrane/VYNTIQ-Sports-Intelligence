@@ -5,6 +5,9 @@ import { AppLayout } from './components/layout/AppLayout';
 import { OverviewPage } from './pages/OverviewPage';
 import { WorkspacesPage } from './pages/WorkspacesPage';
 import { WorkspaceDetailPage } from './pages/WorkspaceDetailPage';
+import { PlayerExplorerPage } from './pages/PlayerExplorerPage';
+import { PlayerProfilePage } from './pages/PlayerProfilePage';
+import { PlayerComparisonPage } from './pages/PlayerComparisonPage';
 import { ComingSoonPage } from './pages/ComingSoonPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -17,16 +20,9 @@ export const App: React.FC = () => {
             <Route index element={<OverviewPage />} />
             <Route path="workspaces" element={<WorkspacesPage />} />
             <Route path="workspaces/:workspaceId" element={<WorkspaceDetailPage />} />
-            <Route
-              path="players"
-              element={
-                <ComingSoonPage
-                  title="Player Explorer"
-                  description="Unified player database, canonical cricket metrics, and ECDF percentile radar distributions."
-                  scheduledPhase="Phase A6"
-                />
-              }
-            />
+            <Route path="players" element={<PlayerExplorerPage />} />
+            <Route path="players/:playerId" element={<PlayerProfilePage />} />
+            <Route path="comparisons" element={<PlayerComparisonPage />} />
             <Route
               path="shortlists"
               element={
@@ -34,16 +30,6 @@ export const App: React.FC = () => {
                   title="Candidate Shortlists"
                   description="View and manage generated shortlists within specific competition workspace sandboxes."
                   scheduledPhase="Available in Workspaces"
-                />
-              }
-            />
-            <Route
-              path="comparisons"
-              element={
-                <ComingSoonPage
-                  title="Player Comparisons"
-                  description="Head-to-head multi-player comparison engine with directionality-aware deltas and cross-role compatibility gating."
-                  scheduledPhase="Phase A6 UI"
                 />
               }
             />

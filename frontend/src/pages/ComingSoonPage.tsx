@@ -39,3 +39,4 @@ export const ComingSoonPage: React.FC<ComingSoonPageProps> = ({
     </div>
   );
 };
+

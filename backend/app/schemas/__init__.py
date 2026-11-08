@@ -75,6 +75,10 @@ from backend.app.schemas.explainability import (
     PlayerScoreBreakdownResponse,
 )
 from backend.app.schemas.health import HealthResponse
+from backend.app.schemas.player import (
+    PlayerListResponse,
+    PlayerMasterResponse,
+)
 from backend.app.schemas.metrics import (
     MetricCategory,
     MetricDirection,
@@ -185,4 +189,7 @@ __all__ = [
     "ShortlistResponse",
     "ShortlistReviewRequest",
     "ShortlistAuditResponse",
+    # Players
+    "PlayerMasterResponse",
+    "PlayerListResponse",
 ]

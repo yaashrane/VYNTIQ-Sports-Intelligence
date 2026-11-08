@@ -25,11 +25,11 @@ describe('Workspaces Experience & Integration', () => {
       },
     ];
 
-    global.fetch = vi.fn().mockResolvedValue({
+    globalThis.fetch = vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
       json: async () => mockWorkspaces,
-    });
+    } as Response);
 
     render(
       <BrowserRouter>
@@ -52,11 +52,11 @@ describe('Workspaces Experience & Integration', () => {
   });
 
   it('renders empty state when no workspaces exist', async () => {
-    global.fetch = vi.fn().mockResolvedValue({
+    globalThis.fetch = vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
       json: async () => [],
-    });
+    } as Response);
 
     render(
       <BrowserRouter>
@@ -99,11 +99,11 @@ describe('Workspaces Experience & Integration', () => {
       },
     ];
 
-    global.fetch = vi.fn().mockResolvedValue({
+    globalThis.fetch = vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
       json: async () => mockWorkspaces,
-    });
+    } as Response);
 
     render(
       <BrowserRouter>
@@ -127,11 +127,11 @@ describe('Workspaces Experience & Integration', () => {
   });
 
   it('opens create workspace modal on action click', async () => {
-    global.fetch = vi.fn().mockResolvedValue({
+    globalThis.fetch = vi.fn().mockResolvedValue({
       ok: true,
       status: 200,
       json: async () => [],
-    });
+    } as Response);
 
     render(
       <BrowserRouter>
@@ -152,3 +152,4 @@ describe('Workspaces Experience & Integration', () => {
     expect(screen.getByLabelText(/Workspace Name/i)).toBeInTheDocument();
   });
 });
+
