@@ -315,3 +315,4 @@ class BattingMetricsCalculator:
             )
             for m_id, name, val, dirn in metric_ids
         }
+

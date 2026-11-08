@@ -212,3 +212,4 @@ class AnalyticsService:
             for d in deliveries
         ]
         return pd.DataFrame(records)
+

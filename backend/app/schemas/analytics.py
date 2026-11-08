@@ -80,3 +80,4 @@ class MetricRegistryResponse(BaseModel):
 
     total_metrics: int
     metrics: list[MetricRegistryEntry]
+

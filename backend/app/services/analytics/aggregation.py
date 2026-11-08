@@ -198,3 +198,4 @@ class DeliveryAggregator:
                 calculation_version=CALCULATION_VERSION,
             ),
         )
+

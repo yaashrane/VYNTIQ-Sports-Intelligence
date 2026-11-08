@@ -472,3 +472,4 @@ def get_all_metrics() -> list[MetricRegistryEntry]:
 def get_metric_definition(metric_id: str) -> MetricRegistryEntry | None:
     """Retrieve metadata entry for a specific metric ID."""
     return METRIC_REGISTRY.get(metric_id)
+

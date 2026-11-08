@@ -62,3 +62,4 @@ async def get_dataset_summary(
     """Produce dataset-level aggregate metrics summary."""
     service = AnalyticsService()
     return await service.get_dataset_summary(session, dataset_id)
+
