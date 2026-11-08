@@ -51,3 +51,4 @@ class RoleWeightConfiguration(BaseModel):
 
 # Default singleton instance
 DEFAULT_WEIGHT_CONFIG = RoleWeightConfiguration()
+

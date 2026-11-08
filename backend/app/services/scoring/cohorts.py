@@ -38,3 +38,4 @@ class CohortManager:
     def validate_cohort_size(self, cohort: list[PlayerEvaluationResponse]) -> bool:
         """Verify whether cohort meets minimum size for statistical ECDF normalization."""
         return len(cohort) >= MINIMUM_COHORT_SIZE
+

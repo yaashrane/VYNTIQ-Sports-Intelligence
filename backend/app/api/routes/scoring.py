@@ -88,3 +88,4 @@ async def get_rankings(
     """Generate ranked player leaderboard for the specified run and role cohort."""
     service = ScoringService()
     return service.get_rankings(run_id=run_id, role_filter=role)
+

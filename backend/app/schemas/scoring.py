@@ -142,3 +142,4 @@ class ScoringMethodologyResponse(BaseModel):
     role_weights: dict[str, dict[str, float]]
     all_rounder_dual_bonus_formula: str
     tie_breaking_hierarchy: list[str]
+

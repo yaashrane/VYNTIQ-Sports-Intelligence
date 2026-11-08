@@ -15,6 +15,15 @@ from backend.app.schemas.common import (
     ErrorResponse,
     MessageResponse,
 )
+from backend.app.schemas.comparison import (
+    ComparisonCompatibilityStatus,
+    ComparisonMetadataResponse,
+    DimensionComparisonItem,
+    MetricComparisonItem,
+    PlayerComparisonHeader,
+    PlayerComparisonRequest,
+    PlayerComparisonResponse,
+)
 from backend.app.schemas.dataset import (
     ColumnInspectionInfo,
     DatasetUploadResponse,
@@ -36,6 +45,13 @@ from backend.app.schemas.evaluation import (
     RoleClassificationResult,
     RoleClassificationStatus,
     SampleAdequacyStatus,
+)
+from backend.app.schemas.explainability import (
+    DimensionContributionDetail,
+    ExplanationStatus,
+    MetricContributionDetail,
+    PlayerDetailedExplanationResponse,
+    PlayerScoreBreakdownResponse,
 )
 from backend.app.schemas.health import HealthResponse
 from backend.app.schemas.metrics import (
@@ -114,4 +130,18 @@ __all__ = [
     "RankingResponse",
     "ScoringCalculationRequest",
     "ScoringMethodologyResponse",
+    # Explainability
+    "ExplanationStatus",
+    "MetricContributionDetail",
+    "DimensionContributionDetail",
+    "PlayerScoreBreakdownResponse",
+    "PlayerDetailedExplanationResponse",
+    # Comparison
+    "ComparisonCompatibilityStatus",
+    "MetricComparisonItem",
+    "DimensionComparisonItem",
+    "PlayerComparisonHeader",
+    "PlayerComparisonRequest",
+    "PlayerComparisonResponse",
+    "ComparisonMetadataResponse",
 ]

@@ -7,3 +7,4 @@ COHORT_MEDIAN_SCORE: float = 50.0
 
 # Minimum cohort size required to compute statistically viable empirical percentiles
 MINIMUM_COHORT_SIZE: int = 3
+

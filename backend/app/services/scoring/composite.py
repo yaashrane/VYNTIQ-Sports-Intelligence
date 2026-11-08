@@ -156,3 +156,4 @@ class VORCompositeCalculator:
             "dual_bonus": dual_bonus,
         }
         return (vor_ar, raw_blended, dual_bonus, components)
+

@@ -140,3 +140,4 @@ class RankingEngine:
             return item.dual_bonus_points
 
         return 0.0
+

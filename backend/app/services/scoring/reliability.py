@@ -71,3 +71,4 @@ class BayesianReliabilityAssessor:
             return self.calculate_batting_reliability(sample.balls_faced)
         else:  # UNKNOWN
             return (0.0, ReliabilityStatus.INSUFFICIENT_SAMPLE)
+
