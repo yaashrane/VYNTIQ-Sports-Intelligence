@@ -164,3 +164,4 @@ class ReportingService:
             generation_status=entity.generation_status,
             created_at=str(entity.created_at),
         )
+

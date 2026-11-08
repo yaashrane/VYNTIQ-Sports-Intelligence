@@ -170,3 +170,4 @@ def build_competition_overview_flowables(
     story.append(Paragraph(methodology_text, styles["BodyText"]))
 
     return story
+

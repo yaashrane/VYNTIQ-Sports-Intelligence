@@ -27,7 +27,7 @@ class WorkspaceRepository(BaseRepository[Workspace]):
         self, limit: int = 100, offset: int = 0, status: str | None = None
     ) -> list[Workspace]:
         """Fetch workspaces, optionally filtered by status."""
-        query = select(Workspace)
+        query = select(Workspace).order_by(Workspace.created_at.desc())
         if status:
             query = query.where(Workspace.status == status)
         query = query.limit(limit).offset(offset)

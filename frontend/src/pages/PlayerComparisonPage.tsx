@@ -7,7 +7,9 @@ import {
   Plus,
   X,
   Info,
+  FileDown,
 } from 'lucide-react';
+import { reportApi } from '../api/reports';
 import { comparisonApi } from '../api/comparison';
 import { playerApi } from '../api/players';
 import type {
@@ -27,6 +29,7 @@ export const PlayerComparisonPage: React.FC = () => {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // Initialize selected IDs from URL query params
@@ -133,6 +136,23 @@ export const PlayerComparisonPage: React.FC = () => {
     if (updated.length < 2) setComparisonResult(null);
   };
 
+  const handleExportPdf = async () => {
+    if (selectedIds.length < 2) return;
+    try {
+      setIsExporting(true);
+      const res = await reportApi.generateStandaloneReport({
+        report_type: 'PLAYER_COMPARISON',
+        comparison_player_ids: selectedIds,
+        title: `Head-to-Head Candidate Comparison — ${selectedIds.join(' vs ')}`,
+      });
+      window.open(res.download_url, '_blank');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Failed to generate comparison PDF.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   return (
     <div className="space-y-8 animate-fade-in pb-16">
       {/* Header */}
@@ -158,8 +178,20 @@ export const PlayerComparisonPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Candidate Selector / Add button */}
-        <div className="relative">
+        {/* Header Action Controls */}
+        <div className="flex items-center gap-3 relative">
+          {comparisonResult && (
+            <Button
+              variant="outline"
+              size="sm"
+              icon={<FileDown className="w-4 h-4" />}
+              onClick={handleExportPdf}
+              isLoading={isExporting}
+            >
+              Export PDF
+            </Button>
+          )}
+
           <Button
             variant="outline"
             size="sm"

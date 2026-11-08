@@ -261,3 +261,4 @@ def build_shortlist_flowables(
     story.append(Paragraph(audit_text, styles["Caption"]))
 
     return story
+

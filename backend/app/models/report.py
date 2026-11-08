@@ -26,3 +26,4 @@ class GeneratedReport(Base, TimestampMixin):
     source_evaluation_references: Mapped[list[str]] = mapped_column(JSON, default=list, nullable=False)
     configuration: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
     generation_status: Mapped[str] = mapped_column(String(32), default="COMPLETED", nullable=False)
+

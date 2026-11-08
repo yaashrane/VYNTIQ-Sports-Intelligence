@@ -259,3 +259,4 @@ def build_player_comparison_flowables(
         story.append(Spacer(1, 10))
 
     return story
+

@@ -233,3 +233,4 @@ def build_individual_player_flowables(
     story.append(Paragraph(audit_text, styles["Caption"]))
 
     return story
+

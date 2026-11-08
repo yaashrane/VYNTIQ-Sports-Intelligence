@@ -58,3 +58,4 @@ class ReportStorage:
     def get_file_size(self, file_path: Path) -> int:
         """Return the size in bytes of a persisted file."""
         return file_path.stat().st_size
+

@@ -10,7 +10,9 @@ import {
   FileCheck2,
   Calendar,
   Globe,
+  FileDown,
 } from 'lucide-react';
+import { reportApi } from '../api/reports';
 import { playerApi } from '../api/players';
 import type {
   PlayerDetailedExplanation,
@@ -33,6 +35,7 @@ export const PlayerProfilePage: React.FC = () => {
   const [explanation, setExplanation] = useState<PlayerDetailedExplanation | null>(null);
   const [breakdown, setBreakdown] = useState<PlayerScoreBreakdown | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isExporting, setIsExporting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const loadPlayerData = useCallback(async () => {
@@ -72,6 +75,23 @@ export const PlayerProfilePage: React.FC = () => {
   useEffect(() => {
     loadPlayerData();
   }, [loadPlayerData]);
+
+  const handleExportPdf = async () => {
+    if (!playerId) return;
+    try {
+      setIsExporting(true);
+      const res = await reportApi.generateStandaloneReport({
+        report_type: 'INDIVIDUAL_PLAYER',
+        player_id: playerId,
+        title: `Player Evaluation Dossier — ${scoreResult?.player_name || playerId}`,
+      });
+      window.open(res.download_url, '_blank');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Failed to generate PDF report.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
 
   if (isLoading) {
     return <LoadingState message="Decomposing player performance dimensions and factor attributions..." />;
@@ -140,15 +160,26 @@ export const PlayerProfilePage: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Compare Trigger */}
-        <Button
-          variant="primary"
-          size="sm"
-          icon={<GitCompare className="w-4 h-4" />}
-          onClick={() => navigate(`/comparisons?players=${scoreResult.player_id}`)}
-        >
-          Compare Player
-        </Button>
+        {/* Action Buttons */}
+        <div className="flex items-center gap-3">
+          <Button
+            variant="outline"
+            size="sm"
+            icon={<FileDown className="w-4 h-4" />}
+            onClick={handleExportPdf}
+            isLoading={isExporting}
+          >
+            Export PDF Dossier
+          </Button>
+          <Button
+            variant="primary"
+            size="sm"
+            icon={<GitCompare className="w-4 h-4" />}
+            onClick={() => navigate(`/comparisons?players=${scoreResult.player_id}`)}
+          >
+            Compare Player
+          </Button>
+        </div>
       </div>
 
       {/* Grid: Ratings Summary & Radar Visualization */}

@@ -200,3 +200,4 @@ def generate_shortlist_composition_chart(
         return buf
     finally:
         plt.close(fig)
+

@@ -71,3 +71,4 @@ class ReportListResponse(BaseModel):
 
     total: int
     reports: list[ReportResponse]
+

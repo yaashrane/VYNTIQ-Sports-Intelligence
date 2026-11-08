@@ -166,3 +166,4 @@ flowchart TD
 2. **Reviewer Notes Confidentiality:** Reviewer notes (`reviewer_notes`) stored in candidate records are suppressed by default in exported PDF documents unless `include_reviewer_notes=True` is explicitly supplied in the request.
 3. **Deterministic Page Numbering:** The two-pass `VyntiqNumberedCanvas` dynamically records page states, ensuring exact "Page X of Y" page counts regardless of table pagination or dynamic chart flow.
 4. **Digest Verification:** Every generated PDF file is hashed with SHA-256 upon compilation. The digest is stored immutably in `generated_reports` for tamper detection and archival verification.
+

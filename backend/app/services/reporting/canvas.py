@@ -92,3 +92,4 @@ class VyntiqNumberedCanvas(canvas.Canvas):
         self.drawRightString(width - margin_x, footer_y, page_str)
 
         self.restoreState()
+

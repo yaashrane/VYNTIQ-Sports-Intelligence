@@ -9,7 +9,9 @@ import {
   ListOrdered,
   Archive,
   Trophy,
+  FileDown,
 } from 'lucide-react';
+import { reportApi } from '../api/reports';
 import type {
   DatasetSummary,
   ShortlistSummary,
@@ -33,6 +35,8 @@ export const WorkspaceDetailPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isArchiving, setIsArchiving] = useState(false);
+  const [isExportingOverview, setIsExportingOverview] = useState(false);
+  const [exportingShortlistId, setExportingShortlistId] = useState<string | null>(null);
 
   const loadData = useCallback(async () => {
     if (!workspaceId) return;
@@ -72,6 +76,39 @@ export const WorkspaceDetailPage: React.FC = () => {
       alert(err instanceof Error ? err.message : 'Failed to archive workspace.');
     } finally {
       setIsArchiving(false);
+    }
+  };
+
+  const handleExportOverview = async () => {
+    if (!workspaceId) return;
+    try {
+      setIsExportingOverview(true);
+      const res = await reportApi.generateWorkspaceReport(workspaceId, {
+        report_type: 'COMPETITION_OVERVIEW',
+        title: `Competition Intelligence Overview — ${workspace?.name || workspaceId}`,
+      });
+      window.open(res.download_url, '_blank');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Failed to generate overview PDF.');
+    } finally {
+      setIsExportingOverview(false);
+    }
+  };
+
+  const handleExportShortlist = async (shortlistId: string, shortlistName: string) => {
+    if (!workspaceId) return;
+    try {
+      setExportingShortlistId(shortlistId);
+      const res = await reportApi.generateWorkspaceReport(workspaceId, {
+        report_type: 'SHORTLIST',
+        shortlist_id: shortlistId,
+        title: `Candidate Shortlist & Scouting Dossier — ${shortlistName}`,
+      });
+      window.open(res.download_url, '_blank');
+    } catch (err: unknown) {
+      alert(err instanceof Error ? err.message : 'Failed to generate shortlist PDF.');
+    } finally {
+      setExportingShortlistId(null);
     }
   };
 
@@ -131,17 +168,29 @@ export const WorkspaceDetailPage: React.FC = () => {
           </div>
         </div>
 
-        {workspace.status !== 'ARCHIVED' && (
+        <div className="flex items-center gap-3">
           <Button
             variant="outline"
             size="sm"
-            icon={<Archive className="w-3.5 h-3.5" />}
-            onClick={handleArchive}
-            isLoading={isArchiving}
+            icon={<FileDown className="w-3.5 h-3.5" />}
+            onClick={handleExportOverview}
+            isLoading={isExportingOverview}
           >
-            Archive Sandbox
+            Export Overview PDF
           </Button>
-        )}
+
+          {workspace.status !== 'ARCHIVED' && (
+            <Button
+              variant="outline"
+              size="sm"
+              icon={<Archive className="w-3.5 h-3.5" />}
+              onClick={handleArchive}
+              isLoading={isArchiving}
+            >
+              Archive Sandbox
+            </Button>
+          )}
+        </div>
       </div>
 
       {/* Navigation Tabs */}
@@ -341,9 +390,17 @@ export const WorkspaceDetailPage: React.FC = () => {
                       <span className="font-semibold text-accent-lime">{sl.shortlisted_count}</span>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between text-[11px] text-text-tertiary pt-1 border-t border-surface-border">
+                  <div className="flex items-center justify-between text-[11px] text-text-tertiary pt-2 border-t border-surface-border">
                     <span className="font-mono">ID: {sl.shortlist_id}</span>
-                    <span>{new Date(sl.created_at).toLocaleDateString()}</span>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      icon={<FileDown className="w-3.5 h-3.5 text-accent-magenta" />}
+                      onClick={() => handleExportShortlist(sl.shortlist_id, sl.name)}
+                      isLoading={exportingShortlistId === sl.shortlist_id}
+                    >
+                      Export PDF
+                    </Button>
                   </div>
                 </div>
               ))}
