@@ -86,3 +86,4 @@ class PlayerDetailedExplanationResponse(BaseModel):
     excluded_or_unsupported_metrics: list[dict[str, str]] = Field(default_factory=list)
     narrative_summary: str
     provenance: MetricProvenance
+

@@ -38,3 +38,4 @@ class CompatibilityChecker:
 
         notes.append("Candidates share identical playing role and tournament comparison cohort.")
         return (ComparisonCompatibilityStatus.FULLY_COMPATIBLE, notes)
+

@@ -48,3 +48,4 @@ async def get_comparison(comparison_id: str) -> PlayerComparisonResponse:
     """Fetch stored player comparison results."""
     service = PlayerComparisonService()
     return service.get_comparison(comparison_id)
+

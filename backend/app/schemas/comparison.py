@@ -91,3 +91,4 @@ class ComparisonMetadataResponse(BaseModel):
     compatibility_rules: list[str]
     tie_breaking_rules: list[str]
     directionality_conventions: dict[str, str]
+

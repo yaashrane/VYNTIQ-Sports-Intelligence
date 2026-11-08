@@ -8,6 +8,7 @@ from backend.app.api.routes.evaluation import router as evaluation_router
 from backend.app.api.routes.explainability import router as explainability_router
 from backend.app.api.routes.health import router as health_router
 from backend.app.api.routes.scoring import router as scoring_router
+from backend.app.api.routes.workspaces import router as workspaces_router
 
 api_v1_router = APIRouter()
 
@@ -31,6 +32,9 @@ api_v1_router.include_router(explainability_router)
 
 # Player Comparison Engine endpoints
 api_v1_router.include_router(comparison_router)
+
+# Competition Workspace & Shortlisting Engine endpoints
+api_v1_router.include_router(workspaces_router)
 
 # Future module routes (To be registered in their respective development phases):
 # - api_v1_router.include_router(players_router, prefix="/players", tags=["Players"])

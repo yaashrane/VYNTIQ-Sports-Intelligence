@@ -61,3 +61,4 @@ class DifferenceAnalyzer:
             favorable_player_id=favorable_id,
             favorable_player_name=player_names.get(favorable_id) if favorable_id else None,
         )
+
