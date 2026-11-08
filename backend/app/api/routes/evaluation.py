@@ -92,3 +92,4 @@ async def evaluate_dataset(
     """Generate structured evaluation profiles across an entire dataset."""
     service = EvaluationService()
     return await service.evaluate_dataset_from_db(session, dataset_id)
+

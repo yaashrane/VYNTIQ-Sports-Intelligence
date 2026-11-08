@@ -47,3 +47,4 @@ class RoleClassificationConfig(BaseModel):
 
 # Default singleton instance for runtime use
 DEFAULT_ROLE_CONFIG = RoleClassificationConfig()
+

@@ -117,3 +117,4 @@ class DimensionRegistryEntry(BaseModel):
     required_data_fields: list[str]
     sample_requirements: str
     limitations: str
+

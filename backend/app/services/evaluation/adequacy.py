@@ -81,3 +81,4 @@ class SampleAdequacyEvaluator:
             overall=overall_status,
             summary=summary,
         )
+

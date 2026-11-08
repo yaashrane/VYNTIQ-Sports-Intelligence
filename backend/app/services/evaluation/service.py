@@ -229,3 +229,4 @@ class EvaluationService:
         """Classify all players in a dataset and return their classification provenance."""
         evaluation_res = await self.evaluate_dataset_from_db(session, dataset_id)
         return [p.role for p in evaluation_res.players]
+

@@ -5,6 +5,7 @@ from backend.app.api.routes.analytics import router as analytics_router
 from backend.app.api.routes.datasets import router as datasets_router
 from backend.app.api.routes.evaluation import router as evaluation_router
 from backend.app.api.routes.health import router as health_router
+from backend.app.api.routes.scoring import router as scoring_router
 
 api_v1_router = APIRouter()
 
@@ -19,6 +20,9 @@ api_v1_router.include_router(analytics_router)
 
 # Role Classification & Evaluation Framework endpoints
 api_v1_router.include_router(evaluation_router)
+
+# VOR Composite Scoring & Player Ranking Engine endpoints
+api_v1_router.include_router(scoring_router)
 
 # Future module routes (To be registered in their respective development phases):
 # - api_v1_router.include_router(players_router, prefix="/players", tags=["Players"])

@@ -47,6 +47,18 @@ from backend.app.schemas.metrics import (
     MetricValue,
     SampleSizeInfo,
 )
+from backend.app.schemas.scoring import (
+    DimensionScore,
+    NormalizedMetric,
+    PlayerScoreResult,
+    RankedPlayer,
+    RankingResponse,
+    ReliabilityStatus,
+    ScoreExplanation,
+    ScoringCalculationRequest,
+    ScoringMethodologyResponse,
+    ScoringRunResponse,
+)
 
 __all__ = [
     # Common
@@ -91,4 +103,15 @@ __all__ = [
     "PlayerEvaluationResponse",
     "DatasetEvaluationResponse",
     "DimensionRegistryEntry",
+    # VOR Scoring & Rankings
+    "ReliabilityStatus",
+    "NormalizedMetric",
+    "DimensionScore",
+    "ScoreExplanation",
+    "PlayerScoreResult",
+    "RankedPlayer",
+    "ScoringRunResponse",
+    "RankingResponse",
+    "ScoringCalculationRequest",
+    "ScoringMethodologyResponse",
 ]

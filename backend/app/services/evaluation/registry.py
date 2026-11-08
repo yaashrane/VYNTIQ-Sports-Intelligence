@@ -140,3 +140,4 @@ def get_all_evaluation_dimensions() -> list[DimensionRegistryEntry]:
 def get_dimension_definition(dimension_id: str) -> DimensionRegistryEntry | None:
     """Retrieve metadata entry for a specific evaluation dimension ID."""
     return EVALUATION_DIMENSION_REGISTRY.get(dimension_id)
+

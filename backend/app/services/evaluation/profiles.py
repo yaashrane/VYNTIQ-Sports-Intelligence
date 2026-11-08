@@ -226,3 +226,4 @@ class ProfileBuilder:
         elif adequacy_status == SampleAdequacyStatus.INSUFFICIENT:
             return DimensionAvailabilityStatus.INSUFFICIENT
         return DimensionAvailabilityStatus.DATA_UNAVAILABLE
+
