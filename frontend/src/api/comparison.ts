@@ -36,3 +36,4 @@ export const comparisonApi = {
     return request<ComparisonMetadata>('/comparisons/metadata');
   },
 };
+

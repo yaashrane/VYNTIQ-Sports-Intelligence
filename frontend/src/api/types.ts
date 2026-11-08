@@ -217,54 +217,49 @@ export interface PlayerComparisonHeader {
   raw_composite_score: number;
   reliability_factor: number;
   reliability_status: ReliabilityStatus;
-  sample_size?: SampleSizeInfo;
+  is_qualified: boolean;
 }
 
 export interface DimensionComparisonItem {
   dimension_id: string;
   dimension_name: string;
-  player_dimension_scores: Record<string, number>;
-  score_difference?: number | null;
-  favorable_player_id?: string | null;
-  metrics?: MetricComparisonItem[];
+  player_scores: Record<string, number>;
+  delta_vs_baseline?: number | null;
+  delta_percentage?: number | null;
+  advantage_player_id?: string | null;
 }
 
 export interface MetricComparisonItem {
   metric_id: string;
   display_name: string;
   directionality: MetricDirection;
-  unit?: string;
   player_values: Record<string, number | null>;
-  player_percentiles?: Record<string, number | null>;
-  absolute_difference?: number | null;
-  relative_difference_pct?: number | null;
-  favorable_player_id?: string | null;
-  favorable_player_name?: string | null;
-  notes?: string;
+  delta_vs_baseline?: number | null;
+  delta_percentage?: number | null;
+  advantage_player_id?: string | null;
 }
 
 export interface PlayerComparisonResponse {
   comparison_id: string;
-  created_at: string;
+  run_id: string;
   compatibility_status: ComparisonCompatibilityStatus;
-  compatibility_notes?: string[];
-  players: PlayerComparisonHeader[];
   is_cross_role: boolean;
   vor_comparison_valid: boolean;
-  vor_leader_id?: string | null;
-  shared_dimensions: DimensionComparisonItem[];
-  batting_comparison: MetricComparisonItem[];
-  bowling_comparison: MetricComparisonItem[];
-  data_quality_warnings?: string[];
-  recommendation_narrative?: string;
+  baseline_player_id: string;
+  vor_leader_id: string;
+  players: PlayerComparisonHeader[];
+  dimension_comparisons: DimensionComparisonItem[];
+  discipline_metrics: Record<string, MetricComparisonItem[]>;
+  compatibility_warning?: string | null;
+  recommendation_narrative: string;
+  compared_at: string;
 }
 
 export interface ComparisonMetadata {
   max_players_allowed: number;
-  supported_roles: string[];
-  compatibility_rules: string[];
-  tie_breaking_rules: string[];
+  compatibility_statuses: string[];
   directionality_conventions: Record<string, string>;
+  tie_breaking_rules: string[];
 }
 
 // ==============================================================================

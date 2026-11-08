@@ -37,3 +37,4 @@ async def test_list_and_get_players_api():
         # 3. 404 for unknown player
         unknown_resp = await client.get("/api/v1/players/P_UNKNOWN_99999")
         assert unknown_resp.status_code == 404
+

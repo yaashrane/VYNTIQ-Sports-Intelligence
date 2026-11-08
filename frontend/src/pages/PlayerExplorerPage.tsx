@@ -287,14 +287,12 @@ export const PlayerExplorerPage: React.FC = () => {
 
                       {/* VOR Score */}
                       <td className="px-4 py-3 font-display font-bold text-accent-magenta text-sm">
-                        {(player.vor_score ?? 0).toFixed(1)}
+                        {player.vor_score.toFixed(1)}
                       </td>
 
                       {/* Raw Composite */}
                       <td className="px-4 py-3 text-text-secondary">
-                        {player.raw_composite_score !== undefined
-                          ? player.raw_composite_score.toFixed(1)
-                          : '—'}
+                        {player.raw_composite_score.toFixed(1)}
                       </td>
 
                       {/* Reliability C(N) */}
@@ -308,13 +306,13 @@ export const PlayerExplorerPage: React.FC = () => {
                               : 'text-status-warning border-status-warning/30 bg-status-warning/10'
                           }`}
                         >
-                          {(player.reliability_factor ?? 1).toFixed(2)} ({player.reliability_status || 'ADEQUATE'})
+                          {player.reliability_factor.toFixed(2)} ({player.reliability_status})
                         </span>
                       </td>
 
                       {/* Primary Tiebreaker */}
                       <td className="px-4 py-3 text-text-tertiary">
-                        {player.primary_tiebreaker !== undefined && player.primary_tiebreaker > 0
+                        {player.primary_tiebreaker > 0
                           ? player.primary_tiebreaker.toFixed(2)
                           : '—'}
                       </td>

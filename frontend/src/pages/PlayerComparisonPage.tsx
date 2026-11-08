@@ -59,10 +59,44 @@ export const PlayerComparisonPage: React.FC = () => {
     try {
       setIsLoading(true);
       setError(null);
-      const res = await comparisonApi.comparePlayers({
+      const rawRes = await comparisonApi.comparePlayers({
         player_ids: ids,
-      });
-      setComparisonResult(res);
+      }) as any;
+
+      const normalized: PlayerComparisonResponse = {
+        ...rawRes,
+        dimension_comparisons: rawRes.dimension_comparisons || (rawRes.shared_dimensions || []).map((sd: any) => ({
+          dimension_id: sd.dimension_id,
+          dimension_name: sd.dimension_name,
+          player_scores: sd.player_dimension_scores || {},
+          delta_vs_baseline: sd.score_difference ?? null,
+          advantage_player_id: sd.favorable_player_id ?? null,
+        })),
+        discipline_metrics: rawRes.discipline_metrics || {
+          ...(rawRes.batting_comparison?.length ? {
+            Batting: rawRes.batting_comparison.map((m: any) => ({
+              metric_id: m.metric_id,
+              display_name: m.display_name,
+              directionality: m.directionality,
+              player_values: m.player_values || {},
+              delta_vs_baseline: m.absolute_difference ?? null,
+              advantage_player_id: m.favorable_player_id ?? null,
+            })),
+          } : {}),
+          ...(rawRes.bowling_comparison?.length ? {
+            Bowling: rawRes.bowling_comparison.map((m: any) => ({
+              metric_id: m.metric_id,
+              display_name: m.display_name,
+              directionality: m.directionality,
+              player_values: m.player_values || {},
+              delta_vs_baseline: m.absolute_difference ?? null,
+              advantage_player_id: m.favorable_player_id ?? null,
+            })),
+          } : {}),
+        },
+      };
+
+      setComparisonResult(normalized);
     } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message);
@@ -176,7 +210,7 @@ export const PlayerComparisonPage: React.FC = () => {
           </span>
         ) : (
           selectedIds.map((id) => {
-            const header = comparisonResult?.players?.find((p) => p.player_id === id);
+            const header = comparisonResult?.players.find((p) => p.player_id === id);
             return (
               <span
                 key={id}
@@ -219,7 +253,7 @@ export const PlayerComparisonPage: React.FC = () => {
       ) : comparisonResult ? (
         <div className="space-y-8">
           {/* Safeguard Alert for Cross-Role Comparisons */}
-          {(comparisonResult.is_cross_role || !comparisonResult.vor_comparison_valid) && (
+          {comparisonResult.is_cross_role && (
             <div className="p-4 bg-status-warning/10 border border-status-warning/30 rounded flex items-start gap-3 text-xs leading-relaxed">
               <AlertTriangle className="w-5 h-5 text-status-warning shrink-0 mt-0.5" />
               <div>
@@ -227,9 +261,9 @@ export const PlayerComparisonPage: React.FC = () => {
                   Cross-Role Statistical Advisory ({comparisonResult.compatibility_status})
                 </strong>
                 <p className="text-text-secondary">
-                  {comparisonResult.compatibility_notes && comparisonResult.compatibility_notes.length > 0
-                    ? comparisonResult.compatibility_notes.join(' ')
-                    : 'Cross-role comparison active. Candidates belong to different roles; VOR scores cannot be directly equated.'}
+                  {comparisonResult.compatibility_warning ||
+                    (comparisonResult as any).compatibility_notes?.[0] ||
+                    'Cross-role comparison active. Candidates belong to different roles; VOR scores cannot be directly equated.'}
                 </p>
               </div>
             </div>
@@ -238,18 +272,18 @@ export const PlayerComparisonPage: React.FC = () => {
           {/* 1. Header Cards Grid */}
           <div
             className={`grid grid-cols-1 sm:grid-cols-${Math.min(
-              comparisonResult.players?.length || 1,
+              comparisonResult.players.length,
               4
             )} gap-4`}
           >
-            {(comparisonResult.players || []).map((p) => {
+            {comparisonResult.players.map((p) => {
               const isLeader = comparisonResult.vor_leader_id === p.player_id;
 
               return (
                 <div
                   key={p.player_id}
                   className={`bg-surface-card border rounded p-5 relative space-y-3 ${
-                    isLeader && comparisonResult.vor_comparison_valid
+                    isLeader
                       ? 'border-accent-magenta/60 shadow-[0_0_12px_rgba(214,41,120,0.15)]'
                       : 'border-surface-border'
                   }`}
@@ -273,13 +307,13 @@ export const PlayerComparisonPage: React.FC = () => {
                     <div>
                       <span className="text-[10px] text-text-tertiary block">VOR Score</span>
                       <span className="text-xl font-display font-bold text-accent-magenta">
-                        {(p.vor_score ?? 0).toFixed(1)}
+                        {p.vor_score.toFixed(1)}
                       </span>
                     </div>
                     <div className="text-right">
                       <span className="text-[10px] text-text-tertiary block">Reliability</span>
                       <span className="text-xs font-semibold text-accent-lime">
-                        {(p.reliability_factor ?? 1).toFixed(2)} ({p.reliability_status || 'ADEQUATE'})
+                        {p.reliability_factor.toFixed(2)} ({p.reliability_status})
                       </span>
                     </div>
                   </div>
@@ -303,16 +337,25 @@ export const PlayerComparisonPage: React.FC = () => {
             </div>
           )}
 
-          {/* 3. Role Dimension Matrix */}
-          {(comparisonResult.shared_dimensions || []).length > 0 && (
+          {/* 3. Dimension Comparison Matrix */}
+          {(comparisonResult.dimension_comparisons?.length ?? 0) > 0 && (
             <div className="bg-surface-card border border-surface-border rounded overflow-hidden space-y-2">
               <div className="px-5 py-3 border-b border-surface-border flex items-center justify-between">
-                <h3 className="text-xs font-semibold text-text-primary uppercase tracking-wider">
-                  Role Dimension Matrix
-                </h3>
-                <span className="text-[10px] text-text-tertiary">
-                  Standardized Percentile Scores (0-100)
-                </span>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-xs font-semibold text-text-primary uppercase tracking-wider">
+                    Role Dimension Matrix
+                  </h3>
+                  {comparisonResult.vor_leader_id && comparisonResult.vor_comparison_valid && (
+                    <span className="text-[11px] font-semibold text-accent-magenta bg-accent-magenta/10 border border-accent-magenta/30 px-2 py-0.5 rounded">
+                      Leader: {comparisonResult.players.find((p) => p.player_id === comparisonResult.vor_leader_id)?.player_name}
+                    </span>
+                  )}
+                </div>
+                {comparisonResult.baseline_player_id && (
+                  <span className="text-[10px] text-text-tertiary tabular-nums">
+                    Baseline: {comparisonResult.baseline_player_id}
+                  </span>
+                )}
               </div>
 
               <div className="overflow-x-auto">
@@ -320,19 +363,19 @@ export const PlayerComparisonPage: React.FC = () => {
                   <thead className="bg-surface-elevated text-text-secondary font-semibold uppercase text-[10px] tracking-wider border-b border-surface-border">
                     <tr>
                       <th className="px-4 py-3">Dimension</th>
-                      {(comparisonResult.players || []).map((p) => (
+                      {comparisonResult.players.map((p) => (
                         <th key={p.player_id} className="px-4 py-3">
                           {p.player_name}
                         </th>
                       ))}
-                      <th className="px-4 py-3">Score Diff</th>
+                      <th className="px-4 py-3">Delta vs Baseline</th>
                       <th className="px-4 py-3 text-right">Advantage</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-surface-border">
-                    {comparisonResult.shared_dimensions.map((dim) => {
-                      const favorable = (comparisonResult.players || []).find(
-                        (p) => p.player_id === dim.favorable_player_id
+                    {comparisonResult.dimension_comparisons.map((dim) => {
+                      const advPlayer = comparisonResult.players.find(
+                        (p) => p.player_id === dim.advantage_player_id
                       );
 
                       return (
@@ -340,34 +383,43 @@ export const PlayerComparisonPage: React.FC = () => {
                           <td className="px-4 py-3 font-medium text-text-primary">
                             {dim.dimension_name}
                           </td>
-                          {(comparisonResult.players || []).map((p) => {
-                            const val = dim.player_dimension_scores[p.player_id];
-                            const isFav = dim.favorable_player_id === p.player_id;
+                          {comparisonResult.players.map((p) => {
+                            const val = dim.player_scores[p.player_id];
+                            const isAdv = dim.advantage_player_id === p.player_id;
 
                             return (
                               <td
                                 key={p.player_id}
                                 className={`px-4 py-3 font-semibold ${
-                                  isFav ? 'text-accent-magenta font-bold' : 'text-text-secondary'
+                                  isAdv ? 'text-accent-magenta font-bold' : 'text-text-secondary'
                                 }`}
                               >
-                                {val !== undefined && val !== null ? val.toFixed(1) : '—'}
+                                {val !== undefined ? val.toFixed(1) : '—'}
                               </td>
                             );
                           })}
                           <td className="px-4 py-3">
-                            {dim.score_difference !== null && dim.score_difference !== undefined ? (
-                              <span className="font-semibold text-accent-lime">
-                                {dim.score_difference.toFixed(1)} pts
+                            {dim.delta_vs_baseline !== null && dim.delta_vs_baseline !== undefined ? (
+                              <span
+                                className={`font-semibold ${
+                                  dim.delta_vs_baseline > 0
+                                    ? 'text-accent-lime'
+                                    : dim.delta_vs_baseline < 0
+                                    ? 'text-status-negative'
+                                    : 'text-text-tertiary'
+                                }`}
+                              >
+                                {dim.delta_vs_baseline > 0 ? '+' : ''}
+                                {dim.delta_vs_baseline.toFixed(1)}
                               </span>
                             ) : (
                               '—'
                             )}
                           </td>
                           <td className="px-4 py-3 text-right">
-                            {favorable ? (
+                            {advPlayer ? (
                               <span className="text-[11px] font-semibold text-accent-magenta">
-                                Leader: {favorable.player_name}
+                                {advPlayer.player_name}
                               </span>
                             ) : (
                               <span className="text-text-tertiary">Tied</span>
@@ -382,96 +434,106 @@ export const PlayerComparisonPage: React.FC = () => {
             </div>
           )}
 
-          {/* 4. Discipline Metric Comparisons (Batting & Bowling) */}
-          {[
-            { title: 'Batting Performance Metrics', metrics: comparisonResult.batting_comparison || [] },
-            { title: 'Bowling Performance Metrics', metrics: comparisonResult.bowling_comparison || [] },
-          ]
-            .filter((section) => section.metrics.length > 0)
-            .map((section) => (
-              <div
-                key={section.title}
-                className="bg-surface-card border border-surface-border rounded overflow-hidden space-y-2"
-              >
-                <div className="px-5 py-3 border-b border-surface-border flex items-center justify-between">
-                  <h3 className="text-xs font-semibold text-text-primary uppercase tracking-wider">
-                    {section.title}
-                  </h3>
-                  <span className="text-[10px] text-text-tertiary uppercase">
-                    Discipline Metric Comparisons
-                  </span>
-                </div>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-xs tabular-nums">
-                    <thead className="bg-surface-elevated text-text-secondary font-semibold uppercase text-[10px] tracking-wider border-b border-surface-border">
-                      <tr>
-                        <th className="px-4 py-3">Metric</th>
-                        <th className="px-4 py-3">Polarity</th>
-                        {(comparisonResult.players || []).map((p) => (
-                          <th key={p.player_id} className="px-4 py-3">
-                            {p.player_name}
-                          </th>
-                        ))}
-                        <th className="px-4 py-3">Delta</th>
-                        <th className="px-4 py-3 text-right">Advantage</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-surface-border">
-                      {section.metrics.map((m) => {
-                        return (
-                          <tr key={m.metric_id} className="hover:bg-surface-elevated/40">
-                            <td className="px-4 py-3 font-medium text-text-primary">
-                              {m.display_name} {m.unit ? `(${m.unit})` : ''}
-                            </td>
-                            <td className="px-4 py-3 text-text-tertiary text-[10px]">
-                              {m.directionality === 'LOWER_IS_BETTER'
-                                ? 'Lower is better'
-                                : m.directionality === 'HIGHER_IS_BETTER'
-                                ? 'Higher is better'
-                                : 'Neutral'}
-                            </td>
-                            {(comparisonResult.players || []).map((p) => {
-                              const val = m.player_values[p.player_id];
-                              const isFav = m.favorable_player_id === p.player_id;
-
-                              return (
-                                <td
-                                  key={p.player_id}
-                                  className={`px-4 py-3 font-semibold ${
-                                    isFav ? 'text-accent-magenta font-bold' : 'text-text-secondary'
-                                  }`}
-                                >
-                                  {val !== null && val !== undefined ? Number(val).toFixed(2) : '—'}
-                                </td>
-                              );
-                            })}
-                            <td className="px-4 py-3">
-                              {m.absolute_difference !== null && m.absolute_difference !== undefined ? (
-                                <span className="font-semibold text-text-primary">
-                                  {m.absolute_difference.toFixed(2)}
-                                </span>
-                              ) : (
-                                '—'
-                              )}
-                            </td>
-                            <td className="px-4 py-3 text-right">
-                              {m.favorable_player_name ? (
-                                <span className="text-[11px] font-semibold text-accent-magenta">
-                                  {m.favorable_player_name}
-                                </span>
-                              ) : (
-                                <span className="text-text-tertiary">Tied / None</span>
-                              )}
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
+          {/* 4. Discipline Metrics Comparison (Batting / Bowling) */}
+          {Object.entries(comparisonResult.discipline_metrics || {}).map(([discipline, metrics]) => (
+            <div
+              key={discipline}
+              className="bg-surface-card border border-surface-border rounded overflow-hidden space-y-2"
+            >
+              <div className="px-5 py-3 border-b border-surface-border flex items-center justify-between">
+                <h3 className="text-xs font-semibold text-text-primary uppercase tracking-wider">
+                  {discipline} Performance Metrics
+                </h3>
+                <span className="text-[10px] text-text-tertiary uppercase">
+                  Directionality-Aware Comparison
+                </span>
               </div>
-            ))}
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs tabular-nums">
+                  <thead className="bg-surface-elevated text-text-secondary font-semibold uppercase text-[10px] tracking-wider border-b border-surface-border">
+                    <tr>
+                      <th className="px-4 py-3">Metric</th>
+                      <th className="px-4 py-3">Polarity</th>
+                      {comparisonResult.players.map((p) => (
+                        <th key={p.player_id} className="px-4 py-3">
+                          {p.player_name}
+                        </th>
+                      ))}
+                      <th className="px-4 py-3">Delta</th>
+                      <th className="px-4 py-3 text-right">Advantage</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-surface-border">
+                    {metrics.map((m) => {
+                      const advPlayer = comparisonResult.players.find(
+                        (p) => p.player_id === m.advantage_player_id
+                      );
+
+                      return (
+                        <tr key={m.metric_id} className="hover:bg-surface-elevated/40">
+                          <td className="px-4 py-3 font-medium text-text-primary">
+                            {m.display_name}
+                          </td>
+                          <td className="px-4 py-3 text-text-tertiary text-[10px]">
+                            {m.directionality === 'LOWER_IS_BETTER'
+                              ? 'Lower is better'
+                              : m.directionality === 'HIGHER_IS_BETTER'
+                              ? 'Higher is better'
+                              : 'Neutral'}
+                          </td>
+                          {comparisonResult.players.map((p) => {
+                            const val = m.player_values[p.player_id];
+                            const isAdv = m.advantage_player_id === p.player_id;
+
+                            return (
+                              <td
+                                key={p.player_id}
+                                className={`px-4 py-3 font-semibold ${
+                                  isAdv ? 'text-accent-magenta font-bold' : 'text-text-secondary'
+                                }`}
+                              >
+                                {val !== null && val !== undefined ? val.toFixed(2) : '—'}
+                              </td>
+                            );
+                          })}
+                          <td className="px-4 py-3">
+                            {m.delta_vs_baseline !== null && m.delta_vs_baseline !== undefined ? (
+                              <span
+                                className={`font-semibold ${
+                                  (m.directionality === 'HIGHER_IS_BETTER' && m.delta_vs_baseline > 0) ||
+                                  (m.directionality === 'LOWER_IS_BETTER' && m.delta_vs_baseline < 0)
+                                    ? 'text-accent-lime'
+                                    : (m.directionality === 'HIGHER_IS_BETTER' && m.delta_vs_baseline < 0) ||
+                                      (m.directionality === 'LOWER_IS_BETTER' && m.delta_vs_baseline > 0)
+                                    ? 'text-status-negative'
+                                    : 'text-text-tertiary'
+                                }`}
+                              >
+                                {m.delta_vs_baseline > 0 ? '+' : ''}
+                                {m.delta_vs_baseline.toFixed(2)}
+                              </span>
+                            ) : (
+                              '—'
+                            )}
+                          </td>
+                          <td className="px-4 py-3 text-right">
+                            {advPlayer ? (
+                              <span className="text-[11px] font-semibold text-accent-magenta">
+                                {advPlayer.player_name}
+                              </span>
+                            ) : (
+                              <span className="text-text-tertiary">Tied / None</span>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
         </div>
       ) : null}
     </div>

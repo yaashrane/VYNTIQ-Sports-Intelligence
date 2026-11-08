@@ -60,6 +60,10 @@ class Settings(BaseSettings):
         default="storage/uploads/raw",
         description="Directory for securely persisting raw uploaded datasets",
     )
+    REPORTS_DIR: str = Field(
+        default="storage/reports",
+        description="Directory for securely persisting generated PDF reports",
+    )
     MAX_UPLOAD_SIZE_BYTES: int = Field(
         default=52_428_800,  # 50 MB
         description="Maximum allowed upload payload size in bytes",

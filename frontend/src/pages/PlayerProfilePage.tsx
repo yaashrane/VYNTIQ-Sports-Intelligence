@@ -163,7 +163,7 @@ export const PlayerProfilePage: React.FC = () => {
                   Composite Rating
                 </span>
                 <div className="text-3xl font-display font-bold text-accent-magenta tabular-nums">
-                  {(scoreResult.vor_score ?? 0).toFixed(1)}{' '}
+                  {scoreResult.vor_score.toFixed(1)}{' '}
                   <span className="text-sm font-sans font-normal text-text-secondary">
                     VOR Score
                   </span>
@@ -174,9 +174,7 @@ export const PlayerProfilePage: React.FC = () => {
                   Raw Unadjusted
                 </span>
                 <div className="text-xl font-display font-semibold text-text-primary tabular-nums">
-                  {scoreResult.raw_composite_score !== undefined
-                    ? scoreResult.raw_composite_score.toFixed(1)
-                    : '—'}
+                  {scoreResult.raw_composite_score.toFixed(1)}
                 </div>
               </div>
             </div>
@@ -186,7 +184,7 @@ export const PlayerProfilePage: React.FC = () => {
               <div>
                 <span className="text-[10px] text-text-tertiary block">Reliability C(N)</span>
                 <span className="font-semibold text-accent-lime">
-                  {(scoreResult.reliability_factor ?? 1).toFixed(2)}
+                  {scoreResult.reliability_factor.toFixed(2)}
                 </span>
               </div>
               <div>
@@ -196,13 +194,13 @@ export const PlayerProfilePage: React.FC = () => {
                     scoreResult.is_qualified ? 'text-accent-lime' : 'text-status-negative'
                   }`}
                 >
-                  {scoreResult.reliability_status || 'ADEQUATE'}
+                  {scoreResult.reliability_status}
                 </span>
               </div>
               <div>
                 <span className="text-[10px] text-text-tertiary block">Engine Version</span>
                 <span className="font-mono text-text-primary">
-                  v{scoreResult.scoring_version || '1.0.0'}
+                  v{scoreResult.scoring_version}
                 </span>
               </div>
             </div>
@@ -219,13 +217,13 @@ export const PlayerProfilePage: React.FC = () => {
                   <div className="p-3 bg-surface-elevated rounded border border-surface-border">
                     <span className="text-text-tertiary block text-[10px]">Balls Faced</span>
                     <span className="text-lg font-bold text-text-primary">
-                      {sample?.balls_faced ?? '—'}
+                      {sample.balls_faced ?? '—'}
                     </span>
                   </div>
                   <div className="p-3 bg-surface-elevated rounded border border-surface-border">
                     <span className="text-text-tertiary block text-[10px]">Dismissals</span>
                     <span className="text-lg font-bold text-text-primary">
-                      {sample?.dismissals ?? '—'}
+                      {sample.dismissals ?? '—'}
                     </span>
                   </div>
                 </>
@@ -235,13 +233,13 @@ export const PlayerProfilePage: React.FC = () => {
                   <div className="p-3 bg-surface-elevated rounded border border-surface-border">
                     <span className="text-text-tertiary block text-[10px]">Legal Balls</span>
                     <span className="text-lg font-bold text-text-primary">
-                      {sample?.legal_balls_bowled ?? '—'}
+                      {sample.legal_balls_bowled ?? '—'}
                     </span>
                   </div>
                   <div className="p-3 bg-surface-elevated rounded border border-surface-border">
                     <span className="text-text-tertiary block text-[10px]">Wickets</span>
                     <span className="text-lg font-bold text-text-primary">
-                      {sample?.wickets ?? '—'}
+                      {sample.wickets ?? '—'}
                     </span>
                   </div>
                 </>
@@ -249,7 +247,7 @@ export const PlayerProfilePage: React.FC = () => {
               <div className="p-3 bg-surface-elevated rounded border border-surface-border">
                 <span className="text-text-tertiary block text-[10px]">Dataset ID</span>
                 <span className="text-xs font-mono text-text-secondary truncate block">
-                  {scoreResult.provenance?.dataset_id || 'DEFAULT'}
+                  {scoreResult.provenance.dataset_id}
                 </span>
               </div>
               <div className="p-3 bg-surface-elevated rounded border border-surface-border">
@@ -270,7 +268,7 @@ export const PlayerProfilePage: React.FC = () => {
 
             {/* Narrative summary generated deterministically by backend */}
             <p className="text-xs text-text-secondary leading-relaxed bg-surface-elevated/30 p-3.5 rounded border border-surface-border">
-              {explanation?.narrative_summary || scoreResult.explanation?.summary_text || 'Performance evaluation completed.'}
+              {explanation?.narrative_summary || scoreResult.explanation.summary_text}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -280,11 +278,11 @@ export const PlayerProfilePage: React.FC = () => {
                   <TrendingUp className="w-4 h-4" />
                   <span>Primary Strengths</span>
                 </div>
-                {(scoreResult.explanation?.top_strengths || []).length === 0 ? (
+                {scoreResult.explanation.top_strengths.length === 0 ? (
                   <p className="text-xs text-text-tertiary italic">No outlier strengths identified.</p>
                 ) : (
                   <ul className="space-y-1 text-xs">
-                    {(scoreResult.explanation?.top_strengths || []).map((str, idx) => (
+                    {scoreResult.explanation.top_strengths.map((str, idx) => (
                       <li
                         key={idx}
                         className="px-2.5 py-1.5 bg-accent-lime/10 border border-accent-lime/20 rounded text-text-primary"
@@ -302,11 +300,11 @@ export const PlayerProfilePage: React.FC = () => {
                   <TrendingDown className="w-4 h-4" />
                   <span>Performance Drag Factors</span>
                 </div>
-                {(scoreResult.explanation?.drag_factors || []).length === 0 ? (
+                {scoreResult.explanation.drag_factors.length === 0 ? (
                   <p className="text-xs text-text-tertiary italic">No severe drag factors recorded.</p>
                 ) : (
                   <ul className="space-y-1 text-xs">
-                    {(scoreResult.explanation?.drag_factors || []).map((drag, idx) => (
+                    {scoreResult.explanation.drag_factors.map((drag, idx) => (
                       <li
                         key={idx}
                         className="px-2.5 py-1.5 bg-status-warning/10 border border-status-warning/20 rounded text-text-primary"
@@ -332,7 +330,7 @@ export const PlayerProfilePage: React.FC = () => {
                   </span>
                 </div>
                 <span>
-                  Discrepancy: {(breakdown.reconciliation_discrepancy ?? 0).toFixed(3)} pts
+                  Discrepancy: {breakdown.reconciliation_discrepancy.toFixed(3)} pts
                 </span>
               </div>
             )}

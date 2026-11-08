@@ -167,3 +167,4 @@ The Comparison Engine allows scouts and analysts to compare 2 to 5 candidates si
 
 - **Backend Tests (`Pytest`):**
   - Full backend suite: **89 tests passed** with zero regressions.
+

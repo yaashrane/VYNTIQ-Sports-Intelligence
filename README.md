@@ -35,17 +35,17 @@ VYNTIQ/
 │   │   ├── repositories/            # Generic BaseRepository & WorkspaceRepository
 │   │   ├── services/                # Analytics, comparison, evaluation, explainability, ingestion, scoring, shortlisting, workspace
 │   │   └── utils/                   # Shared mathematical and data utilities
-│   ├── tests/                       # 88 automated backend unit & integration tests
+│   ├── tests/                       # 97 automated backend unit & integration tests
 │   ├── requirements.txt             # Pinned backend dependencies
 │   └── .env.example                 # Environment configuration template
 │
 ├── frontend/                        # Editorial Sports Analytics Web Application
 │   ├── src/
 │   │   ├── api/                     # Centralized API client, types, and endpoints
-│   │   ├── components/              # Buttons, badges, modals, empty states, cards
+│   │   ├── components/              # Buttons, badges, modals, empty states, cards, charts
 │   │   ├── context/                 # Workspace selection state provider
-│   │   ├── pages/                   # Overview, Workspaces, Detail, Coming Soon
-│   │   ├── test/                    # Vitest + RTL component and navigation tests
+│   │   ├── pages/                   # Overview, Workspaces, Player Explorer, Profiles, Comparison
+│   │   ├── test/                    # 10 Vitest + RTL component and navigation tests
 │   │   ├── App.tsx                  # React Router configuration
 │   │   └── index.css                # Tailwind directives & design tokens
 │   ├── tailwind.config.js           # VYNTIQ design system token definitions
@@ -64,6 +64,8 @@ VYNTIQ/
 │   ├── DATA_DICTIONARY.md           # Canonical schemas & ingestion mapping
 │   ├── ARCHITECTURE_DECISIONS.md    # Formal Architecture Decision Records (ADRs)
 │   ├── WORKSPACE_AND_SHORTLIST_SPECIFICATION.md # Workspace & shortlisting spec
+│   ├── PLAYER_INTELLIGENCE_UI.md    # Player Explorer, Profile & Comparison UI spec
+│   ├── REPORTING_AND_EXPORT_SPECIFICATION.md # PDF Reports & Export Engine spec
 │   └── FRONTEND_ARCHITECTURE.md     # Frontend architecture & token mapping
 │
 ├── .gitignore                       # Python, Node & environment gitignore
@@ -81,7 +83,8 @@ VYNTIQ/
   * Local Dev & Testing: SQLite via `aiosqlite` (Zero-dependency local database)
   * Production Target: PostgreSQL 16+ via `asyncpg` (Partitioned relational tables)
 * **Analytics Core:** Pandas 2.2+, NumPy 1.26+, SciPy 1.13+
-* **Testing:** Pytest 8.2+, anyio, httpx
+* **PDF Reporting & Export:** ReportLab 4.2+, Matplotlib 3.10+ (Headless `Agg` backend)
+* **Testing:** Pytest 8.2+, anyio, httpx, vitest, React Testing Library
 
 ---
 
@@ -184,4 +187,6 @@ npm run test
 | **Explainability & Comparison (Prompt 08)** | Track A | **Completed** | Factor attribution ($|\Delta| \le 0.05$) and multi-player comparison with cross-role gating. |
 | **Competition Workspaces & Shortlisting (Prompt 09)** | Track A | **Completed** | Isolated workspaces, configurable eligibility, candidate shortlisting, and audit logs. |
 | **Frontend Foundation & Dashboard (Prompt 10)** | Track A | **Completed** | React 19 + TypeScript + Vite + Tailwind CSS dashboard with workspace management. |
+| **Player Intelligence UI (Prompt 11)** | Track A | **Completed** | Interactive Player Explorer, candidate profiles with polar radars, and multi-player comparison UI. |
+| **PDF Reporting & Export Engine (Prompt 12)** | Track A | **Completed** | Vector PDF export engine with 4 canonical report types, audit records, charts, and REST API. |
 

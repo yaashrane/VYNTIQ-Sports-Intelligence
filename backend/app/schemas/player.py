@@ -28,3 +28,4 @@ class PlayerListResponse(BaseModel):
     limit: int
     offset: int
     players: list[PlayerMasterResponse] = Field(default_factory=list)
+

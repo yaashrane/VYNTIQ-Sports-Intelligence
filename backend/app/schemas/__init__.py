@@ -79,6 +79,13 @@ from backend.app.schemas.player import (
     PlayerListResponse,
     PlayerMasterResponse,
 )
+from backend.app.schemas.report import (
+    ReportCreateRequest,
+    ReportListResponse,
+    ReportResponse,
+    ReportStatus,
+    ReportType,
+)
 from backend.app.schemas.metrics import (
     MetricCategory,
     MetricDirection,
@@ -192,4 +199,10 @@ __all__ = [
     # Players
     "PlayerMasterResponse",
     "PlayerListResponse",
+    # Reporting & Export
+    "ReportType",
+    "ReportStatus",
+    "ReportCreateRequest",
+    "ReportResponse",
+    "ReportListResponse",
 ]

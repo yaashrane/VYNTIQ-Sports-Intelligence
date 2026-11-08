@@ -8,6 +8,10 @@ from backend.app.api.routes.evaluation import router as evaluation_router
 from backend.app.api.routes.explainability import router as explainability_router
 from backend.app.api.routes.health import router as health_router
 from backend.app.api.routes.players import router as players_router
+from backend.app.api.routes.reports import (
+    global_reports_router,
+    workspace_reports_router,
+)
 from backend.app.api.routes.scoring import router as scoring_router
 from backend.app.api.routes.workspaces import router as workspaces_router
 
@@ -36,6 +40,10 @@ api_v1_router.include_router(comparison_router)
 
 # Competition Workspace & Shortlisting Engine endpoints
 api_v1_router.include_router(workspaces_router)
+
+# PDF Reporting & Export Engine endpoints (Prompt 12)
+api_v1_router.include_router(workspace_reports_router)
+api_v1_router.include_router(global_reports_router)
 
 # Canonical Athlete Master endpoints
 api_v1_router.include_router(players_router)

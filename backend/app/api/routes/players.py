@@ -102,3 +102,4 @@ async def get_player(
         created_at=player.created_at,
         updated_at=player.updated_at,
     )
+

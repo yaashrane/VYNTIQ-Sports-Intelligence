@@ -17,9 +17,7 @@ export const RoleRadarChart: React.FC<RoleRadarChartProps> = ({
   // Normalize dimensions into an array
   const dimList: DimensionScore[] = Array.isArray(dimensions)
     ? dimensions
-    : dimensions
-    ? Object.values(dimensions)
-    : [];
+    : Object.values(dimensions);
 
   if (dimList.length < 3) {
     return (
@@ -47,8 +45,7 @@ export const RoleRadarChart: React.FC<RoleRadarChartProps> = ({
   // Polygon path string
   const polygonPoints = dimList
     .map((d, i) => {
-      const score = d.dimension_score ?? (d as unknown as { score?: number }).score ?? 0;
-      const { x, y } = getCoordinates(i, Math.min(100, Math.max(0, score)));
+      const { x, y } = getCoordinates(i, Math.min(100, Math.max(0, d.dimension_score)));
       return `${x.toFixed(1)},${y.toFixed(1)}`;
     })
     .join(' ');
@@ -198,16 +195,14 @@ export const RoleRadarChart: React.FC<RoleRadarChartProps> = ({
             >
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent-magenta" />
-                <span className="font-medium text-text-primary">
-                  {d.dimension_name || (d as unknown as { name?: string }).name || d.dimension_id}
-                </span>
+                <span className="font-medium text-text-primary">{d.dimension_name}</span>
               </div>
               <div className="flex items-center gap-3 tabular-nums">
                 <span className="text-text-tertiary text-[11px]">
-                  (w={(d.weight ?? 0).toFixed(2)})
+                  (w={d.weight.toFixed(2)})
                 </span>
                 <span className="font-bold text-text-primary">
-                  {(d.dimension_score ?? (d as unknown as { score?: number }).score ?? 0).toFixed(1)}
+                  {d.dimension_score.toFixed(1)}
                 </span>
               </div>
             </div>
