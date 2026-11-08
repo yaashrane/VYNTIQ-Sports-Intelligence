@@ -1,143 +1,145 @@
 # VYNTIQ — Feature Map & Prioritization Matrix
 
-**Document Reference:** FEAT-VYNTIQ-001  
-**Document Version:** 1.0.0  
+**Document Reference:** FEAT-VYNTIQ-002  
+**Document Version:** 2.0.0 (Post-Architecture Review & Competition MVP Alignment)  
 **Status:** Approved Architectural Baseline  
 
 ---
 
-## 1. Feature Map by Functional Domain
+## 1. Two-Track Feature Architecture
 
 ```mermaid
 mindmap
-  root((VYNTIQ Sports Intelligence))
-    Discovery & Profiles
-      Universal Player Search
-      Faceted Filtering by Phase/Role
-      Interactive Radar Capability
-      Phase-of-Play Splits (Powerplay/Middle/Death)
-      Pace vs Spin Matchup Tables
-      Rolling Form Curves
-    Evaluation & Ranking
-      VYNTIQ Overall Rating (VOR)
-      Customizable Weight Presets
-      Role Archetype Normalization
-      Decile Percentile Scoring
-      Explainability & Narrative Attribution
-    Comparison & Simulation
-      Head-to-Head Comparative Matrix
-      Multi-Player Overlaid Radars
-      Batter vs Bowler Historical Matchups
-      Delta Indicators (+/-)
-    Data Ingestion & Integrity
-      CSV/JSON Ingestion Pipeline
-      Pydantic Schema Validation Gate
-      Quarantine & Error Diagnostics
-      Canonical vs Workspace Lineage Tagging
-    Scouting & Workspace Management
-      Custom Named Shortlists
-      Analyst Tagging & Tier Grading
-      SuperRR Selector S2 Workspace
-      Isolated Dataset Scenarios
-    Editorial PDF Reporting
-      Vector Headless PDF Dossier (ReportLab)
-      Executive Summary Layout
-      High-DPI Embedded Visualizations
-      Batch Export Capability
+  root((VYNTIQ Features))
+    Track A: Competition MVP (Nov 8-18)
+      Ingestion & Validation
+        Dynamic Column Mapper
+        Pydantic Structural Gate
+        Cricket Domain Constraint Gate
+        Quarantine Diagnostic Report
+        Lineage & Provenance Stamping
+      Cricket Feature Engineering
+        Over-Phase Splitting (PP/Mid/Death)
+        True Strike Rate (TSR)
+        True Economy Rate (TER)
+        Pace vs Spin Tactical Splits
+      Role-Specific Evaluation
+        Batting Dimensions (6 Axes)
+        Bowling Dimensions (6 Axes)
+        All-Rounder Dual Evaluation & Bonus
+        ECDF Percentile Scaling (0-100)
+        Bayesian Reliability Discount Factor
+      Scoring, Ranking & Reporting
+        VYNTIQ Overall Rating (VOR)
+        Explainability Cards ("The Story")
+        Top 10 Candidate Ranking
+        Head-to-Head Comparison Matrix
+        SuperRR Submission Dossier
+    Track B: Full Platform (Post-MVP)
+      Editorial Web Application
+        React 18 + TS + Tailwind UI
+        Universal Player Discovery & Sliders
+        Role-Adaptive SVG Radar Visualizer
+        Dynamic Client-Side Weight Sliders
+      Advanced Scouting & Documents
+        ReportLab Headless Vector PDF Engine
+        Squad Scouting Binders
+        Direct Batter vs Bowler Head-to-Head History
+      Enterprise & Multi-Sport
+        PostgreSQL Row-Level Security
+        Multi-Tenant Workspace Switcher
+        Football / Soccer Possession Engine
 ```
 
 ---
 
 ## 2. Granular Module Specifications
 
-### Module 1: Player Discovery & Exploration
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
+### Module 1: Flexible Data Ingestion & Integrity Gate
+| Feature ID | Feature Name | Track | Inputs | Computational Mechanism | Primary Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-DISC-01** | Sub-Second Player Search | Name string, team, nation | Trigram similarity indexing + prefix matching | Matched player list with biographical badges | All Users |
-| **F-DISC-02** | Role & Phase Filter Bar | Role, phase, minimum balls/innings | Dynamic SQL/DataFrame filtering with cohort re-indexing | Filtered player cohort matching criteria | Scout, Analyst |
-| **F-DISC-03** | Statistical Threshold Sliders | Sliders: Min SR, Max Economy, Min Dot % | Continuous boundary filtering with instant count update | Real-time filtered grid | Analyst |
-| **F-DISC-04** | Cohort Percentile Benchmarking | Selected cohort (e.g. IPL 2024 Middle-Overs) | Empirical Cumulative Distribution Function (ECDF) calculation | Percentile ranks ($P_{10} \dots P_{99}$) for all metrics | Analyst, Director |
+| **F-ING-01** | Multi-Format File Ingest | **Track A (MVP)** | CSV / JSON file upload | Stream parser with UTF-8 encoding verification | Parsed raw records |
+| **F-ING-02** | Schema & Header Inspector | **Track A (MVP)** | Raw file headers | Fuzzy token matching against canonical dictionary | Proposed column mapping |
+| **F-ING-03** | Structural Validation Gate | **Track A (MVP)** | Mapped records | Pydantic v2 strict type and boundary checking | Structurally valid records |
+| **F-ING-04** | Cricket Domain Integrity Gate | **Track A (MVP)** | Delivery records | Sequence check ($0.1 \dots 19.6$), run reconciliation, legal ball verification | Domain-verified deliveries |
+| **F-ING-05** | Quarantine Logger | **Track A (MVP)** | Corrupted records | Error serializer capturing line number, field, and violation | Diagnostic audit log |
+| **F-ING-06** | Lineage & Origin Stamping | **Track A (MVP)** | Validated dataset | SHA-256 file hashing + `origin_type` assignment | Tagged workspace dataset |
+| **F-ING-07** | UI Column Mapping Visualizer | **Track B (Full)** | Unmapped headers | Interactive React drag-and-drop column mapping modal | Confirmed custom mapping |
 
-### Module 2: Player Deep-Dive Performance Profile
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
+### Module 2: Cricket Feature Engineering & Contextual Metrics
+| Feature ID | Feature Name | Track | Inputs | Computational Mechanism | Primary Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-PROF-01** | Capability Radar Profile | Player ID, comparison cohort | 6-axis dimensional score normalization ($0–100$) | Interactive SVG/Canvas Polygon Radar | Scout, Director |
-| **F-PROF-02** | Phase Breakdown Grid | Player ID, date range | Ball-by-ball aggregation grouped by Over Phase (1–6, 7–15, 16–20) | Tabular matrix with Runs, SR, Dot %, Boundaries | Analyst |
-| **F-PROF-03** | Tactical Splits (Pace vs Spin) | Player ID | Ball-by-ball aggregation grouped by bowler arm/type | Split card comparing Pace vs Spin vulnerabilities | Scout, Analyst |
-| **F-PROF-04** | Rolling Form & Trendline | Player ID, window size (e.g. 5 innings) | Exponentially weighted moving average (EWMA) | Form trajectory chart with confidence bands | Scout, Director |
+| **F-ENG-01** | Match-Phase Splitting | **Track A (MVP)** | Delivery over number | Partitioning into Powerplay (1–6), Middle (7–15), Death (16–20) | Phase-tagged deliveries |
+| **F-ENG-02** | Standard Ball-by-Ball Metrics | **Track A (MVP)** | Deliveries per player | Vectorized aggregation of runs, balls, boundaries, wickets, dots | Core rate statistics (SR, Econ, Dot %) |
+| **F-ENG-03** | True Strike Rate (TSR) | **Track A (MVP)** | Batter balls, venue, phase | Phase-specific actual SR minus phase/venue baseline SR | $\text{TSR} \in (-\infty, +\infty)$ |
+| **F-ENG-04** | True Economy Rate (TER) | **Track A (MVP)** | Bowler balls, venue, phase | Phase-specific baseline economy minus bowler actual economy | $\text{TER} \in (-\infty, +\infty)$ |
+| **F-ENG-05** | Tactical Splits (Pace vs. Spin)| **Track A (MVP)** | Bowler bowling style | Delivery aggregation grouped by Pace vs. Spin categories | Matchup efficiency ratios |
+| **F-ENG-06** | Tracking Extensions (Pitch Maps)| **Track B (Ext)** | Coordinate telemetry | Spatial kernel density estimation | Wagon wheels & pitch maps *(optional)* |
 
-### Module 3: Evaluation, Scoring & Explainability
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
+### Module 3: Role-Specific Evaluation & Normalization Engine
+| Feature ID | Feature Name | Track | Inputs | Computational Mechanism | Primary Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-EVAL-01** | VYNTIQ Overall Rating (VOR) | Player ID, active role preset | Weighted multi-attribute utility summation ($\sum w_i S_i$) | Composite score ($0–100$) and Tier badge | All Users |
-| **F-EVAL-02** | Interactive Weight Customizer | Slider values for metric weights | Real-time client/server dot-product recalculation | Updated rankings and score breakdown | Analyst |
-| **F-EVAL-03** | Explainability Attribution Card | Calculated score | Shapley-style feature contribution ($\Delta_i \times w_i$) | "Story Behind the Metric" positive/negative drivers | Director, Evaluator |
-| **F-EVAL-04** | True Metric Normalization | Venue, phase, raw strike/economy | Phase & venue baseline deviation subtraction | True Strike Rate (TSR) & True Economy Rate (TER) | Analyst |
+| **F-EVL-01** | Role Archetype Classifier | **Track A (MVP)** | Career phase distributions | Threshold classification into Finisher, Anchor, Enforcer, Death Bowler | Player Role Archetype |
+| **F-EVL-02** | Batting Dimension Engine | **Track A (MVP)** | Batter feature vectors | 6 dimensions: TSR, Boundary %, Balls/Dismissal, Dot %, Phase, Matchup | Batting score vector ($Z_{bat}$) |
+| **F-EVL-03** | Bowling Dimension Engine | **Track A (MVP)** | Bowler feature vectors | 6 dimensions: TER, Strike Rate, Dot %, Boundary Supp., Phase, Discipline | Bowling score vector ($Z_{bowl}$) |
+| **F-EVL-04** | All-Rounder Composite Engine | **Track A (MVP)** | Bat & Bowl vectors | Dual-discipline weighted sum + Role Balance / Dual-Utility Bonus | All-Rounder score ($Z_{ar}$) |
+| **F-EVL-05** | ECDF Empirical Normalization | **Track A (MVP)** | Metric values per cohort | Percentile rank mapping ($0–100$) with directional inversion | Standardized dimension scores |
+| **F-EVL-06** | Bayesian Reliability Discount | **Track A (MVP)** | Sample size $N$ vs $N_{full}$ | Sigmoidal/linear confidence discounting factor $C \in (0, 1]$ | Reliability multiplier $C$ |
 
-### Module 4: Comparative Head-to-Head Matrix
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
+### Module 4: Scoring, Ranking & Explainability Engine
+| Feature ID | Feature Name | Track | Inputs | Computational Mechanism | Primary Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-COMP-01** | Multi-Player Matrix (2–4 Players)| Selected Player IDs | Aligned tabular joining with delta calculation against benchmark | Side-by-side comparative grid with bold winners | Scout, Director |
-| **F-COMP-02** | Overlaid Radar Visualizer | 2–4 Player IDs | Multi-polygon rendering with distinct contrast color strokes | Overlaid radar canvas with interactive legend | Analyst, Director |
-| **F-COMP-03** | Batter vs Bowler Head-to-Head | Batter ID, Bowler ID | Ball-by-ball filtering on mutual encounters | Matchup summary (Balls, Runs, SR, Dismissals, Dots) | Analyst |
+| **F-SCR-01** | VYNTIQ Overall Rating (VOR) | **Track A (MVP)** | Normalized scores & weights | $VOR = C \times \sum w_i Z_i$ using configurable role presets | Composite score ($0–100$) & Tier |
+| **F-SCR-02** | Explainability Attribution Card | **Track A (MVP)** | Final score & dimension deltas | Feature attribution decomposing top 2 strengths and top 2 drag factors | "The Story Behind the Metric" |
+| **F-SCR-03** | SuperRR Top 10 Ranker | **Track A (MVP)** | Candidate pool scores | Multi-factor sort: VOR desc, Confidence desc, Role suitability | Ranked Top 10 Candidate Roster |
+| **F-SCR-04** | Dynamic Weight Customization | **Track B (Full)** | Slider inputs | Vectorized client-side re-weighting ($\vec{W} \cdot \vec{Z}$) | Real-time leaderboard re-sort |
 
-### Module 5: Dataset Upload & Integrity Gate
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
+### Module 5: Comparison, Shortlists & Reporting
+| Feature ID | Feature Name | Track | Inputs | Computational Mechanism | Primary Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-INGEST-01**| Multipart CSV/JSON Ingestion | File upload, Workspace ID | Stream parser, checksum calculation, structure verification | Ingestion receipt or validation error log | Analyst, Admin |
-| **F-INGEST-02**| Pydantic Schema Enforcement | Ingested delivery rows | Type enforcement, range validation, mandatory foreign keys | Clean validated records or quarantined error payload | Analyst, Admin |
-| **F-INGEST-03**| Lineage & Provenance Tagging | Uploaded dataset | Cryptographic hashing + origin metadata stamping | Tagged dataset isolated to current workspace | All Users |
-
-### Module 6: Scouting Shortlists & Workspace Isolation
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-SCT-01** | Custom Shortlist Management | Shortlist name, player IDs | Relational CRUD with user ownership | Named recruitment shortlists | Scout, Director |
-| **F-SCT-02** | Analyst Dossier Notes & Tags | Player ID, note text, tag | Markdown storage with audit timestamp | Private scouting annotations | Scout, Analyst |
-| **F-SCT-03** | SuperRR Selector S2 Workspace | Workspace selection | Session/Tenant header routing | Sandboxed environment with competition rules | Evaluator |
-
-### Module 7: Automated PDF Dossier Generation
-| Feature ID | Feature Name | Inputs | Computational Mechanism | Primary Output | Target User |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **F-REP-01** | Single-Player Dossier PDF | Player ID, workspace context | ReportLab document builder + static chart rendering | Multi-page, editorial-grade vector PDF | All Users |
-| **F-REP-02** | Shortlist Scouting Binder PDF | Shortlist ID | Consolidated multi-player layout compilation | Print-ready scouting book for boardroom review | Director, Evaluator |
+| **F-REP-01** | Head-to-Head Matrix | **Track A (MVP)** | 2–4 Player IDs | Columnar alignment with delta indicators ($+\Delta / -\Delta$) | Comparative performance grid |
+| **F-REP-02** | SuperRR Submission Report | **Track A (MVP)** | Top 10 candidates & audit logs | Formatted analytical report with provenance data and tactical fit | Audit-ready submission document |
+| **F-REP-03** | Role-Adaptive Radar Visualizer | **Track B (Full)** | Player dimension scores | Dynamic polygon canvas adapting vertices to role archetype | Interactive multi-axis radar |
+| **F-REP-04** | Headless Vector PDF Dossier | **Track B (Full)** | Player / Shortlist ID | ReportLab programmatic vector compilation pipeline | Print-ready PDF scouting book |
 
 ---
 
-## 3. MVP vs Post-MVP Prioritization Matrix
+## 3. Prioritization Matrix: Track A vs. Track B
 
 ```
-   High Value, Low Effort             High Value, High Effort
-   (Immediate MVP - Sprint 1-2)       (Core MVP - Sprint 3-5)
-  ┌──────────────────────────────────┬──────────────────────────────────┐
-  │ • F-DISC-01 Universal Search     │ • F-EVAL-01 VYNTIQ Overall Rating│
-  │ • F-PROF-02 Phase Splits Grid    │ • F-PROF-01 Capability Radar     │
-  │ • F-INGEST-01 CSV/JSON Parser    │ • F-COMP-01 Comparative Matrix   │
-  │ • F-SCT-01 Custom Shortlists     │ • F-REP-01 Vector PDF Dossier    │
-  │ • F-INGEST-02 Schema Gate        │ • F-EVAL-03 Explainability Card  │
-  ├──────────────────────────────────┼──────────────────────────────────┤
-  │ • F-DISC-03 Threshold Sliders    │ • F-REP-02 Batch Scouting Binder │
-  │ • F-SCT-02 Analyst Notes/Tags    │ • F-COMP-03 Direct Head-to-Head  │
-  │ • F-EVAL-02 Weight Presets       │ • Multi-Sport Engine Stubs       │
-  │                                  │ • Automated Replacement Scout    │
-  └──────────────────────────────────┴──────────────────────────────────┘
-   Low Value, Low Effort              Low Value, High Effort
-   (Secondary MVP / Polish)           (Post-MVP / Future Horizon)
+                        CRITICAL PATH (Track A: Competition MVP)
+                       ─────────────────────────────────────────
+  High Impact          • Flexible Ingestion & Header Inspector (F-ING-01/02)
+  & Essential          • Two-Tiered Validation & Quarantine (F-ING-03/04/05)
+  for Nov 18           • Phase-of-Play & True Metrics (F-ENG-01/03/04)
+  Submission           • Role-Specific Batting/Bowling Dimensions (F-EVL-02/03)
+                       • ECDF Normalization & Reliability Shrinkage (F-EVL-05/06)
+                       • VYNTIQ Overall Rating & Top 10 Ranker (F-SCR-01/03)
+                       • Explainable Attribution Cards (F-SCR-02)
+                       • SuperRR Submission Report & Shortlist (F-REP-02)
+                       ─────────────────────────────────────────
+                       POST-MVP ENHANCEMENTS (Track B: Full Platform)
+                       ─────────────────────────────────────────
+  High Value,          • Editorial React 18 Web UI & Faceted Filter Sliders
+  Post-Competition     • Role-Adaptive SVG/Canvas Radar Charts (F-REP-03)
+  Roadmap              • Headless Vector PDF Generation Engine via ReportLab (F-REP-04)
+                       • Interactive Dynamic Weight Customizer (F-SCR-04)
+                       • Row-Level Security & Multi-Tenant Workspace Switcher
+                       • Multi-Sport Domain Abstractions (Football, Basketball)
 ```
 
-### MVP Scope (Version 1.0 — SuperRR & Cricket Release)
-1. Full Cricket Ball-by-Ball Ingestion & Validation Pipeline with Quarantine.
-2. Canonical Historical Dataset + SuperRR Season 2 Workspace Isolation.
-3. Player Discovery with Phase-of-Play & Role-based filtering.
-4. Player Performance Profiles with 6-Axis Capability Radar.
-5. True Strike Rate (TSR) & True Economy Rate (TER) Phase Calculations.
-6. Multi-Player Head-to-Head Comparison Matrix (up to 4 players).
-7. VYNTIQ Overall Rating (VOR) with Explainability Drivers ("Story Behind the Metric").
-8. Custom Recruitment Shortlists with Analyst Notes.
-9. Headless Vector PDF Scouting Dossier Generation (ReportLab).
+---
 
-### Post-MVP Scope (Version 2.0 & Multi-Sport Horizon)
-1. **Automated Replacement Player Finder:** Algorithmic similarity matching (nearest-neighbor vector search in normalized metric space) to find statistical clones for injured players.
-2. **Auction Purse Optimizer & Squad Builder:** Mathematical linear programming solver to assemble optimal XI under budget and overseas player constraints.
-3. **Football / Soccer Expansion:** Possession sequence models, xG/xA calculations.
-4. **Live In-Play Telemetry Streaming:** Real-time push updates via WebSockets for live matches.
+## 4. Definition of Done (DoD)
 
+### For Track A (Competition MVP) Features:
+1. **Mathematical Accuracy:** Metric formulas match definitions in `SCORING_METHODOLOGY.md` exactly, verified by deterministic unit tests.
+2. **Schema Resilience:** Ingestion successfully handles field order changes and whitespace without crashing.
+3. **Quarantine Auditability:** Quarantined rows produce line-by-line diagnostic entries.
+4. **Zero Sample Size Hallucination:** Every rating includes sample count ($N$) and confidence factor ($C$).
+5. **Reproducibility:** Re-running the pipeline on identical input data produces identical scores down to 4 decimal places.
+
+### For Track B (Full Platform) Features:
+1. **Design System Adherence:** 100% compliance with `DESIGN_SYSTEM.md` editorial tokens.
+2. **Performance SLA:** Sub-200ms API response time (p95) for indexed player queries.
+3. **Cross-Browser & Vector Quality:** Crisp rendering on desktop/tablet, and vector-clean PDF printouts.

@@ -3,95 +3,112 @@
 **Product Name:** VYNTIQ  
 **Category:** Sports Intelligence Platform  
 **Tagline:** "Every Metric Tells a Story."  
-**Document Version:** 1.0.0  
+**Document Version:** 2.0.0 (Post-Architecture Review & Competition MVP Alignment)  
 **Status:** Approved Architectural Baseline  
 
 ---
 
 ## 1. Executive Summary
 
-VYNTIQ is an enterprise-grade sports intelligence and scouting platform designed to bridge the gap between raw match data and high-stakes recruitment decisions. Built on the core belief that "Every Metric Tells a Story," VYNTIQ transforms granular play-by-play statistics into explainable, contextual, and decision-ready intelligence.
+VYNTIQ is an independent, premium sports intelligence and scouting platform designed to bridge the gap between raw match data and high-stakes recruitment decisions. Built on the core belief that **"Every Metric Tells a Story,"** VYNTIQ transforms granular play-by-play statistics into explainable, contextual, and decision-ready intelligence.
 
-While the modern sports ecosystem produces massive amounts of ball-by-ball and event-level tracking data, sports organizations, scouts, and analysts struggle with two recurring failures in existing tooling:
-1. **The "Black Box" Problem:** Modern AI/ML tools offer predictive rankings without transparent mathematical reasoning, preventing coaching staff and executives from trusting recommendations.
-2. **The "Stat Sheet" Problem:** Traditional dashboards display uncontextualized aggregate statistics (e.g., batting averages, strike rates) that fail to adjust for match phases, opposition quality, conditions, or role-specific execution.
+While the modern sports ecosystem produces massive amounts of event-level data, sports organizations, scouts, and analysts struggle with two recurring failures in existing tooling:
+1. **The "Black Box" Problem:** Predictive tools offer rankings without transparent mathematical reasoning, preventing coaching staff and executives from trusting recommendations.
+2. **The "Stat Sheet" Problem:** Traditional dashboards display uncontextualized aggregate statistics (e.g., career batting averages, overall strike rates) that fail to adjust for match phases, conditions, sample size reliability, or role-specific execution.
 
-VYNTIQ addresses both failures by introducing a **context-aware, multi-dimensional evaluation engine** where every composite score and recommendation is fully deconstructed, transparently weighted, and traceable back to the raw event data.
+VYNTIQ solves both problems through a **context-aware, multi-dimensional evaluation engine** where every composite score and recommendation is deconstructed, transparently weighted, and traceable back to verified event-level data.
 
 ---
 
 ## 2. Core Positioning & Brand Identity
 
 ### 2.1 Brand Ethos & Personality
-- **Analytical & Rigorous:** No hand-waving or superficial metrics. Every metric has a rigorous definition, explicit normalization, and clear analytical purpose.
-- **Premium Editorial Quality:** A visual and analytical tone reminiscent of high-end analytical periodicals and professional sports operations rooms—not noisy gamer UIs or generic SaaS templates.
-- **Explainable & Trustworthy:** We reject opaque predictions. Every grade, tier, and recommendation comes with traceable data lineage and feature attribution.
-- **Modular & Sport-Agnostic Core:** The platform architecture treats sports as pluggable domain engines over an invariant core of entity resolution, cohort normalization, evaluation modeling, and workspace management.
+* **Analytical & Rigorous:** No hand-waving or superficial vanity metrics. Every metric has a mathematically sound formula, explicit cohort normalization, and defined directionality.
+* **Premium Editorial Quality:** A visual and analytical tone reminiscent of high-end analytical periodicals and professional sports operations rooms—not noisy gamer UIs or generic SaaS dashboard templates.
+* **Explainable & Trustworthy:** We reject opaque predictions. Every grade, tier, and recommendation comes with traceable data lineage, confidence indicators, and factor attribution.
+* **Modular Architecture:** The platform core abstracts entities, cohorts, and evaluation pipelines, allowing sport-specific engines (starting with Cricket) to function as pluggable modules.
 
-### 2.2 Neutrality & Workspace Isolation
-VYNTIQ is an **independent platform product**. Its first operational deployment is the **SuperRR Selector Season 2** competition workspace (evaluating talent for the Rajasthan Royals franchise ecosystem).
+### 2.2 Sovereign Platform Identity & Workspace Tenancy
+VYNTIQ is an **independent, sovereign platform product**. Its initial operational deployment is the **SuperRR Selector Season 2** competition workspace (evaluating talent for the Rajasthan Royals franchise ecosystem).
 
-> **Architectural Non-Negotiable:**  
-> The platform identity must never be coupled to Rajasthan Royals or any individual franchise. Rajasthan Royals operates strictly as an isolated **Competition Workspace** tenant within VYNTIQ. All branding, visual identities, logos, color schemes, and proprietary heuristics of a client remain contained within their respective workspace context. VYNTIQ maintains its own sovereign editorial brand identity.
-
----
-
-## 3. Target Personas & User Journeys
-
-| Persona | Primary Goal | Key Pain Points | VYNTIQ Value Proposition |
-| :--- | :--- | :--- | :--- |
-| **Lead Scout / Talent Hunter** | Identify undervalued, high-ceiling domestic and international talent for specific squad gaps. | Sifting through thousands of unformatted player profiles; lack of phase-specific context; subjective scouting biases. | Dynamic role-based filtering, cohort benchmarking, radar profile matching, and shortlist exports. |
-| **Head of Performance / Technical Analyst** | Evaluate opposition matchups, diagnose tactical efficiencies, and benchmark squad depth. | Inflexible metrics; inability to adjust for league strength, match phase, or pressure; siloed tools. | Granular ball-by-ball feature extraction, custom metric weighting, interactive player comparison matrix. |
-| **Team Director / GM / C-Suite** | Make high-value auction and recruitment decisions with quantifiable risk profiles. | Black-box predictive models that coaching staff reject; inability to defend picks to franchise ownership. | Explainable recommendation summaries, automated audit-ready PDF scouting dossiers, transparent risk-reward ratings. |
-| **Competition Evaluator (e.g., SuperRR)** | Review candidate submissions, assess scouting rationale, and compare team compositions. | Inconsistent data formats; unverified claims; static spreadsheets lacking interactive drill-down. | Dedicated workspace sandbox, verified dataset ingestion, standardized scoring rubric, automated candidate report generation. |
+> [!IMPORTANT]
+> **Architectural Non-Negotiable: Brand Separation**  
+> The platform identity must never be coupled to Rajasthan Royals or any individual franchise. Rajasthan Royals operates strictly as an isolated **Competition Workspace** tenant within VYNTIQ (`workspace_super_rr_s2`). All branding, visual identities, logos, color schemes, and proprietary heuristics of a client remain contained within their respective workspace context. VYNTIQ maintains its own sovereign editorial brand identity across all views.
 
 ---
 
-## 4. Multi-Sport Evolution Roadmap
+## 3. Two-Track Development Strategy
 
-VYNTIQ is architected from Day 1 as an **abstract multi-sport engine**. While Cricket is the initial domain implementation (driven by the depth and richness of ball-by-ball event structures), the platform core abstracts entities into four invariant primitives:
+To balance the immediate real-world deadline of the competition with the long-term integrity of the product, VYNTIQ operates on two distinct development tracks:
 
 ```mermaid
 graph TD
-    subgraph PlatformCore ["VYNTIQ Platform Core (Sport-Agnostic)"]
-        A[Entity Registry: Athletes, Teams, Venues, Fixtures]
-        B[Cohort & Normalization Engine]
-        C[Weighted Multi-Dimensional Scoring Framework]
-        D[Explainability & Feature Attribution Engine]
-        E[Workspace & Data Isolation Layer]
-        F[Automated Editorial PDF Engine]
+    subgraph Strategy ["VYNTIQ Two-Track Strategy"]
+        TrackA["Track A: Competition MVP<br/>(Execution Window: Nov 8 – Nov 18, 2026)<br/>• Standard Ball-by-Ball Ingestion & Validation<br/>• Role-Specific Batting & Bowling Metrics<br/>• Percentile Normalization & Transparent Scoring<br/>• Top 10 Candidate Selection & Submission Dossier"]
+        TrackB["Track B: Full VYNTIQ Platform<br/>(Post-Competition Roadmap)<br/>• Universal Discovery & Advanced Filtering<br/>• Interactive Multi-Player Comparison Canvas<br/>• Dynamic Weight Customization Presets<br/>• Automated Vector PDF Generation Engine<br/>• Multi-Sport Domain Extensibility"]
     end
-
-    subgraph DomainEngines ["Pluggable Domain Engines"]
-        G["Cricket Domain Engine (Phase 1)<br/>• Ball-by-ball parsing<br/>• Over-phase indexing: Powerplay, Middle, Death<br/>• True Strike Rate & Economy<br/>• Bowling impact & match leverage"]
-        H["Football / Soccer Domain Engine (Future)<br/>• Possession sequences<br/>• Expected Goals / Assists (xG/xA)<br/>• Pressing intensity & pitch control"]
-        I["Basketball Domain Engine (Future)<br/>• Possession-level analytics<br/>• True Shooting & Box Plus/Minus<br/>• Lineup net efficiency"]
-    end
-
-    PlatformCore --> G
-    PlatformCore --> H
-    PlatformCore --> I
+    TrackA -->|Establishes Core Intelligence Engine| TrackB
 ```
 
-### 4.1 Abstraction Strategy
-- **Time/Event Abstraction:** Instead of hardcoding "overs and deliveries", the core ingestion pipeline processes atomic `Events` within `Matches`, characterized by `TemporalPhase` (e.g., Over 1–6 vs. Minutes 1–15 vs. Q1), `State` (score, balls remaining, win probability), and `ActorInvolvement` (striker, bowler, fielder).
-- **Metric Abstraction:** All aggregate metrics feed into a normalized `MetricDimension` vector (0.0 to 100.0 percentile score relative to an explicit baseline cohort).
-- **Role Archetypes:** Instead of hardcoded player classifications, roles are defined via multidimensional skill clusters (e.g., Cricket: *Death Overs Finisher*, *Powerplay Enforcer*, *Spin Choke Specialist*).
+### 3.1 Track A — Competition MVP (SuperRR Selector Season 2)
+* **Target Constraint:** Fixed deadline of **November 18, 2026**. Official data release: **November 8, 2026, at 6:00 PM IST**.
+* **Primary Objective:** Build an analytically rigorous, fully tested cricket evaluation engine capable of ingesting the official competition dataset, resolving player identities, computing phase-of-play metrics, scoring candidates across role-specific dimensions, and producing an audit-ready Top 10 candidate recommendation report.
+* **Scope Discipline:** Focus strictly on what is required to produce a winning, mathematically defensible scouting submission. Do not build speculative features before the analytical core is tested and verified.
+
+### 3.2 Track B — Full VYNTIQ Platform (Long-Term Vision)
+* **Primary Objective:** Expand the competition-tested engine into an enterprise-grade, multi-workspace SaaS platform supporting universal player discovery, interactive comparison canvases, custom shortlist workflows, headless vector PDF generation, and multi-sport extensibility.
 
 ---
 
-## 5. Strategic Differentiators
+## 4. Target Personas & Value Proposition
 
-1. **Zero Black-Box Scoring:** Every composite index (e.g., *Player Value Rating*, *Clutch Factor*, *Versatility Index*) exposes its full calculation tree down to underlying sub-metrics and event-level samples.
-2. **Phase-of-Play Contextualization:** Raw averages deceive. VYNTIQ evaluates performance indexed against phase difficulty, pitch type, match leverage, and opponent quality.
-3. **Dual Data Lineage (Historical vs. Competition):** Distinct boundaries between canonical historical multi-year records and isolated, user-uploaded competition or tournament datasets.
-4. **Editorial-Grade Output:** Rather than messy browser printouts, VYNTIQ compiles boardroom-ready, typography-curated vector PDF dossiers via a headless ReportLab compilation pipeline.
+| Persona | Primary Goal | Core Pain Points | VYNTIQ Value Proposition | Track Alignment |
+| :--- | :--- | :--- | :--- | :--- |
+| **Competition Scout / Analyst (SuperRR)** | Identify the Top 10 undervalued prospects for the franchise from competition data. | Inconsistent data formats, short evaluation window, risk of sample-size bias. | Automated validation, role-specific dimensional scoring, traceable ranking, and audit-ready report generation. | **Track A (MVP)** |
+| **Franchise Director of Cricket / GM** | Make high-stakes recruitment and auction decisions with quantifiable risk profiles. | Black-box predictive models coaching staff reject; inability to defend picks to ownership. | Explainable attribution cards ("The Story Behind the Metric"), confidence intervals, and risk-reward profiles. | **Track A & B** |
+| **Lead Technical Analyst** | Benchmark squad depth, evaluate phase-specific tactics, and model replacement options. | Inflexible metrics, lack of phase-of-play splits, unadjusted raw statistics. | True Strike Rate (TSR), True Economy Rate (TER), and role-specific radar gap analysis. | **Track B (Full Platform)** |
+| **Multi-Sport Scout (Future)** | Evaluate athletes across disciplines using unified scouting workflows. | Disparate software across sports, inconsistent evaluation rubrics. | Unified platform core with pluggable sport domain engines. | **Track B (Future)** |
 
 ---
 
-## 6. Ethical AI, Fairness & Anti-Bias Framework
+## 5. Multi-Sport Abstraction Strategy
 
-- **Sample Size Thresholds:** Strict suppression and flagging of micro-sample statistical outliers (e.g., strike rate of 250 across only 12 balls faced is flagged with high confidence intervals).
-- **Era and League Normalization:** Metrics across different leagues (IPL, BBL, domestic T20, international) are normalized against competition-specific baselines to prevent misleading flat comparisons.
-- **Transparency Mandate:** If an algorithm penalizes a player's rating, the interface must explicitly state which metric dimension contributed negatively and the empirical distribution of that metric across the peer cohort.
+VYNTIQ is designed with a sport-agnostic core. The core system defines invariant primitives that apply across team sports, while specific sports are implemented as pluggable domain engines:
 
+```mermaid
+graph TD
+    subgraph CorePlatform ["Invariant Platform Core"]
+        E[Entity Registry: Athletes, Teams, Venues, Fixtures]
+        C[Cohort & Empirical Normalization Engine]
+        S[Weighted Multi-Attribute Scoring Framework]
+        A[Feature Attribution & Explainability Generator]
+        W[Workspace Data Isolation & Provenance Layer]
+    end
+
+    subgraph PluggableEngines ["Pluggable Domain Engines"]
+        Cricket["Cricket Domain Engine (Track A MVP)<br/>• Ball-by-ball event parsing<br/>• Over-phase indexing (Powerplay, Middle, Death)<br/>• True Strike Rate & True Economy Rate<br/>• Role archetypes (Finisher, Anchor, Enforcer, Death Bowler)"]
+        Football["Football / Soccer Engine (Future Horizon)<br/>• Possession sequence parsing<br/>• Expected Goals / Assists (xG/xA)<br/>• Pitch control & pressing intensity"]
+        Basketball["Basketball Engine (Future Horizon)<br/>• Possession-level tracking<br/>• True Shooting % & Box Plus/Minus<br/>• Lineup net efficiency"]
+    end
+
+    CorePlatform --> Cricket
+    CorePlatform --> Football
+    CorePlatform --> Basketball
+```
+
+---
+
+## 6. Strategic Differentiators
+
+1. **Zero Black-Box Scoring:** Every composite index exposes its exact mathematical formula, feature weights, and raw underlying event counts.
+2. **Phase-of-Play Contextualization:** Raw averages deceive. VYNTIQ evaluates performance indexed against phase difficulty (Powerplay, Middle, Death) and scoring environment baselines.
+3. **Rigorous Sample-Size Discipline:** Micro-sample distortions are actively mitigated through explicit qualification thresholds and Bayesian reliability discounting.
+4. **Data Provenance & Dual Lineage:** Clear separation between verified historical records and competition-provided datasets, ensuring evaluation findings are reproducible and auditable.
+
+---
+
+## 7. Ethical AI, Fairness & Anti-Bias Framework
+
+* **Sample-Size Transparency:** Never present a high-rate metric from a small sample (e.g., SR 240 across 10 balls) without a prominent low-sample warning badge and confidence interval.
+* **Role-Appropriate Evaluation:** Batters are evaluated on batting metrics, bowlers on bowling metrics. Cross-discipline metrics are never conflated.
+* **Audit Trail Mandate:** Any stakeholder must be able to click on a player's rating and view the exact deliveries and mathematical steps that produced that score.

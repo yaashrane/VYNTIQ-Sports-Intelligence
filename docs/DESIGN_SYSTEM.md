@@ -2,22 +2,24 @@
 
 **Design Philosophy:** Editorial Sports Intelligence  
 **Tone:** Analytical, High-Precision, Restrained, Boardroom-Ready  
-**Document Version:** 1.0.0  
+**Tagline:** "Every Metric Tells a Story."  
+**Document Version:** 2.0.0 (Post-Architecture Review & Competition MVP Alignment)  
 **Status:** Approved Architectural Baseline  
 
 ---
 
 ## 1. Visual Philosophy & Strict Editorial Rules
 
-VYNTIQ is built for sports directors, elite scouts, and high-performance analysts. The visual language rejects decorative clutter, generic SaaS tropes, and flashy gamer aesthetics in favor of a **scholarly, high-density editorial sports journal**.
+VYNTIQ is engineered for sports directors, elite scouts, and high-performance technical analysts. The visual language rejects decorative clutter, generic SaaS tropes, and flashy gamer aesthetics in favor of a **scholarly, high-density editorial sports journal**.
 
 ### Strict Anti-Patterns (BANNED from VYNTIQ)
-- **NO Excessive KPI Cards:** Do not plaster the screen with 12 identical square boxes showing raw numbers without context.
-- **NO Random Gradients & Glowing Borders:** No cyber/neon aesthetics or glowing drop shadows.
-- **NO Unnecessary Glassmorphism:** Avoid blurry frosted-glass backgrounds that degrade text legibility.
-- **NO Over-Rounded Containers:** Standardize on disciplined, subtle border radiuses ($4\text{px} \dots 8\text{px}$).
-- **NO Decorative Charts Without Analytical Meaning:** Every chart must answer an explicit tactical question (e.g., phase split, pitch length distribution, radar gap).
-- **NO Unformatted Monospace Strings:** Use tabular lining figures with proper decimal alignments for all statistical figures.
+* **NO Excessive KPI Cards:** Never plaster the screen with 12 identical square boxes showing raw numbers without context.
+* **NO Random Gradients & Glowing Borders:** No cyber/neon aesthetics or glowing drop shadows.
+* **NO Unnecessary Glassmorphism:** Avoid blurry frosted-glass backgrounds that degrade text legibility.
+* **NO Over-Rounded Containers:** Standardize on disciplined, subtle border radiuses ($4\text{px} \dots 8\text{px}$).
+* **NO Decorative Charts Without Analytical Meaning:** Every chart must answer an explicit tactical question (e.g., phase split, pitch length distribution, radar gap).
+* **NO Unformatted Monospace Strings:** Use tabular lining figures with proper decimal alignments for all statistical figures.
+* **NO Incompatible Radar Comparisons:** Never plot bowlers on batting axes or compare incompatible roles on a single generic radar canvas.
 
 ---
 
@@ -41,7 +43,7 @@ The color system combines an authoritative dark ground with refined editorial ac
 
 ### 2.1 Complete Color Token Specifications
 
-| Token Name | Hex Code | HSL / RGB | Purpose / Usage |
+| Token Name | Hex Code | RGB | Purpose / Usage |
 | :--- | :--- | :--- | :--- |
 | `surface-ground` | `#111318` | `rgb(17, 19, 24)` | Primary application background; deep, non-fatiguing matte charcoal |
 | `surface-card` | `#181B22` | `rgb(24, 27, 34)` | Primary container cards, data table wrappers, panel surfaces |
@@ -62,8 +64,8 @@ The color system combines an authoritative dark ground with refined editorial ac
 Typography bridges academic sports journalism and high-density financial data terminals.
 
 ### 3.1 Typeface Families
-* **Headings & Key Metrics:** **Manrope** (Google Fonts) — Geometric, modern, highly legible with sharp geometric proportions.
-* **Body Text & UI Controls:** **Inter** (Google Fonts) — Exceptional legibility at micro-sizes, neutral personality.
+* **Headings & Key Metrics:** **Manrope** — Geometric, modern, highly legible with sharp geometric proportions.
+* **Body Text & UI Controls:** **Inter** — Exceptional legibility at micro-sizes, neutral personality.
 * **Statistical Values & Numerical Grids:** **Inter / Manrope with `font-variant-numeric: tabular-nums`** — Ensures every digit shares identical horizontal advance width so decimal points and columns align vertically with micro-precision.
 
 ### 3.2 Type Scale
@@ -115,28 +117,54 @@ Data tables are the core workhorse of VYNTIQ. They must follow strict analytical
    * Numerical / Statistical columns: **Right-aligned** with headers aligned directly above the decimal positions.
    * Status / Tier badges: Center-aligned.
 2. **Tabular Numerals:** Always apply `.font-tabular` (`font-variant-numeric: tabular-nums lining-nums`).
-3. **Zebra Striping vs. Clean Hairlines:** Avoid dark/light zebra stripes that create optical illusions; use clean `1px` horizontal border dividers (`#2D323E`) with subtle hover highlight (`#1F232D`).
+3. **Hairline Dividers:** Clean `1px` horizontal border dividers (`#2D323E`) with subtle hover highlight (`#1F232D`). Never use distracting dark/light alternating zebra stripes.
 4. **Contextual Delta Indicators:**
    * $+5.2$ in Sage Lime (`#B9D66C`) with a crisp upward indicator `↑`.
    * $-3.8$ in Coral Red (`#E05D52`) with a downward indicator `↓`.
    * Flat $\pm 0.0$ in Muted Slate (`#9DA3B4`) with a neutral dash `—`.
-5. **Sample Size Disclaimers:** Any metric derived from $< 30$ events must render a subtle warning dot with an analytical tooltip indicating the confidence interval.
+5. **Sample Size Disclaimers:** Any metric derived from $< 30$ events must render a subtle warning dot with an analytical tooltip indicating the confidence interval and sample count ($N$).
 
 ---
 
-## 6. Chart Presentation Guidelines (Plotly & Vector Styling)
+## 6. Role-Adaptive Capability Radar System
 
-Charts must integrate seamlessly with the editorial dark theme:
+To eliminate analytical contradictions, radar charts must **dynamically adapt their vertices** to the player's primary evaluated role archetype:
 
-* **Background:** Transparent (`rgba(0,0,0,0)`) or matching `surface-card` (`#181B22`).
-* **Grid Lines:** Hairline grid lines `#222630` at `0.5px` width; never prominent white or heavy lines.
-* **Axis Labels:** Inter 11px in Muted Slate (`#9DA3B4`).
-* **Radar Chart Standard:**
-  * Web / Spoke Lines: `#2D323E`.
-  * Polygon Stroke: Royal Magenta (`#D62978`) at 2px thickness.
-  * Polygon Fill: `rgba(214, 41, 120, 0.15)` (restrained transparency).
-  * Comparison Polygon: Sage Lime (`#B9D66C`) with fill `rgba(185, 214, 108, 0.15)`.
-* **Tooltips:** Crisp dark card (`#111318` with `#2D323E` border), tabular formatting, displaying absolute value, cohort percentile, and sample size $N$.
+```
+BATTER RADAR (6 Axes)                BOWLER RADAR (6 Axes)
+       [Scoring Velocity / TSR]              [Run Prevention / TER]
+                 /\                                    /\
+  [Matchup]     /  \   [Boundary %]     [Discipline]  /  \   [Wicket Threat]
+      |        /    \       |                |       /    \         |
+      |-------•      •------|                |------•      •--------|
+      |        \    /       |                |       \    /         |
+  [Phase Adapt] \  /   [Stability]      [Phase Exec]  \  /   [Dot Ball %]
+                 \/                                    \/
+           [Dot Ball Supp.]                      [Boundary Supp.]
+```
+
+### 6.1 Radar Specifications
+* **Batter Radar Axes:**
+  1. *Scoring Velocity (True Strike Rate)*
+  2. *Boundary Potency (Boundary % & Freq)*
+  3. *Stability (Balls per Dismissal)*
+  4. *Dot Ball Suppression (Non-dot %)*
+  5. *Phase Adaptability (PP / Mid / Death balance)*
+  6. *Matchup Neutrality (Pace vs Spin balance)*
+* **Bowler Radar Axes:**
+  1. *Run Prevention (True Economy Rate)*
+  2. *Wicket Threat (Bowling Strike Rate)*
+  3. *Dot Ball Dominance (Dot Ball %)*
+  4. *Boundary Concession Suppression (Balls per Boundary Conceded)*
+  5. *Phase Execution (PP control & Death restraint)*
+  6. *Tactical Discipline (Extras suppression)*
+* **All-Rounder Presentation:**
+  * Must **never** average batting and bowling into a single blended 6-axis polygon.
+  * Rendered as **Dual Overlaid Polygons** (Magenta for Batting Footprint, Lime for Bowling Footprint) on a split comparison view, or as two distinct side-by-side radars.
+* **Polygon Styling:**
+  * Web / Spoke Lines: Hairline `#2D323E`.
+  * Primary Polygon Stroke: Royal Magenta (`#D62978`) at 2px. Fill: `rgba(214, 41, 120, 0.15)`.
+  * Benchmark / Comparison Polygon Stroke: Sage Lime (`#B9D66C`) at 2px. Fill: `rgba(185, 214, 108, 0.15)`.
 
 ---
 
@@ -144,24 +172,22 @@ Charts must integrate seamlessly with the editorial dark theme:
 
 ### 7.1 Metric Pill Component
 ```
-┌─────────────────────────────────┐
-│ DEATH OVERS SR                  │  ← 10px Inter Upper, Muted Slate
-│ 188.42           +18.4% ↑       │  ← 18px Manrope Bold, Warm Ivory | 11px Lime
-└─────────────────────────────────┘
+┌──────────────────────────────────────────────┐
+│ DEATH OVERS TRUE SR                          │  ← 10px Inter Upper, Muted Slate
+│ +18.42           Top 4% (N=142)  ↑           │  ← 18px Manrope Bold, Warm Ivory | 11px Lime
+└──────────────────────────────────────────────┘
 ```
 
-### 7.2 Capability Radar Component
-* Six normalized axes: *Powerplay Impact*, *Middle Overs Rotation*, *Death Finishing*, *Boundary Efficiency*, *Dot Ball Suppression*, *Pressure Leverage*.
-* Every vertex displays the metric label and the 0–100 percentile score.
-
-### 7.3 Head-to-Head Comparison Matrix
+### 7.2 Head-to-Head Comparison Matrix
 * Fixed left column for Metric Category and Metric Name.
 * Dynamic columns for Player 1, Player 2, (Player 3, Player 4).
 * The leading performer in each row receives a subtle Sage Lime accent highlight and bold tabular weight.
 
-### 7.4 Explainability Accordion ("The Story Behind the Metric")
-* Expandable row below every rating score.
-* Deconstructs the overall rating into primary positive attributes ($+ \text{pts}$) and dragging factors ($-\text{pts}$) with clear plain-English tactical context.
+### 7.3 Explainability Card ("The Story Behind the Metric")
+* Deconstructs every rating score into primary drivers:
+  * **Key Strengths:** Dimensions where player exceeds cohort median by $> 1.0\sigma$.
+  * **Tactical Drag Factors:** Dimensions where player falls below cohort median by $> 0.5\sigma$.
+  * **Confidence Factor:** Explicit declaration of sample size qualification and reliability discount ($C$).
 
 ---
 
@@ -170,6 +196,5 @@ Charts must integrate seamlessly with the editorial dark theme:
 | State | Visual Treatment & User Guidance |
 | :--- | :--- |
 | **Loading State** | Skeleton wireframe placeholders matching exact card/table proportions using a subtle `#181B22` to `#222630` pulse animation. No spinner wheels in primary data tables. |
-| **Empty State** | Clean editorial message container: A precise geometric icon (e.g. search filter), a clear title (e.g., *"No Players Match Active Criteria"*), and a discrete secondary action (*"Reset Phase Filters"* or *"Broaden Sample Size"*). |
+| **Empty State** | Clean editorial message container: A precise geometric icon, clear title (e.g., *"No Players Match Active Criteria"*), and a discrete secondary action (*"Reset Phase Filters"* or *"Broaden Sample Size"*). |
 | **Error / Quarantine State** | High-visibility analytical alert: Deep charcoal card with a `#E05D52` hairline border, an explicit diagnostic code (e.g., `ERR_INGEST_INVALID_OVER_SEQUENCE`), and a structured line-by-line inspection log. |
-
