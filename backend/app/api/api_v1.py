@@ -1,6 +1,7 @@
 """API Version 1 root router mounting versioned endpoints."""
 
 from fastapi import APIRouter
+from backend.app.api.routes.analytics import router as analytics_router
 from backend.app.api.routes.datasets import router as datasets_router
 from backend.app.api.routes.health import router as health_router
 
@@ -11,6 +12,9 @@ api_v1_router.include_router(health_router)
 
 # Ingestion & Dataset pipeline endpoints
 api_v1_router.include_router(datasets_router)
+
+# Analytics & Cricket Metrics Engine endpoints
+api_v1_router.include_router(analytics_router)
 
 # Future module routes (To be registered in their respective development phases):
 # - api_v1_router.include_router(players_router, prefix="/players", tags=["Players"])

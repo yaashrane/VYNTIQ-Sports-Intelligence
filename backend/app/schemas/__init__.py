@@ -1,5 +1,14 @@
 """Pydantic request and response schemas."""
 
+from backend.app.schemas.analytics import (
+    CalculationResponse,
+    DatasetMetricsSummaryResponse,
+    DimensionGroup,
+    MetricCalculationFilter,
+    MetricCalculationRequest,
+    MetricRegistryResponse,
+    PlayerMetricsSummary,
+)
 from backend.app.schemas.common import (
     ErrorDetail,
     ErrorEnvelope,
@@ -17,13 +26,24 @@ from backend.app.schemas.dataset import (
     ValidationSummary,
 )
 from backend.app.schemas.health import HealthResponse
+from backend.app.schemas.metrics import (
+    MetricCategory,
+    MetricDirection,
+    MetricProvenance,
+    MetricRegistryEntry,
+    MetricStatus,
+    MetricValue,
+    SampleSizeInfo,
+)
 
 __all__ = [
+    # Common
     "ErrorDetail",
     "ErrorEnvelope",
     "ErrorResponse",
     "HealthResponse",
     "MessageResponse",
+    # Dataset Ingestion
     "DatasetUploadResponse",
     "ColumnInspectionInfo",
     "InspectionReport",
@@ -32,4 +52,20 @@ __all__ = [
     "ValidationReport",
     "ValidationRequest",
     "PersistenceResponse",
+    # Metrics
+    "MetricStatus",
+    "MetricDirection",
+    "MetricCategory",
+    "SampleSizeInfo",
+    "MetricProvenance",
+    "MetricValue",
+    "MetricRegistryEntry",
+    # Analytics
+    "MetricCalculationFilter",
+    "MetricCalculationRequest",
+    "DimensionGroup",
+    "PlayerMetricsSummary",
+    "CalculationResponse",
+    "DatasetMetricsSummaryResponse",
+    "MetricRegistryResponse",
 ]
