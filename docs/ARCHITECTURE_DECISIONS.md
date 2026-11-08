@@ -152,3 +152,4 @@ Scouting reports must be distributed to coaching staff and team directors who re
 | **OPEN DECISION 02** | Official Eligibility Rules | Assumed to focus on domestic / uncapped Indian players for the RR ecosystem. | **OPEN DECISION** (To be verified upon competition brief inspection). |
 | **OPEN DECISION 03** | Tracking Telemetry Availability| Pitch maps, release speeds, and wagon wheels are assumed to be **unavailable** in standard files. | **OPEN DECISION** (Treated as optional extensions). |
 | **OPEN DECISION 04** | Role Weight Presets | Current role weights are provisional baseline parameters for domain testing. | **OPEN DECISION** (To be tuned during candidate evaluation). |
+

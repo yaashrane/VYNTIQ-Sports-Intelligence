@@ -192,3 +192,4 @@ This is the primary analytical workhorse table of the platform:
 3. **Dismissal Integrity:** If `is_wicket == True`, `dismissal_kind` must be recognized and `dismissed_player_id` cannot be null.
 4. **Extras Accounting:** Deliveries with `extras_type == 'WIDE'` must not increment balls faced by the batter.
 5. **Idempotent Ingestion:** Re-uploading a file with an identical `file_sha256` hash returns an `ALREADY_INGESTED` confirmation without duplicating records.
+

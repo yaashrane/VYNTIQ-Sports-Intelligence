@@ -285,3 +285,4 @@ Every scouting recommendation must account for known statistical limitations:
 2. **Opposition Quality Variance:** Deliveries against world-class pace vs. domestic reserves are treated equally in standard scorecards unless weighted by batter/bowler quality indices.
 3. **Chasing Pressure / Game State:** Batters chasing 12+ RPO take higher dismissal risks, which artificially depresses raw balls per dismissal.
 4. **Toss and Dew Factors:** Second innings wet-ball conditions significantly impair finger spin grip and defensive bowling economy.
+
