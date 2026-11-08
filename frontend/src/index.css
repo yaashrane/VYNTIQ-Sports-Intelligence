@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-ground text-text-primary font-sans antialiased selection:bg-accent-magenta selection:text-white;
+    min-height: 100vh;
+  }
+
+  /* Editorial numerical grid alignment */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}

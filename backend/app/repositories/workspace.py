@@ -130,3 +130,4 @@ class WorkspaceRepository(BaseRepository[Workspace]):
         )
         result = await self.session.execute(query)
         return result.scalars().first()
+

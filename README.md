@@ -28,30 +28,29 @@ VYNTIQ/
 │   │   ├── api/
 │   │   │   ├── api_v1.py            # Root v1 router mounting versioned endpoints
 │   │   │   ├── dependencies.py      # Dependency injection (DB session, settings, workspace scope)
-│   │   │   └── routes/
-│   │   │       └── health.py        # System health & availability endpoint
-│   │   ├── core/
-│   │   │   ├── config.py            # Centralized Pydantic Settings configuration
-│   │   │   ├── logging.py           # Unified standard library logging configuration
-│   │   │   ├── exceptions.py        # Domain exception hierarchy & global error handlers
-│   │   │   └── database.py          # SQLAlchemy 2.0 async engine, sessionmaker & health checks
-│   │   ├── models/
-│   │   │   └── base.py              # DeclarativeBase & TimestampMixin audit primitives
-│   │   ├── schemas/
-│   │   │   ├── common.py            # Standardized error envelopes & responses
-│   │   │   └── health.py            # Health check response schemas
-│   │   ├── repositories/
-│   │   │   └── base.py              # Generic async repository pattern
-│   │   ├── services/                # Domain services (Feature engineering, scoring)
+│   │   │   └── routes/              # Analytics, datasets, evaluation, scoring, explainability, comparisons, workspaces
+│   │   ├── core/                    # Config, logging, exceptions, database
+│   │   ├── models/                  # Base, cricket, dataset, and workspace SQLAlchemy models
+│   │   ├── schemas/                 # Pydantic v2 schemas across all domains
+│   │   ├── repositories/            # Generic BaseRepository & WorkspaceRepository
+│   │   ├── services/                # Analytics, comparison, evaluation, explainability, ingestion, scoring, shortlisting, workspace
 │   │   └── utils/                   # Shared mathematical and data utilities
-│   ├── tests/
-│   │   ├── conftest.py              # Pytest fixtures & async HTTP test client
-│   │   ├── test_config.py           # Configuration validation tests
-│   │   ├── test_database.py         # DB connection & BaseRepository CRUD tests
-│   │   ├── test_errors.py           # Exception handling & 500 masking tests
-│   │   └── test_health.py           # Health endpoint & schema verification tests
+│   ├── tests/                       # 88 automated backend unit & integration tests
 │   ├── requirements.txt             # Pinned backend dependencies
 │   └── .env.example                 # Environment configuration template
+│
+├── frontend/                        # Editorial Sports Analytics Web Application
+│   ├── src/
+│   │   ├── api/                     # Centralized API client, types, and endpoints
+│   │   ├── components/              # Buttons, badges, modals, empty states, cards
+│   │   ├── context/                 # Workspace selection state provider
+│   │   ├── pages/                   # Overview, Workspaces, Detail, Coming Soon
+│   │   ├── test/                    # Vitest + RTL component and navigation tests
+│   │   ├── App.tsx                  # React Router configuration
+│   │   └── index.css                # Tailwind directives & design tokens
+│   ├── tailwind.config.js           # VYNTIQ design system token definitions
+│   ├── vite.config.ts               # Vite bundler & proxy configuration
+│   └── package.json                 # React, TypeScript, Tailwind, Lucide dependencies
 │
 ├── docs/                            # Comprehensive architectural documentation
 │   ├── PRODUCT_VISION.md            # Vision, positioning, and two-track strategy
@@ -63,9 +62,11 @@ VYNTIQ/
 │   ├── DEVELOPMENT_ROADMAP.md       # 10-day competition sprint vs post-MVP roadmap
 │   ├── SCORING_METHODOLOGY.md       # Exact formulas, ECDF scaling & reliability
 │   ├── DATA_DICTIONARY.md           # Canonical schemas & ingestion mapping
-│   └── ARCHITECTURE_DECISIONS.md    # 7 formal Architecture Decision Records (ADRs)
+│   ├── ARCHITECTURE_DECISIONS.md    # Formal Architecture Decision Records (ADRs)
+│   ├── WORKSPACE_AND_SHORTLIST_SPECIFICATION.md # Workspace & shortlisting spec
+│   └── FRONTEND_ARCHITECTURE.md     # Frontend architecture & token mapping
 │
-├── .gitignore                       # Python & environment gitignore
+├── .gitignore                       # Python, Node & environment gitignore
 └── README.md                        # Project documentation
 ```
 
@@ -134,35 +135,38 @@ The service will be available at:
 * **Interactive OpenAPI Docs (Swagger UI):** `http://localhost:8000/api/v1/docs`
 * **ReDoc Documentation:** `http://localhost:8000/api/v1/redoc`
 
-### 4.4 Health Check Verification
+### 4.4 Running the Frontend Application
 
-Test application availability via `curl` or browser:
+In a separate terminal, install packages and start the Vite development server:
 
 ```bash
-curl http://localhost:8000/api/v1/health
+cd frontend
+npm install
+npm run dev
 ```
 
-Expected JSON response:
-```json
-{
-  "status": "healthy",
-  "service": "vyntiq-api",
-  "version": "1.0.0"
-}
-```
+The frontend dashboard will be available at:
+* **Dashboard URL:** `http://localhost:3000/`
 
 ---
 
 ## 5. Running Automated Tests
 
-Run the test suite with Pytest:
+### 5.1 Backend Test Suite (Pytest)
+
+Run all 88 backend domain and integration tests:
 
 ```bash
-# Run all tests with verbose output
 python -m pytest backend/tests -v
+```
 
-# Run with test summary output
-python -m pytest backend/tests -q
+### 5.2 Frontend Test Suite (Vitest)
+
+Run frontend component, layout, and integration tests:
+
+```bash
+cd frontend
+npm run test
 ```
 
 ---
@@ -171,14 +175,13 @@ python -m pytest backend/tests -q
 
 | Milestone / Component | Track | Status | Description |
 | :--- | :---: | :---: | :--- |
-| **Architectural Documentation** | All | **Completed** | 10 comprehensive docs in `/docs/` establishing vision, PRD, ADRs, scoring, and data dictionary. |
+| **Architectural Documentation** | All | **Completed** | 12 comprehensive docs in `/docs/` establishing vision, PRD, ADRs, scoring, and data dictionary. |
 | **Backend Foundation & Lifespan** | Track A | **Completed** | FastAPI modular monolith scaffold with centralized Pydantic Settings, CORS, and logging. |
-| **Exception Hierarchy & Handlers** | Track A | **Completed** | Global exception handlers returning standardized error envelopes (`error: {code, message, details}`). |
-| **Database & Repository Layer** | Track A | **Completed** | SQLAlchemy 2.0 async engine supporting SQLite dev parity & PostgreSQL target; generic `BaseRepository`. |
-| **Health & Core Endpoints** | Track A | **Completed** | `GET /api/v1/health` responding with service availability and semantic version. |
-| **Automated Test Suite** | Track A | **Completed** | 15 automated unit & integration tests covering config, DB, health, and error handling (100% pass rate). |
-| **Data Ingestion & Quarantine** | Track A | *Next Phase* | Dynamic header inspection, column mapping, and two-tiered validation gate. |
-| **Cricket Feature Engineering** | Track A | *Next Phase* | Phase-of-play extraction (PP/Mid/Death), True Strike Rate (TSR), and True Economy Rate (TER). |
-| **Role Scoring & VOR Engine** | Track A | *Next Phase* | ECDF percentile normalization, Bayesian reliability shrinkage, and Top 10 candidate ranking. |
-| **Editorial Web UI & PDF Engine** | Track B | *Deferred* | React 18 frontend and ReportLab programmatic vector PDF compiler (Post-competition). |
+| **Data Ingestion & Quarantine (Prompt 04)** | Track A | **Completed** | 6-stage ingestion pipeline with schema-agnostic column mapper and quarantine logger. |
+| **Cricket Metrics Engine (Prompt 05)** | Track A | **Completed** | Vectorized batting/bowling calculators, True Strike Rate, True Economy Rate, and registry. |
+| **Role Classification & Profiles (Prompt 06)** | Track A | **Completed** | Role archetypes, sample adequacy gates, and 6-axis evaluation profiles. |
+| **VOR Scoring & Ranking Engine (Prompt 07)** | Track A | **Completed** | ECDF percentiles, Bayesian reliability shrinkage, and 3-tier tie-breaking ranking engine. |
+| **Explainability & Comparison (Prompt 08)** | Track A | **Completed** | Factor attribution ($|\Delta| \le 0.05$) and multi-player comparison with cross-role gating. |
+| **Competition Workspaces & Shortlisting (Prompt 09)** | Track A | **Completed** | Isolated workspaces, configurable eligibility, candidate shortlisting, and audit logs. |
+| **Frontend Foundation & Dashboard (Prompt 10)** | Track A | **Completed** | React 19 + TypeScript + Vite + Tailwind CSS dashboard with workspace management. |
 

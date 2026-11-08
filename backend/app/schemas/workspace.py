@@ -311,3 +311,4 @@ class ShortlistAuditResponse(BaseModel):
     excluded_candidate_count: int
     shortlisted_candidate_count: int
     exclusion_details: dict[str, list[str]]
+

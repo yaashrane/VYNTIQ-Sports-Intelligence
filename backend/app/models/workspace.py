@@ -144,3 +144,4 @@ class ShortlistAuditLog(Base):
     excluded_candidate_count: Mapped[int] = mapped_column(Integer, nullable=False)
     shortlisted_candidate_count: Mapped[int] = mapped_column(Integer, nullable=False)
     exclusion_details: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
+

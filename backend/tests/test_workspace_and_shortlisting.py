@@ -692,3 +692,4 @@ async def test_api_workspace_and_shortlist_end_to_end_lifecycle(mock_scoring_run
         assert audit_resp.status_code == 200
         assert audit_resp.json()["shortlist_id"] == sl_id
         assert audit_resp.json()["shortlisted_candidate_count"] == 2
+

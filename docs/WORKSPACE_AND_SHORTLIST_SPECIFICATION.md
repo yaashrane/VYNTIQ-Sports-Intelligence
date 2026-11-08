@@ -235,3 +235,4 @@ Running a duplicate shortlist request against the same dataset and configuration
 1. **Static Roles**: Player roles are presently sourced from the canonical classifier or source master. Dynamic multi-role shortlisting (e.g., dual-slotting an All-Rounder as both Batter and Bowler) will be expanded in Track B.
 2. **Auction Budgeting Constraints**: Shortlist size is presently cardinally bounded ($K \in [1, 100]$); auction purse/budget simulation constraints will be incorporated in Prompt 10.
 3. **Multi-User RBAC**: Currently relies on workspace tenant scoping; granular scout-level permissions (e.g. Lead Scout vs. Junior Analyst signoff) will be introduced in Track B.
+

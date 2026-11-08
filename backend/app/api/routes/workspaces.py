@@ -261,3 +261,4 @@ async def get_shortlist_audit(
     """Get shortlist audit."""
     service = ShortlistingService(session)
     return await service.get_audit_log(workspace_id, shortlist_id)
+
