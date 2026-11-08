@@ -33,3 +33,4 @@ class MessageResponse(BaseModel):
 
     message: str
     data: dict[str, Any] | None = None
+

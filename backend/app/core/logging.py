@@ -34,3 +34,4 @@ def setup_logging(log_level: str = "INFO") -> None:
 def get_logger(name: str) -> logging.Logger:
     """Return a scoped logger instance."""
     return logging.getLogger(name)
+

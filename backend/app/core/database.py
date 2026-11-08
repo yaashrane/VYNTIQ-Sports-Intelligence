@@ -64,3 +64,4 @@ async def check_db_health() -> bool:
     except Exception as exc:
         logger.error("Database connectivity check failed: %s", str(exc))
         return False
+

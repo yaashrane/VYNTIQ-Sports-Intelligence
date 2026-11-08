@@ -33,3 +33,4 @@ async def get_current_workspace_id(
     Returns None for canonical un-scoped queries, or the workspace identifier string.
     """
     return x_workspace_id
+

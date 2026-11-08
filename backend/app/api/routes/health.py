@@ -22,3 +22,4 @@ async def get_health() -> HealthResponse:
         service=settings.SERVICE_NAME,
         version=settings.VERSION,
     )
+

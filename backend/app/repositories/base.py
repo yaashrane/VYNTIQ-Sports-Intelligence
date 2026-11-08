@@ -36,3 +36,4 @@ class BaseRepository(Generic[ModelType]):
         """Remove an entity instance from the session."""
         await self.session.delete(instance)
         await self.session.flush()
+

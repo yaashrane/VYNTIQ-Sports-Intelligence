@@ -57,3 +57,4 @@ async def test_repository_crud_lifecycle() -> None:
         deleted = await repo.get_by_id("sample-01")
         assert deleted is None
         break
+

@@ -55,6 +55,16 @@ class Settings(BaseSettings):
     )
     DB_ECHO: bool = Field(default=False, description="Echo raw SQL statements to logs")
 
+    # Storage & Upload Security (ADR-004)
+    UPLOAD_DIR: str = Field(
+        default="storage/uploads/raw",
+        description="Directory for securely persisting raw uploaded datasets",
+    )
+    MAX_UPLOAD_SIZE_BYTES: int = Field(
+        default=52_428_800,  # 50 MB
+        description="Maximum allowed upload payload size in bytes",
+    )
+
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod
     def assemble_cors_origins(cls, value: str | list[str]) -> list[str]:
@@ -80,3 +90,4 @@ class Settings(BaseSettings):
 def get_settings() -> Settings:
     """Return cached singleton application settings."""
     return Settings()
+

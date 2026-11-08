@@ -47,6 +47,10 @@ venv.bak/
 *.db-wal
 *.db-shm
 
+# Upload Storage
+storage/
+uploads/
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -77,3 +81,4 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+

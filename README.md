@@ -181,3 +181,4 @@ python -m pytest backend/tests -q
 | **Cricket Feature Engineering** | Track A | *Next Phase* | Phase-of-play extraction (PP/Mid/Death), True Strike Rate (TSR), and True Economy Rate (TER). |
 | **Role Scoring & VOR Engine** | Track A | *Next Phase* | ECDF percentile normalization, Bayesian reliability shrinkage, and Top 10 candidate ranking. |
 | **Editorial Web UI & PDF Engine** | Track B | *Deferred* | React 18 frontend and ReportLab programmatic vector PDF compiler (Post-competition). |
+

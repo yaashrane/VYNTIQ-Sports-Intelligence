@@ -35,3 +35,4 @@ async def test_root_endpoint_metadata(async_client: httpx.AsyncClient) -> None:
     assert data["tagline"] == "Every Metric Tells a Story."
     assert data["version"] == "1.0.0"
     assert "/api/v1/docs" in data["docs_url"]
+
