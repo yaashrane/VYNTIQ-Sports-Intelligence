@@ -129,3 +129,4 @@ In production (`ENVIRONMENT = "production"`), any unhandled error logs the full 
 | Malformed File Protection | Pydantic schema validation & quarantine | `DatasetValidator` | Verified |
 | Traceback Shielding | Custom FastAPI error handlers | `backend/app/main.py` | Verified |
 | Score Tampering | Immutable scoring runs & read-only profiles | `ScoringEngine`, `ShortlistingService` | Verified |
+

@@ -12,6 +12,11 @@ from backend.app.services.analytics.base import (
 from backend.app.services.analytics.batting import BattingMetricsCalculator
 from backend.app.services.analytics.bowling import BowlingMetricsCalculator
 from backend.app.services.analytics.dimensions import DimensionBuilder
+from backend.app.services.analytics.pressure import (
+    PressureEngine,
+    PressureTier,
+    PressureWeights,
+)
 from backend.app.services.analytics.registry import (
     METRIC_REGISTRY,
     get_all_metrics,
@@ -34,5 +39,8 @@ __all__ = [
     "DimensionBuilder",
     "DeliveryAggregator",
     "AnalyticsService",
+    "PressureEngine",
+    "PressureTier",
+    "PressureWeights",
 ]
 

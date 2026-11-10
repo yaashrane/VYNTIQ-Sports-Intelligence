@@ -64,3 +64,4 @@ This document catalogs technical boundaries, known limitations, and operational 
 ### 5.1 Sport Adapters
 - **Current Support:** Cricket is the fully implemented and validated sport in v1.0.0. The platform's generic concepts (Workspaces, Datasets, Dimensions, VOR Scoring, Shortlists, Reports) are sport-agnostic.
 - **Next Supported Sports:** Adding Football (Soccer) or Basketball requires adding sport-specific metric calculators (`football_metrics.py`), schema mappers, and dimensional profiles without changing the core VOR scoring engine or workspace architecture.
+

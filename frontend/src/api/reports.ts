@@ -65,3 +65,4 @@ export const reportApi = {
     return `${base}/reports/${encodeURIComponent(reportId)}/download`;
   },
 };
+
