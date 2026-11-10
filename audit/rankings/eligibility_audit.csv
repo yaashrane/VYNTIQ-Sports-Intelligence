@@ -1,0 +1,1421 @@
+player_id,total_balls,pressure_balls,is_qualified,exclusion_reason,role,player_name
+8,463,383.0,True,Qualified,Batter,Mahendra Singh Dhoni
+23,37,33.0,False,Insufficient pressure balls faced (33.0 < 60),Batter,Piyush Chawla
+28,8,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Ishant Sharma
+47,2456,204.0,True,Qualified,Batter,Virat Kohli
+88,1276,123.0,True,Qualified,Batter,Faf du Plessis
+109,661,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Wriddhiman Saha
+126,1619,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Rohit Sharma
+142,757,110.0,True,Qualified,Batter,Shikhar Dhawan
+143,639,559.0,True,Qualified,Batter,Dinesh Karthik
+147,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Pradeep Sangwan
+152,958,651.0,True,Qualified,Batter,Ravindra Jadeja
+158,30,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Amit Mishra
+161,24,24.0,False,Insufficient pressure balls faced (24.0 < 60),Batter,Dwayne Bravo
+167,1025,52.0,False,Insufficient pressure balls faced (52.0 < 60),Batter,Ajinkya Rahane
+169,171,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Robin Uthappa
+198,371,134.0,True,Qualified,Batter,Manish Pandey
+220,1117,151.0,True,Qualified,Batter,David Warner
+223,184,43.0,False,Insufficient pressure balls faced (43.0 < 60),Batter,Steven Smith
+232,22,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Tom Cooper
+250,346,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Aaron Finch
+274,158,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Martin Guptill
+278,51,50.0,False,Insufficient pressure balls faced (50.0 < 60),Batter,Tim Southee
+286,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Kane Richardson
+295,76,63.0,True,Qualified,Batter,Wayne Parnell
+305,317,145.0,True,Qualified,Batter,Ravichandran Ashwin
+332,150,102.0,True,Qualified,Batter,Angelo Mathews
+344,26,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Sheldon Jackson
+360,169,144.0,True,Qualified,Batter,Bhuvneshwar Kumar
+393,10,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Kedar Jadhav
+395,21,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Karn Sharma
+403,90,79.0,True,Qualified,Batter,Umesh Yadav
+418,80,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Richard Berrington
+443,527,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Paul Stirling
+470,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Mohammad Amir
+478,41,27.0,False,Insufficient pressure balls faced (27.0 < 60),Batter,Eoin Morgan
+479,119,115.0,True,Qualified,Batter,Adil Rashid
+492,39,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Andre Fletcher
+494,212,136.0,True,Qualified,Batter,Kieron Pollard
+499,327,132.0,True,Qualified,Batter,Shakib Al Hasan
+505,9,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Mushfiqur Rahim
+507,262,152.0,True,Qualified,Batter,Mohammad Mahmudullah
+535,337,107.0,True,Qualified,Batter,Ambati Rayudu
+722,48,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Liam Dawson
+728,457,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Dawid Malan
+757,10,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Sybrand Engelbrecht
+768,835,108.0,True,Qualified,Batter,Reeza Hendricks
+772,417,94.0,True,Qualified,Batter,Rilee Rossouw
+773,14,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Shadley Van Schalkwyk
+778,28,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Darren Bravo
+781,511,80.0,True,Qualified,Batter,Sunil Narine
+786,129,125.0,True,Qualified,Batter,Chris Jordan
+796,427,199.0,True,Qualified,Batter,Matthew Wade
+813,2829,380.0,True,Qualified,Batter,Jos Buttler
+818,1724,145.0,True,Qualified,Batter,Mitchell Marsh
+820,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Nathan Coulter Nile
+829,30,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Mitchell Starc
+830,39,35.0,False,Insufficient pressure balls faced (35.0 < 60),Batter,Josh Hazlewood
+838,958,267.0,True,Qualified,Batter,Glenn Maxwell
+914,38,24.0,False,Insufficient pressure balls faced (24.0 < 60),Batter,Krishnappa Gowtham
+930,151,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Karun Nair
+953,2018,280.0,True,Qualified,Batter,Lokesh Rahul
+985,59,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Brendan Taylor
+988,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Graeme Cremer
+992,491,52.0,False,Insufficient pressure balls faced (52.0 < 60),Batter,Mayank Agarwal
+1039,39,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Mandeep Singh
+1040,93,30.0,False,Insufficient pressure balls faced (30.0 < 60),Batter,Harpreet Bhatia
+1045,11,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,David Wiese
+1071,73,62.0,True,Qualified,Batter,Jaydev Unadkat
+1077,1280,805.0,True,Qualified,Batter,David Miller
+1100,75,32.0,False,Insufficient pressure balls faced (32.0 < 60),Batter,Dinesh Chandimal
+1101,498,284.0,True,Qualified,Batter,George Dockrell
+1107,663,383.0,True,Qualified,Batter,Mohammad Nabi
+1116,245,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Craig Ervine
+1159,24,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Tendai Chatara
+1171,48,46.0,False,Insufficient pressure balls faced (46.0 < 60),Batter,Chris Woakes
+1183,152,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Alex Hales
+1187,386,46.0,False,Insufficient pressure balls faced (46.0 < 60),Batter,Jason Roy
+1195,44,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Ben Stokes
+1205,673,92.0,True,Qualified,Batter,Jonny Bairstow
+1210,86,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,James Vince
+1219,98,61.0,True,Qualified,Batter,David Willey
+1233,29,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Gary Ballance
+1318,733,558.0,True,Qualified,Batter,Andre Russell
+1327,410,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Johnson Charles
+1389,37,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Sean Abbott
+1440,713,80.0,True,Qualified,Batter,Rahul Tripathi
+1481,570,60.0,True,Qualified,Batter,Kusal Perera
+1487,56,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Adam Milne
+1541,157,24.0,False,Insufficient pressure balls faced (24.0 < 60),Batter,Sean Williams
+1556,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,David Payne
+1566,46,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Mohammed Shami
+1568,535,61.0,True,Qualified,Batter,Kane Williamson
+1596,755,339.0,True,Qualified,Batter,Moeen Ali
+1612,10,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Yuzvendra Chahal
+1617,52,38.0,False,Insufficient pressure balls faced (38.0 < 60),Batter,Rishi Dhawan
+1649,52,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Regis Chakabva
+1699,2761,665.0,True,Qualified,Batter,Suryakumar Yadav
+1701,25,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Swapnil Singh
+1758,247,220.0,True,Qualified,Batter,Patrick Cummins
+1791,9,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Wesley Barresi
+1801,20,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Nitish Kumar
+1810,50,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Devon Thomas
+1813,65,60.0,True,Qualified,Batter,Deepak Chahar
+1924,181,98.0,True,Qualified,Batter,Sam Billings
+1941,1486,93.0,True,Qualified,Batter,Devon Conway
+1944,90,79.0,True,Qualified,Batter,Keshav Maharaj
+2003,421,113.0,True,Qualified,Batter,Bhanuka Rajapaksa
+2054,11,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Jason Behrendorff
+2101,1262,133.0,True,Qualified,Batter,Quinton de Kock
+2210,36,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Sabbir Rahman
+2213,201,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Soumya Sarkar
+2214,202,91.0,True,Qualified,Batter,Gulbadin Naib
+2218,94,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Anamul Haque
+2246,242,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Tom Latham
+2258,2232,331.0,True,Qualified,Batter,Sanju Samson
+2261,145,135.0,True,Qualified,Batter,Harshal Patel
+2296,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Safyaan Sharif
+2304,13,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Tymal Mills
+2315,21,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Reece Topley
+2320,79,74.0,True,Qualified,Batter,Trent Boult
+2321,1,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Olly Stone
+2334,82,43.0,False,Insufficient pressure balls faced (43.0 < 60),Batter,Dwaine Pretorius
+2351,117,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Danushka Gunathilaka
+2361,98,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Temba Bavuma
+2364,47,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Ashton Agar
+2367,1129,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Travis Head
+2373,20,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Ashton Turner
+2379,337,42.0,False,Insufficient pressure balls faced (42.0 < 60),Batter,Ben Duckett
+2382,146,134.0,True,Qualified,Batter,Jamie Overton
+2399,100,88.0,True,Qualified,Batter,Dushmantha Chameera
+2407,199,33.0,False,Insufficient pressure balls faced (33.0 < 60),Batter,Dhananjaya de Silva
+2411,11,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Sandeep Sharma
+2416,756,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Kyle Mayers
+2417,223,177.0,True,Qualified,Batter,Akeal Hosein
+2418,20,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Justin Greaves
+2436,777,522.0,True,Qualified,Batter,Dasun Shanaka
+2439,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Akila Dananjaya
+2463,706,365.0,True,Qualified,Batter,Ryan Burl
+2483,21,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Lizaad Williams
+2485,1181,122.0,True,Qualified,Batter,Babar Azam
+2490,497,337.0,True,Qualified,Batter,Mohammad Nawaz
+2523,176,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Will Young
+2526,133,124.0,True,Qualified,Batter,Ish Sodhi
+2531,15,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Joe Root
+2533,306,152.0,True,Qualified,Batter,Najibullah Zadran
+2534,6,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Rahmat Shah
+2573,275,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Evin Lewis
+2633,447,362.0,True,Qualified,Batter,Jason Holder
+2636,52,51.0,False,Insufficient pressure balls faced (51.0 < 60),Batter,Adam Zampa
+2639,1247,588.0,True,Qualified,Batter,Marcus Stoinis
+2650,41,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Raymon Reifer
+2661,150,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Shamarh Brooks
+2671,1139,65.0,True,Qualified,Batter,Liton Das
+2680,238,157.0,True,Qualified,Batter,Nurul Hasan
+2681,92,79.0,True,Qualified,Batter,Taskin Ahmed
+2687,511,173.0,True,Qualified,Batter,Roston Chase
+2750,28,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Alex Carey
+2756,560,371.0,True,Qualified,Batter,Shashank Singh
+2790,20,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Praveen Dubey
+2847,216,175.0,True,Qualified,Batter,Shardul Thakur
+2852,8,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Jagadeesha Suchith
+2860,7,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,KS Bharat
+2876,1279,884.0,True,Qualified,Batter,Axar Patel
+2877,386,120.0,True,Qualified,Batter,Vijay Shankar
+2878,19,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Mohit Sharma
+2884,22,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Manan Vohra
+2887,28,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Harmeet Singh
+2892,78,60.0,True,Qualified,Batter,Asif Ali
+2921,863,144.0,True,Qualified,Batter,Fakhar Zaman
+2930,311,94.0,True,Qualified,Batter,Rassie van der Dussen
+2933,31,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Jasprit Bumrah
+2972,169,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Yasim Murtaza
+2984,1002,377.0,True,Qualified,Batter,Sikandar Raza
+2985,20,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Mark Wood
+2996,28,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Stephanus Myburgh
+2997,18,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Paul van Meekeren
+3024,1152,135.0,True,Qualified,Batter,Mohammad Rizwan
+3033,7,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Usman Qadir
+3038,54,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Hussain Talat
+3040,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Kashif Daud
+3056,455,240.0,True,Qualified,Batter,Iftikhar Ahmed
+3077,7,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Usama Mir
+3091,814,51.0,False,Insufficient pressure balls faced (51.0 < 60),Batter,Sahibzada Farhan
+3097,176,76.0,True,Qualified,Batter,Shan Masood
+3125,1973,654.0,True,Qualified,Batter,Nicholas Pooran
+3135,4,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Yannic Cariah
+3174,28,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Matt Henry
+3260,54,26.0,False,Insufficient pressure balls faced (26.0 < 60),Batter,Hashmatullah Shahidi
+3272,48,43.0,False,Insufficient pressure balls faced (43.0 < 60),Batter,Fabian Allen
+3275,130,109.0,True,Qualified,Batter,Alzarri Joseph
+3276,145,114.0,True,Qualified,Batter,Gudakesh Motie
+3280,510,85.0,True,Qualified,Batter,Nazmul Hossain Shanto
+3281,113,89.0,True,Qualified,Batter,Mosaddek Hossain
+3282,265,95.0,True,Qualified,Batter,Mehidy Hasan Miraz
+3297,1249,734.0,True,Qualified,Batter,Shimron Hetmyer
+3298,145,131.0,True,Qualified,Batter,Jofra Archer
+3304,19,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Munim Shahriar
+3306,24,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Afsar Zazai
+3323,421,312.0,True,Qualified,Batter,Jimmy Neesham
+3330,1924,908.0,True,Qualified,Batter,Hardik Pandya
+3361,59,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Michael Leask
+3373,48,37.0,False,Insufficient pressure balls faced (37.0 < 60),Batter,Aizaz Khan
+3374,873,330.0,True,Qualified,Batter,Mark Chapman
+3377,165,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Babar Hayat
+3382,188,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Nizakat Khan
+3383,87,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Kinchit Shah
+3415,110,47.0,False,Insufficient pressure balls faced (47.0 < 60),Batter,Matthew Cross
+3451,30,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Baba Indrajith
+3469,7,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Shreyas Gopal
+3489,698,241.0,True,Qualified,Batter,Salman Agha
+3539,138,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ben McDermott
+3543,65,46.0,False,Insufficient pressure balls faced (46.0 < 60),Batter,Shahidullah Kamal
+3544,125,37.0,False,Insufficient pressure balls faced (37.0 < 60),Batter,Usman Ghani
+3545,14,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ihsanullah Janat
+3550,21,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Sharafuddin Ashraf
+3578,161,129.0,True,Qualified,Batter,Imad Wasim
+3595,8,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Andy McBrine
+3605,1673,341.0,True,Qualified,Batter,Aiden Markram
+3613,33,33.0,False,Insufficient pressure balls faced (33.0 < 60),Batter,Shakeel Ahmed
+3622,15,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Hayden Walsh
+3623,19,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Hasan Ali
+3627,41,35.0,False,Insufficient pressure balls faced (35.0 < 60),Batter,Andile Phehlukwayo
+3628,141,131.0,True,Qualified,Batter,Kagiso Rabada
+3629,140,132.0,True,Qualified,Batter,Corbin Bosch
+3635,69,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Jason Smith
+3639,1135,45.0,False,Insufficient pressure balls faced (45.0 < 60),Batter,Brandon King
+3641,70,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Ben Dwarshuis
+3644,201,172.0,True,Qualified,Batter,Kuldeep Yadav
+3645,224,75.0,True,Qualified,Batter,Sarfaraz Khan
+3647,1865,451.0,True,Qualified,Batter,Shreyas Iyer
+3648,797,246.0,True,Qualified,Batter,Deepak Hooda
+3651,9,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ricky Bhui
+3653,57,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Avesh Khan
+3660,8,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Luke Wood
+3664,25,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Binura Fernando
+3669,163,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Sadeera Samarawickrama
+3672,1327,53.0,False,Insufficient pressure balls faced (53.0 < 60),Batter,Kusal Mendis
+3673,16,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Ramesh Mendis
+3683,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Gavin Main
+3686,22,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,CB Sole
+3689,58,58.0,False,Insufficient pressure balls faced (58.0 < 60),Batter,Mark Watt
+3697,68,61.0,True,Qualified,Batter,Kyle Jamieson
+3700,760,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Tim Seifert
+3720,30,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Craig Young
+3727,420,70.0,True,Qualified,Batter,Matthew Short
+3771,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Vivian Kingma
+3772,32,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Logan van Beek
+3775,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Sompal Kami
+3782,410,258.0,True,Qualified,Batter,M Shahrukh Khan
+3802,52,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Anshuman Rath
+3832,41,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Rezza Gaznavi
+3839,19,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Amjad Mahboob
+3858,46,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Jatinder Singh
+3871,59,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Aamir Kaleem
+3876,5,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Sufyan Mehmood
+3916,829,461.0,True,Qualified,Batter,Jitesh Sharma
+3926,524,411.0,True,Qualified,Batter,Rahul Tewatia
+3954,569,48.0,False,Insufficient pressure balls faced (48.0 < 60),Batter,Andrew Balbirnie
+3967,54,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Tom Kohler
+3986,108,32.0,False,Insufficient pressure balls faced (32.0 < 60),Batter,Matthew Renshaw
+3995,3,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Donald Tiripano
+4007,856,42.0,False,Insufficient pressure balls faced (42.0 < 60),Batter,Ryan Rickelton
+4101,540,390.0,True,Qualified,Batter,Mitchell Santner
+4102,98,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,George Munsey
+4106,1150,434.0,True,Qualified,Batter,Daryl Mitchell
+4111,206,153.0,True,Qualified,Batter,Khushdil Shah
+4117,2411,206.0,True,Qualified,Batter,Ishan Kishan
+4201,20,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Fareed Malik
+4211,39,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Vishnu Vinod
+4219,656,303.0,True,Qualified,Batter,Krunal Pandya
+4221,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Chris Green
+4229,140,130.0,True,Qualified,Batter,George Linde
+4235,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Sisanda Magala
+4237,7,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Tabraiz Shamsi
+4246,861,182.0,True,Qualified,Batter,Nitish Rana
+4260,1417,687.0,True,Qualified,Batter,Heinrich Klaasen
+4265,2,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,T Natarajan
+4288,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Navdeep Saini
+4369,1105,137.0,True,Qualified,Batter,Shai Hope
+4372,143,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Rony Talukder
+4373,59,49.0,False,Insufficient pressure balls faced (49.0 < 60),Batter,Mustafizur Rahman
+4391,994,413.0,True,Qualified,Batter,Liam Livingstone
+4409,858,462.0,True,Qualified,Batter,Sam Curran
+4412,199,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Max ODowd
+4417,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Karan KC
+4438,20,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Jasdeep Singh
+4458,24,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,AHT Donald
+4460,23,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Jeffrey Vandersay
+4486,5,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,BR Sharath
+4487,16,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Vyshak Kumar
+4489,22,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Prasidh Krishna
+4494,235,146.0,True,Qualified,Batter,Abhinav Manohar
+4499,33,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Saqib Mahmood
+4505,22,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Jhye Richardson
+4604,1,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Mitchell Swepson
+4636,56,54.0,False,Insufficient pressure balls faced (54.0 < 60),Batter,Bjorn Fortuin
+4639,151,132.0,True,Qualified,Batter,Wellington Masakadza
+4641,62,48.0,False,Insufficient pressure balls faced (48.0 < 60),Batter,Lungi Ngidi
+4658,78,63.0,True,Qualified,Batter,Nasum Ahmed
+4662,97,85.0,True,Qualified,Batter,Cole McConchie
+4665,19,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Tom Blundell
+4684,149,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Dane Cleaver
+4686,114,105.0,True,Qualified,Batter,Joshua Clarkson
+4692,30,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Lockie Ferguson
+4695,88,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Nick Kelly
+4703,1240,379.0,True,Qualified,Batter,Rishabh Pant
+4708,1285,823.0,True,Qualified,Batter,Rinku Singh
+4716,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Mayank Dagar
+4722,507,475.0,True,Qualified,Batter,Rashid Khan
+4736,904,114.0,True,Qualified,Batter,Josh Inglis
+4755,1544,745.0,True,Qualified,Batter,Shivam Dube
+4773,512,339.0,True,Qualified,Batter,Jaker Ali Anik
+4779,112,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Pieter Willem Mulder
+4780,453,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Mohammad Saif Hassan
+4784,91,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Tony de Zorzi
+4790,14,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Lutho Sipamla
+4793,101,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Dean Foxcroft
+4802,21,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Stephen Doheny
+4807,19,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Joshua Little
+4812,828,181.0,True,Qualified,Batter,Harry Tector
+4814,666,122.0,True,Qualified,Batter,Lorcan Tucker
+4815,14,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Benjamin White
+4816,5,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Khaleel Ahmed
+4817,101,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Anmolpreet Singh
+4821,222,121.0,True,Qualified,Batter,Mahipal Lomror
+4823,637,347.0,True,Qualified,Batter,Washington Sundar
+4826,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,George Garton
+4830,72,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Keacy Carty
+4837,43,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Obed McCoy
+4838,29,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Keemo Paul
+4840,133,114.0,True,Qualified,Batter,Odean Smith
+4842,69,65.0,True,Qualified,Batter,Shamar Springer
+4847,834,27.0,False,Insufficient pressure balls faced (27.0 < 60),Batter,Finn Allen
+4853,1093,327.0,True,Qualified,Batter,Glenn Phillips
+4854,582,105.0,True,Qualified,Batter,Rachin Ravindra
+4856,33,33.0,False,Insufficient pressure balls faced (33.0 < 60),Batter,Benjamin Sears
+4857,7,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Nathan Smith
+4867,427,131.0,True,Qualified,Batter,Wesley Madhevere
+4871,15,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Brandon Mavuta
+4874,62,50.0,False,Insufficient pressure balls faced (50.0 < 60),Batter,Richard Ngarava
+4876,63,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Milton Shumba
+4880,3,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Aarif Sheikh
+4881,19,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Dipendra Airee
+4882,44,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kushal Bhurtel
+4895,739,279.0,True,Qualified,Batter,Charith Asalanka
+4900,468,348.0,True,Qualified,Batter,Wanindu Hasaranga
+4901,5,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Asitha Fernando
+4902,62,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Avishka Fernando
+4904,594,257.0,True,Qualified,Batter,Kamindu Mendis
+4926,332,202.0,True,Qualified,Batter,Shadab Khan
+4947,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Kasun Rajitha
+4974,7,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Mohammad Nadeem
+4983,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Sikander Zulfiqar
+4986,1559,798.0,True,Qualified,Batter,Rovman Powell
+5029,73,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Prerak Mankad
+5034,14,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Murugan Ashwin
+5039,918,226.0,True,Qualified,Batter,Rajat Patidar
+5041,23,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Mukesh Kumar
+5189,204,195.0,True,Qualified,Batter,Faheem Ashraf
+5379,277,260.0,True,Qualified,Batter,Mark Adair
+5441,112,105.0,True,Qualified,Batter,Barry McCarthy
+5547,13,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Nosthush Kenjige
+5553,1643,122.0,True,Qualified,Batter,Phil Salt
+5561,12,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Brad Wheal
+5562,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Richard Gleeson
+5577,16,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Sai Kishore
+5608,118,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Narayan Jagadeesan
+5665,2,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Sanjay Yadav
+5738,90,70.0,True,Qualified,Batter,Xavier Bartlett
+5750,17,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Ehsan Khan
+5808,238,157.0,True,Qualified,Batter,Karim Janat
+5809,67,64.0,True,Qualified,Batter,Naveen ul Haq
+5837,253,180.0,True,Qualified,Batter,Mahedi Hasan
+5839,117,69.0,True,Qualified,Batter,Yasir Ali Chowdhury
+5866,60,59.0,False,Insufficient pressure balls faced (59.0 < 60),Batter,Patrick Kruger
+5877,57,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Andries Gous
+5882,361,149.0,True,Qualified,Batter,Afif Hossain
+5892,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Blair Tickner
+5928,391,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Prithvi Shaw
+5939,1072,260.0,True,Qualified,Batter,Cameron Green
+5940,3,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Riley Meredith
+5944,72,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Mohammed Siraj
+5977,15,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Khary Pierre
+5979,11,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Abrar Ahmed
+6025,2,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Henry Shipley
+6035,103,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Chirag Suri
+6059,1822,183.0,True,Qualified,Batter,Ruturaj Gaikwad
+6097,37,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Brydon Carse
+6160,152,147.0,True,Qualified,Batter,Chamika Karunaratne
+6161,92,90.0,True,Qualified,Batter,Rahul Chahar
+6166,6,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Jack Edwards
+6172,1,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Lasith Croospulle
+6203,25,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Surendran Chandramohan
+6256,49,41.0,False,Insufficient pressure balls faced (41.0 < 60),Batter,Varun Chakravarthy
+6272,697,75.0,True,Qualified,Batter,William Jacks
+6273,274,41.0,False,Insufficient pressure balls faced (41.0 < 60),Batter,Tom Banton
+6280,889,240.0,True,Qualified,Batter,Harry Brook
+6281,2251,118.0,True,Qualified,Batter,Abhishek Sharma
+6284,64,47.0,False,Insufficient pressure balls faced (47.0 < 60),Batter,Anukul Roy
+6286,25,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Shivam Mavi
+6288,2711,257.0,True,Qualified,Batter,Shubman Gill
+6297,5,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Matthew Parkinson
+6314,998,87.0,True,Qualified,Batter,Devdutt Padikkal
+6342,148,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Matthew Breetzke
+6350,12,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Matthew Kuhnemann
+6354,13,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Spencer Johnson
+6355,183,174.0,True,Qualified,Batter,Shaheen Afridi
+6389,16,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Tanvir Islam
+6395,46,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Josh Philippe
+6396,1226,743.0,True,Qualified,Batter,Tim David
+6398,142,49.0,False,Insufficient pressure balls faced (49.0 < 60),Batter,Aaron Hardie
+6423,1086,379.0,True,Qualified,Batter,Riyan Parag
+6433,307,98.0,True,Qualified,Batter,Darwish Rasooli
+6436,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Qais Ahmad
+6440,41,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Omair Yousuf
+6441,16,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Abdullah Shafique
+6448,1126,184.0,True,Qualified,Batter,Ibrahim Zadran
+6450,70,67.0,True,Qualified,Batter,Mujeeb Ur Rahman
+6457,96,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Urvil Patel
+6460,836,469.0,True,Qualified,Batter,Ayush Badoni
+6464,132,118.0,True,Qualified,Batter,Arshdeep Singh
+6466,177,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Atharwa Taide
+6467,266,113.0,True,Qualified,Batter,Anuj Rawat
+6473,12,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Nuwanidu Fernando
+6486,31,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Tanush Kotian
+6487,56,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Priyam Garg
+6489,12,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Darshan Nalkande
+6494,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Manoj Bhandage
+6503,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Zahoor Khan
+6506,12,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Mohammad Imran Randhawa
+6512,350,258.0,True,Qualified,Batter,Michael Bracewell
+6514,43,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Anil Nidamanuru
+6515,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Benjamin Lister
+6518,75,57.0,False,Insufficient pressure balls faced (57.0 < 60),Batter,Daniel Sams
+6523,43,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Blessing Muzarabani
+6526,69,61.0,True,Qualified,Batter,Himmat Singh
+6565,48,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Katene Clarke
+6574,264,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Alick Athanaze
+6591,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,KM Asif
+6628,103,92.0,True,Qualified,Batter,Gerald Coetzee
+6643,46,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Hasan Mahmud
+6645,61,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Mohammad Sheikh
+6651,932,236.0,True,Qualified,Batter,Towhid Hridoy
+6664,340,85.0,True,Qualified,Batter,Dion Myers
+6669,28,26.0,False,Insufficient pressure balls faced (26.0 < 60),Batter,Mohsin Khan
+6671,217,93.0,True,Qualified,Batter,Lalit Yadav
+6674,1123,61.0,True,Qualified,Batter,Rahmanullah Gurbaz
+6676,665,425.0,True,Qualified,Batter,Azmatullah Omarzai
+6677,13,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Mohammad Hasnain
+6683,13,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Mayank Markande
+6697,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Shams Mulani
+6705,26,20.0,False,Insufficient pressure balls faced (20.0 < 60),Batter,Scott McKechnie
+6725,818,446.0,True,Qualified,Batter,Sherfane Rutherford
+6726,687,635.0,True,Qualified,Batter,Romario Shepherd
+6739,135,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Amir Jangoo
+6772,6,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Chetan Sakariya
+6783,58,26.0,False,Insufficient pressure balls faced (26.0 < 60),Batter,Azam Khan
+6795,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Terrance Hinds
+6797,12,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Dominic Drakes
+6806,24,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Tushar Deshpande
+6819,1872,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Yashasvi Jaiswal
+6881,176,49.0,False,Insufficient pressure balls faced (49.0 < 60),Batter,Scott Edwards
+6900,19,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Michael Jones
+6919,11,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Tyrone Kane
+6922,68,66.0,True,Qualified,Batter,Abdul Samad
+6931,1632,69.0,True,Qualified,Batter,Pathum Nissanka
+6932,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Pramod Madushan
+6985,163,50.0,False,Insufficient pressure balls faced (50.0 < 60),Batter,Bas de Leede
+6995,39,38.0,False,Insufficient pressure balls faced (38.0 < 60),Batter,Saad Zafar
+7001,20,20.0,False,Insufficient pressure balls faced (20.0 < 60),Batter,Dilon Heyliger
+7002,109,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Nicholas Kirton
+7003,16,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Rayyan Pathan
+7008,23,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Gus Atkinson
+7044,67,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Jamie Smith
+7046,74,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Tinashe Kamunhukamwe
+7049,407,40.0,False,Insufficient pressure balls faced (40.0 < 60),Batter,Kamil Mishara
+7052,89,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Dunith Wellalage
+7059,560,262.0,True,Qualified,Batter,Nehal Wadhera
+7060,14,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Arjun Tendulkar
+7094,526,256.0,True,Qualified,Batter,Curtis Campher
+7120,64,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Rohit Paudel
+7140,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Senuran Muthusamy
+7152,245,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Hazratullah Zazai
+7155,3,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Sahan Arachchige
+7201,18,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Haroon Arshad
+7216,1134,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Prabhsimran Singh
+7227,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Nijat Masood
+7240,45,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,FazalHaq Farooqi
+7250,8,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Mukesh Choudhary
+7260,798,346.0,True,Qualified,Batter,Dhruv Jurel
+7269,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Sushant Mishra
+7270,67,61.0,True,Qualified,Batter,Anrich Nortje
+7304,21,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Sanvir Singh
+7312,30,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Nandre Burger
+7322,9,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Yash Dayal
+7325,136,120.0,True,Qualified,Batter,Harpreet Brar
+7327,38,37.0,False,Insufficient pressure balls faced (37.0 < 60),Batter,Rasikh Salam
+7338,74,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Haider Ali
+7341,279,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Jake McGurk
+7344,79,70.0,True,Qualified,Batter,Shoriful Islam
+7355,104,53.0,False,Insufficient pressure balls faced (53.0 < 60),Batter,Tayyab Tahir
+7364,104,88.0,True,Qualified,Batter,Haris Rauf
+7406,102,60.0,True,Qualified,Batter,Rizwan CP
+7409,60,38.0,False,Insufficient pressure balls faced (38.0 < 60),Batter,Sundeep Jora
+7446,424,348.0,True,Qualified,Batter,Abdul Samad
+7472,435,305.0,True,Qualified,Batter,Shahbaz Ahmed
+7473,14,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Akash Deep
+7498,8,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Abhijeet Tomar
+7503,105,74.0,True,Qualified,Batter,Ravi Bishnoi
+7533,15,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Simarjeet Singh
+7544,943,256.0,True,Qualified,Batter,Venkatesh Iyer
+7545,3,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kuldeep Sen
+7566,40,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ben Curran
+7574,17,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Kumar Kartikeya Singh
+7625,112,88.0,True,Qualified,Batter,Suryansh Shedge
+7634,40,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Aaron Jones
+7689,12,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Dilshan Madushanka
+7690,880,50.0,False,Insufficient pressure balls faced (50.0 < 60),Batter,Saim Ayub
+7692,15,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Qasim Akram
+7696,30,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Mohammad Wasim
+7699,98,88.0,True,Qualified,Batter,Abbas Afridi
+7702,35,27.0,False,Insufficient pressure balls faced (27.0 < 60),Batter,Chamindu Wickramasinghe
+7704,60,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Pavan Rathnayake
+7709,32,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Ainsley Ndlovu
+7710,1,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Brandon Glover
+7741,296,225.0,True,Qualified,Batter,Gareth Delany
+7744,74,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Jordan Cox
+7755,57,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Harsh Thaker
+7756,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Kaleem Sana
+7761,24,24.0,False,Insufficient pressure balls faced (24.0 < 60),Batter,Ravinderpal Singh
+7808,277,241.0,True,Qualified,Batter,Marco Jansen
+7894,141,56.0,False,Insufficient pressure balls faced (56.0 < 60),Batter,Tony Munyonga
+7897,2418,904.0,True,Qualified,Batter,Namboori Tilak Varma
+7900,910,40.0,False,Insufficient pressure balls faced (40.0 < 60),Batter,Tanzid Hasan
+7901,517,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Parvez Emon
+7903,395,222.0,True,Qualified,Batter,Shamim Hossain
+7905,163,148.0,True,Qualified,Batter,Tanzim Sakib
+7911,50,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Oliver Hairs
+7912,137,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Vikramjit Singh
+7914,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Clayton Floyd
+7915,37,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Monank Patel
+7920,57,56.0,False,Insufficient pressure balls faced (56.0 < 60),Batter,Nathan Ellis
+7924,51,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kushal Malla
+7925,11,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Rohan Rangarajan
+7926,15,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Manpreet Singh
+7927,81,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Janak Prakash
+7928,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Vinoth Baskaran
+7929,17,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Aryaman Sunil Uchil
+7931,62,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Aritra Dutta
+7935,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Mohammad Ghazanfar
+7937,2,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Wasim Ali
+7967,114,106.0,True,Qualified,Batter,Noor Ahmad
+7978,101,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Johnathan Campbell
+8005,50,43.0,False,Insufficient pressure balls faced (43.0 < 60),Batter,Zawar Farid
+8009,38,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Junaid Siddique
+8014,32,26.0,False,Insufficient pressure balls faced (26.0 < 60),Batter,Avi Dixit
+8040,46,45.0,False,Insufficient pressure balls faced (45.0 < 60),Batter,Ripal Patel
+8049,49,45.0,False,Insufficient pressure balls faced (45.0 < 60),Batter,Naseem Shah
+8085,106,74.0,True,Qualified,Batter,Suyash Prabhudessai
+8093,19,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Nikhil Chaudhary
+8101,334,318.0,True,Qualified,Batter,Ashutosh Sharma
+8141,4,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Auqib Nabi
+8177,14,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Akash Madhwal
+8182,343,258.0,True,Qualified,Batter,Donovan Ferreira
+8217,13,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ansh Tandon
+8221,672,275.0,True,Qualified,Batter,Nitish Reddy
+8238,293,103.0,True,Qualified,Batter,Sameer Rizvi
+8241,10,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Lokesh Bam
+8251,21,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Kumar Kushagra
+8266,24,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Sumit Kumar 1
+8295,114,109.0,True,Qualified,Batter,Matthew Forde
+8298,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Ramon Simmonds
+8301,200,74.0,True,Qualified,Batter,Asif Khan
+8311,6,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Dan Mousley
+8326,6,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Jayden Seales
+8380,165,152.0,True,Qualified,Batter,Mohammad Rishad Hossain
+8405,8,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kanwarpal Tathgur
+8408,82,50.0,False,Insufficient pressure balls faced (50.0 < 60),Batter,Shreyas Movva
+8424,4,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Tanveer Sangha
+8530,16,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Kartik Tyagi
+8580,16,16.0,False,Insufficient pressure balls faced (16.0 < 60),Batter,Yudhvir Singh
+8600,433,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Tadiwanashe Marumani
+8623,1,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kristian Clarke
+8634,6,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ashwani Kumar
+8637,103,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Vriitya Aravind
+8638,139,99.0,True,Qualified,Batter,Basil Hameed
+8639,15,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Kartik Meiyappan
+8647,529,62.0,True,Qualified,Batter,Sediqullah Atal
+8652,72,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Mohammad Ishaq
+8654,363,58.0,False,Insufficient pressure balls faced (58.0 < 60),Batter,Cooper Connolly
+8661,32,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Matheesha Pathirana
+8664,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Victor Nyauchi
+8719,43,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Aryan Lakra
+8723,8,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Mohammed Faraazuddin
+8726,224,48.0,False,Insufficient pressure balls faced (48.0 < 60),Batter,Alishan Sharafu
+8727,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Sanchit Sharma
+8739,140,55.0,False,Insufficient pressure balls faced (55.0 < 60),Batter,Muhammad Irfan
+8741,340,71.0,True,Qualified,Batter,Mohammad Haris
+8746,27,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Vaibhav Arora
+8771,82,20.0,False,Insufficient pressure balls faced (20.0 < 60),Batter,Rubin Hermann
+8805,35,32.0,False,Insufficient pressure balls faced (32.0 < 60),Batter,Ottneil Baartman
+15269,39,35.0,False,Insufficient pressure balls faced (35.0 < 60),Batter,Mohammed Aslam
+15271,38,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Usmangani Ibrahim Patel
+15274,46,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ravija Sandaruwan
+15279,14,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Shiraz Khan
+15280,24,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Sayed Monib
+15303,22,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Bilal Tahir
+15551,125,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Ackeem Auguste
+15629,47,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Shayan Jahangir
+16498,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Sultan Ahmad
+16559,3,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Alexander Patmore
+17413,59,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Neil Rock
+17419,81,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Tim Tector
+17424,29,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Graham Hume
+17432,287,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Ross Adair
+17910,9,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Mohammad Akram
+17911,11,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Nangeyalia Kharote
+17937,7,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Zubaid Akbari
+19012,94,31.0,False,Insufficient pressure balls faced (31.0 < 60),Batter,Zeeshan Ali
+19020,3,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ateeq Iqbal
+19125,7,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Ayush Shukla
+19145,22,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Aamer Jamal
+19147,55,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Faraz Akram
+19307,15,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Tharindu Rathnayake
+19309,95,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Lahiru Udara
+19312,20,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Nuwan Thushara
+19315,7,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Vijayakanth Viyaskanth
+19316,203,162.0,True,Qualified,Batter,Maheesh Theekshana
+19530,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Shahnawaz Dhani
+19714,529,105.0,True,Qualified,Batter,Abishek Porel
+19781,123,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Mitchell Owen
+19894,68,41.0,False,Insufficient pressure balls faced (41.0 < 60),Batter,Mitchell Hay
+19902,37,37.0,False,Insufficient pressure balls faced (37.0 < 60),Batter,Tim Pringle
+20005,99,91.0,True,Qualified,Batter,Arshad Khan
+20006,211,166.0,True,Qualified,Batter,Ramandeep Singh
+20023,25,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Karan Sharma
+20163,51,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Aasif Sheikh
+20175,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Nandan Yadav
+20229,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Mohammad Ali
+20310,11,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Ahmed Daniyal
+20316,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Shahab Alam
+20327,321,81.0,True,Qualified,Batter,Usman Khan
+20702,1082,651.0,True,Qualified,Batter,Tristan Stubbs
+20704,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Salman Mirza
+20802,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Abdul Basith
+20894,104,88.0,True,Qualified,Batter,Aman Khan
+20989,47,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Vivrant Sharma
+21777,24,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Tafadzwa Tsiga
+21780,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Ernest Masuku
+21781,298,212.0,True,Qualified,Batter,Clive Madande
+21784,121,116.0,True,Qualified,Batter,Brad Evans
+21790,208,158.0,True,Qualified,Batter,Tashinga Musekiwa
+21791,52,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,J Gumbie
+22134,124,102.0,True,Qualified,Batter,Luke Jongwe
+22137,37,36.0,False,Insufficient pressure balls faced (36.0 < 60),Batter,Fionn Hand
+22187,65,64.0,True,Qualified,Batter,Ryan Klein
+22188,44,43.0,False,Insufficient pressure balls faced (43.0 < 60),Batter,Aryan Dutt
+22471,11,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Matthew Humphreys
+22565,459,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Muhammad Waseem
+22920,31,29.0,False,Insufficient pressure balls faced (29.0 < 60),Batter,Jacob Duffy
+23311,453,73.0,True,Qualified,Batter,Jacob Bethell
+23450,1686,215.0,True,Qualified,Batter,Sai Sudharsan
+24017,793,61.0,True,Qualified,Batter,Brian Bennett
+24346,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Mohamed Shafeeq
+24381,34,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Shariz Ahmad
+24475,45,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Rehan Ahmed
+24767,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Ripon Mondol
+24779,81,64.0,True,Qualified,Batter,Ijaz Ahmadzai
+24803,34,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Gulshan Jha
+24812,28,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Chris Greaves
+24887,165,25.0,False,Insufficient pressure balls faced (25.0 < 60),Batter,Innocent Kaia
+24978,11,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Jack Jarvis
+24982,25,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Charlie Tear
+25011,24,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Liam Mccarthy
+25030,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Zaman Khan
+25048,18,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Umran Malik
+25128,20,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Nqabayomzi Peter
+25132,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Praful Hinge
+25138,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Harsh Dubey
+25139,143,128.0,True,Qualified,Batter,Shubham Dubey
+25213,630,177.0,True,Qualified,Batter,Dewald Brevis
+25216,35,24.0,False,Insufficient pressure balls faced (24.0 < 60),Batter,Andile Simelane
+25231,19,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Samay Shrivastava
+25501,38,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Meet Bhavsar
+25502,6,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Adnan Idrees
+25507,47,41.0,False,Insufficient pressure balls faced (41.0 < 60),Batter,Edson Silva
+25534,156,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Chad Bowes
+25669,471,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Priyansh Arya
+25679,98,65.0,True,Qualified,Batter,Salil Arora
+25809,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Juanoy Drysdale
+26519,136,91.0,True,Qualified,Batter,Janith Liyanage
+26646,154,50.0,False,Insufficient pressure balls faced (50.0 < 60),Batter,Rahul Chopra
+26663,25,20.0,False,Insufficient pressure balls faced (20.0 < 60),Batter,Kwena Maphaka
+26795,14,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Joel Davies
+26830,50,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Nishant Kumar Sindhu
+26834,32,30.0,False,Insufficient pressure balls faced (30.0 < 60),Batter,Raj Bawa
+26839,30,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Haseebullah Khan
+26843,83,22.0,False,Insufficient pressure balls faced (22.0 < 60),Batter,Maaz Sadaqat
+26906,608,113.0,True,Qualified,Batter,Angkrish Raghuvanshi
+26909,23,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Yash Dhull
+26913,63,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Shaik Rasheed
+26916,9,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Yasir Mohammad
+26988,14,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Jitenkumar Ramanandi
+27004,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Hassnain Shah
+27071,23,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Vinayak Shukla
+27137,63,27.0,False,Insufficient pressure balls faced (27.0 < 60),Batter,Hammad Mirza
+27364,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Simranjeet Kang
+27380,47,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Harshit Kaushik
+27390,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Matiullah Khan
+27460,14,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Ali Naseer
+27464,63,60.0,True,Qualified,Batter,Aayan Afzal Khan
+27466,92,57.0,False,Insufficient pressure balls faced (57.0 < 60),Batter,Dhruv Parashar
+27469,129,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Aryansh Sharma
+27504,19,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Dushan Hemantha
+27516,8,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Ihsanullah Ihsanullah
+27743,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,DT Doram
+27959,65,24.0,False,Insufficient pressure balls faced (24.0 < 60),Batter,Hrithik Shokeen
+27960,12,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Mayank Yadav
+27962,15,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Saurav Chauhan
+27964,52,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Anshul Kamboj
+28018,4,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Ashok Sharma
+28021,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Saurabh Dubey
+28185,40,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Kamil Pooran
+28655,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Muhammad Rohid
+28756,39,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Haider Ali
+28908,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Vincent Masekesa
+28915,26,26.0,False,Insufficient pressure balls faced (26.0 < 60),Batter,Trevor Gwandu
+28967,420,35.0,False,Insufficient pressure balls faced (35.0 < 60),Batter,Tim Robinson
+28970,137,14.0,False,Insufficient pressure balls faced (14.0 < 60),Batter,Connor Esterhuizen
+29066,66,62.0,True,Qualified,Batter,Zakary Foulkes
+29075,10,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Aadil Ansari
+29080,12,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Muhammad Khan
+29558,32,20.0,False,Insufficient pressure balls faced (20.0 < 60),Batter,Muhammad Arfan
+29699,3,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ibrahim Takahashi
+29833,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Bashir Ahmad
+29888,147,131.0,True,Qualified,Batter,Harshit Rana
+30925,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Bradley Currie
+30927,43,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Saiteja Mukkamalla
+31107,7,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Yasin Patel
+31513,29,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ethan Dsouza
+31518,25,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Akshat Raghuwanshi
+31529,19,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Robin Minz
+31835,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Akshay Roopak Puri
+31836,27,15.0,False,Insufficient pressure balls faced (15.0 < 60),Batter,Aman Desai
+32399,49,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Aaron Johnson
+32401,12,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Akhil Kumar
+32862,11,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Allah Ghazanfar
+33067,25,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ravichandran Smaran
+33440,6,6.0,False,Insufficient pressure balls faced (6.0 < 60),Batter,Adwitya Bhargava
+33969,45,44.0,False,Insufficient pressure balls faced (44.0 < 60),Batter,Tinotenda Maposa
+34466,46,46.0,False,Insufficient pressure balls faced (46.0 < 60),Batter,Arafat Minhas
+34485,23,20.0,False,Insufficient pressure balls faced (20.0 < 60),Batter,Sufiyan Muqeem
+34522,96,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Brandon McMullen
+34527,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Jasper John Davidson
+34546,32,18.0,False,Insufficient pressure balls faced (18.0 < 60),Batter,Aryan Bisht
+34928,12,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kendel Fleming
+34929,4,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Lachlan Lake
+34969,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Manav Suthar
+35071,5,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Kunal Rathore
+35102,10,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Zikria Islam
+35122,15,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Shah Faisal
+35318,7,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Sakib Hussain
+35506,50,49.0,False,Insufficient pressure balls faced (49.0 < 60),Batter,Quentin Sampson
+36551,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Zishan Motara
+36553,13,13.0,False,Insufficient pressure balls faced (13.0 < 60),Batter,Jediah Blades
+36983,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Mohit Rathee
+37052,515,254.0,True,Qualified,Batter,Naman Dhir
+37201,96,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Jewel Andrew
+37731,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Musheer Khan
+37879,39,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Khawaja Nafay
+37939,5,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Nahid Rana
+38855,78,69.0,True,Qualified,Batter,Mohammad Saifuddin
+39374,147,8.0,False,Insufficient pressure balls faced (8.0 < 60),Batter,Muhammad Zohaib
+39640,47,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Sineth Jayawardena
+39657,38,33.0,False,Insufficient pressure balls faced (33.0 < 60),Batter,Eshan Malinga
+39991,8,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Parveen Kumar
+41110,7,7.0,False,Insufficient pressure balls faced (7.0 < 60),Batter,Mayank Kumar
+42548,10,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Muhammad Jawadullah
+42810,53,36.0,False,Insufficient pressure balls faced (36.0 < 60),Batter,Noah Croes
+42811,203,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Michael Levitt
+42845,33,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Arshin Kulkarni
+43250,53,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Dilpreet Singh Bajwa
+43774,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Shivam Singh
+43798,77,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Lhuan Pretorius
+43917,21,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Krish Bhagat
+45381,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,PV Satyanarayan Raju
+45457,48,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Zach Lion Cachet
+45749,120,82.0,True,Qualified,Batter,Mukul Choudhary
+45966,67,67.0,True,Qualified,Batter,Prashant Veer
+46066,89,76.0,True,Qualified,Batter,Vipraj Nigam
+46137,216,48.0,False,Insufficient pressure balls faced (48.0 < 60),Batter,Kartik Sharma
+46378,39,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Kyle Klein
+46929,77,38.0,False,Insufficient pressure balls faced (38.0 < 60),Batter,Dian Forrester
+47050,29,23.0,False,Insufficient pressure balls faced (23.0 < 60),Batter,Shamar Joseph
+47314,17,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Wafiullah Tarakhil
+47370,196,129.0,True,Qualified,Batter,Aniket Verma
+47371,2,2.0,False,Insufficient pressure balls faced (2.0 < 60),Batter,Zuhaid Zubair
+47403,21,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Newman Nyamhuri
+47724,34,34.0,False,Insufficient pressure balls faced (34.0 < 60),Batter,Jahandad Khan
+48504,240,10.0,False,Insufficient pressure balls faced (10.0 < 60),Batter,Ayush Mhatre
+48575,33,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Sahil Parakh
+48616,21,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Abdul Saqlain
+48953,5,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Danish Malewar
+49003,324,85.0,True,Qualified,Batter,Hasan Nawaz
+49027,189,93.0,True,Qualified,Batter,Bevon Jacobs
+49268,7,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Sohaib Khan
+50062,21,21.0,False,Insufficient pressure balls faced (21.0 < 60),Batter,Nqobani Mokoena
+50284,578,17.0,False,Insufficient pressure balls faced (17.0 < 60),Batter,Vaibhav Sooryavanshi
+54404,8,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Benjamin Ito
+55747,81,39.0,False,Insufficient pressure balls faced (39.0 < 60),Batter,Benjamin Calitz
+56685,9,9.0,False,Insufficient pressure balls faced (9.0 < 60),Batter,Abdullah Ahmadzai
+56817,46,43.0,False,Insufficient pressure balls faced (43.0 < 60),Batter,Shivang Kumar
+56830,12,12.0,False,Insufficient pressure balls faced (12.0 < 60),Batter,Madhav Tiwari
+57747,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Charlie Cassell
+58134,8,5.0,False,Insufficient pressure balls faced (5.0 < 60),Batter,Digvesh Rathi
+58135,15,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Tejasvi Dahiya
+58246,39,28.0,False,Insufficient pressure balls faced (28.0 < 60),Batter,Prince Yadav
+59045,3,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Jai Moondra
+60609,30,19.0,False,Insufficient pressure balls faced (19.0 < 60),Batter,Navin Bidaisee
+60700,2,0.0,False,Insufficient pressure balls faced (0.0 < 60),Batter,Ravi Singh
+64604,11,3.0,False,Insufficient pressure balls faced (3.0 < 60),Batter,Kalhan Challu
+66103,17,11.0,False,Insufficient pressure balls faced (11.0 < 60),Batter,Noor Rahman
+67036,4,4.0,False,Insufficient pressure balls faced (4.0 < 60),Batter,Brijesh Sharma
+71727,1,1.0,False,Insufficient pressure balls faced (1.0 < 60),Batter,Razaullah Razaullah
+23,576,159.0,True,Qualified,Bowler,Piyush Chawla
+28,422,109.0,True,Qualified,Bowler,Ishant Sharma
+47,6,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Virat Kohli
+143,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Dinesh Karthik
+147,54,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Pradeep Sangwan
+152,1396,431.0,True,Qualified,Bowler,Ravindra Jadeja
+158,126,38.0,False,Insufficient legal pressure balls bowled (38.0 < 60),Bowler,Amit Mishra
+161,206,109.0,True,Qualified,Bowler,Dwayne Bravo
+232,12,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Tom Cooper
+278,826,235.0,True,Qualified,Bowler,Tim Southee
+286,198,81.0,True,Qualified,Bowler,Kane Richardson
+295,400,110.0,True,Qualified,Bowler,Wayne Parnell
+305,1404,402.0,True,Qualified,Bowler,Ravichandran Ashwin
+332,110,1.0,False,Insufficient legal pressure balls bowled (1.0 < 60),Bowler,Angelo Mathews
+360,2221,702.0,True,Qualified,Bowler,Bhuvneshwar Kumar
+395,363,190.0,True,Qualified,Bowler,Karn Sharma
+403,558,69.0,True,Qualified,Bowler,Umesh Yadav
+470,146,62.0,True,Qualified,Bowler,Mohammad Amir
+479,1324,533.0,True,Qualified,Bowler,Adil Rashid
+494,185,44.0,False,Insufficient legal pressure balls bowled (44.0 < 60),Bowler,Kieron Pollard
+499,340,75.0,True,Qualified,Bowler,Shakib Al Hasan
+507,38,19.0,False,Insufficient legal pressure balls bowled (19.0 < 60),Bowler,Mohammad Mahmudullah
+722,415,153.0,True,Qualified,Bowler,Liam Dawson
+768,23,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Reeza Hendricks
+773,90,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Shadley Van Schalkwyk
+781,1533,508.0,True,Qualified,Bowler,Sunil Narine
+786,550,292.0,True,Qualified,Bowler,Chris Jordan
+818,295,90.0,True,Qualified,Bowler,Mitchell Marsh
+820,18,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Nathan Coulter Nile
+829,808,213.0,True,Qualified,Bowler,Mitchell Starc
+830,1476,483.0,True,Qualified,Bowler,Josh Hazlewood
+838,638,77.0,True,Qualified,Bowler,Glenn Maxwell
+914,180,37.0,False,Insufficient legal pressure balls bowled (37.0 < 60),Bowler,Krishnappa Gowtham
+988,42,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Graeme Cremer
+1028,30,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Varun Aaron
+1045,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,David Wiese
+1071,575,179.0,True,Qualified,Bowler,Jaydev Unadkat
+1101,186,65.0,True,Qualified,Bowler,George Dockrell
+1107,680,198.0,True,Qualified,Bowler,Mohammad Nabi
+1159,217,48.0,False,Insufficient legal pressure balls bowled (48.0 < 60),Bowler,Tendai Chatara
+1171,164,28.0,False,Insufficient legal pressure balls bowled (28.0 < 60),Bowler,Chris Woakes
+1195,30,8.0,False,Insufficient legal pressure balls bowled (8.0 < 60),Bowler,Ben Stokes
+1219,380,73.0,True,Qualified,Bowler,David Willey
+1318,754,349.0,True,Qualified,Bowler,Andre Russell
+1389,442,191.0,True,Qualified,Bowler,Sean Abbott
+1487,545,166.0,True,Qualified,Bowler,Adam Milne
+1541,162,60.0,True,Qualified,Bowler,Sean Williams
+1556,30,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,David Payne
+1566,1275,263.0,True,Qualified,Bowler,Mohammed Shami
+1596,805,203.0,True,Qualified,Bowler,Moeen Ali
+1612,2138,787.0,True,Qualified,Bowler,Yuzvendra Chahal
+1617,174,37.0,False,Insufficient legal pressure balls bowled (37.0 < 60),Bowler,Rishi Dhawan
+1699,6,5.0,False,Insufficient legal pressure balls bowled (5.0 < 60),Bowler,Suryakumar Yadav
+1701,102,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Swapnil Singh
+1758,1215,405.0,True,Qualified,Bowler,Patrick Cummins
+1772,215,58.0,False,Insufficient legal pressure balls bowled (58.0 < 60),Bowler,Sheldon Cottrell
+1813,917,146.0,True,Qualified,Bowler,Deepak Chahar
+1944,598,179.0,True,Qualified,Bowler,Keshav Maharaj
+2054,438,130.0,True,Qualified,Bowler,Jason Behrendorff
+2210,6,2.0,False,Insufficient legal pressure balls bowled (2.0 < 60),Bowler,Sabbir Rahman
+2213,42,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Soumya Sarkar
+2214,54,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Gulbadin Naib
+2261,1643,789.0,True,Qualified,Bowler,Harshal Patel
+2296,33,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Safyaan Sharif
+2304,229,78.0,True,Qualified,Bowler,Tymal Mills
+2315,615,185.0,True,Qualified,Bowler,Reece Topley
+2320,1543,329.0,True,Qualified,Bowler,Trent Boult
+2321,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Olly Stone
+2334,308,198.0,True,Qualified,Bowler,Dwaine Pretorius
+2351,5,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Danushka Gunathilaka
+2359,42,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Prenelan Subrayen
+2364,144,35.0,False,Insufficient legal pressure balls bowled (35.0 < 60),Bowler,Ashton Agar
+2367,16,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Travis Head
+2382,497,257.0,True,Qualified,Bowler,Jamie Overton
+2399,1151,328.0,True,Qualified,Bowler,Dushmantha Chameera
+2407,81,13.0,False,Insufficient legal pressure balls bowled (13.0 < 60),Bowler,Dhananjaya de Silva
+2411,965,372.0,True,Qualified,Bowler,Sandeep Sharma
+2416,138,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Kyle Mayers
+2417,1692,245.0,True,Qualified,Bowler,Akeal Hosein
+2418,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Justin Greaves
+2436,529,169.0,True,Qualified,Bowler,Dasun Shanaka
+2439,36,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Akila Dananjaya
+2463,318,89.0,True,Qualified,Bowler,Ryan Burl
+2483,259,73.0,True,Qualified,Bowler,Lizaad Williams
+2490,1004,232.0,True,Qualified,Bowler,Mohammad Nawaz
+2526,1175,406.0,True,Qualified,Bowler,Ish Sodhi
+2531,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Joe Root
+2633,1928,754.0,True,Qualified,Bowler,Jason Holder
+2636,1152,487.0,True,Qualified,Bowler,Adam Zampa
+2639,747,275.0,True,Qualified,Bowler,Marcus Stoinis
+2650,30,8.0,False,Insufficient legal pressure balls bowled (8.0 < 60),Bowler,Raymon Reifer
+2681,1040,331.0,True,Qualified,Bowler,Taskin Ahmed
+2687,834,185.0,True,Qualified,Bowler,Roston Chase
+2756,90,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Shashank Singh
+2790,30,17.0,False,Insufficient legal pressure balls bowled (17.0 < 60),Bowler,Praveen Dubey
+2847,966,367.0,True,Qualified,Bowler,Shardul Thakur
+2852,108,40.0,False,Insufficient legal pressure balls bowled (40.0 < 60),Bowler,Jagadeesha Suchith
+2863,66,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Sandeep Warrier
+2872,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Siddarth Kaul
+2876,2670,779.0,True,Qualified,Bowler,Axar Patel
+2877,9,3.0,False,Insufficient legal pressure balls bowled (3.0 < 60),Bowler,Vijay Shankar
+2878,649,352.0,True,Qualified,Bowler,Mohit Sharma
+2887,96,32.0,False,Insufficient legal pressure balls bowled (32.0 < 60),Bowler,Harmeet Singh
+2933,1708,648.0,True,Qualified,Bowler,Jasprit Bumrah
+2972,192,57.0,False,Insufficient legal pressure balls bowled (57.0 < 60),Bowler,Yasim Murtaza
+2984,1091,316.0,True,Qualified,Bowler,Sikandar Raza
+2985,281,92.0,True,Qualified,Bowler,Mark Wood
+2997,187,86.0,True,Qualified,Bowler,Paul van Meekeren
+3033,96,3.0,False,Insufficient legal pressure balls bowled (3.0 < 60),Bowler,Usman Qadir
+3038,36,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Hussain Talat
+3040,11,5.0,False,Insufficient legal pressure balls bowled (5.0 < 60),Bowler,Kashif Daud
+3056,186,60.0,True,Qualified,Bowler,Iftikhar Ahmed
+3077,120,17.0,False,Insufficient legal pressure balls bowled (17.0 < 60),Bowler,Usama Mir
+3135,36,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Yannic Cariah
+3174,622,150.0,True,Qualified,Bowler,Matt Henry
+3253,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Rohan Mustafa
+3255,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Ahmed Raza 1
+3272,179,51.0,False,Insufficient legal pressure balls bowled (51.0 < 60),Bowler,Fabian Allen
+3275,1153,385.0,True,Qualified,Bowler,Alzarri Joseph
+3276,738,194.0,True,Qualified,Bowler,Gudakesh Motie
+3280,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Nazmul Hossain Shanto
+3281,159,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Mosaddek Hossain
+3282,234,60.0,True,Qualified,Bowler,Mehidy Hasan Miraz
+3298,1259,390.0,True,Qualified,Bowler,Jofra Archer
+3299,66,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Andrew Tye
+3320,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Jayant Yadav
+3323,526,234.0,True,Qualified,Bowler,Jimmy Neesham
+3330,1825,511.0,True,Qualified,Bowler,Hardik Pandya
+3337,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Jeremy Gordon
+3361,30,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Michael Leask
+3373,123,27.0,False,Insufficient legal pressure balls bowled (27.0 < 60),Bowler,Aizaz Khan
+3374,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Mark Chapman
+3383,54,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Kinchit Shah
+3469,60,9.0,False,Insufficient legal pressure balls bowled (9.0 < 60),Bowler,Shreyas Gopal
+3489,108,48.0,False,Insufficient legal pressure balls bowled (48.0 < 60),Bowler,Salman Agha
+3543,30,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Shahidullah Kamal
+3550,114,40.0,False,Insufficient legal pressure balls bowled (40.0 < 60),Bowler,Sharafuddin Ashraf
+3578,246,43.0,False,Insufficient legal pressure balls bowled (43.0 < 60),Bowler,Imad Wasim
+3595,72,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Andy McBrine
+3605,397,91.0,True,Qualified,Bowler,Aiden Markram
+3613,60,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Shakeel Ahmed
+3622,186,43.0,False,Insufficient legal pressure balls bowled (43.0 < 60),Bowler,Hayden Walsh
+3623,158,43.0,False,Insufficient legal pressure balls bowled (43.0 < 60),Bowler,Hasan Ali
+3627,144,59.0,False,Insufficient legal pressure balls bowled (59.0 < 60),Bowler,Andile Phehlukwayo
+3628,1533,373.0,True,Qualified,Bowler,Kagiso Rabada
+3629,367,146.0,True,Qualified,Bowler,Corbin Bosch
+3637,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Dayyaan Galiem
+3641,324,117.0,True,Qualified,Bowler,Ben Dwarshuis
+3644,1914,754.0,True,Qualified,Bowler,Kuldeep Yadav
+3647,8,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Shreyas Iyer
+3648,131,54.0,False,Insufficient legal pressure balls bowled (54.0 < 60),Bowler,Deepak Hooda
+3653,1672,687.0,True,Qualified,Bowler,Avesh Khan
+3660,324,91.0,True,Qualified,Bowler,Luke Wood
+3664,342,99.0,True,Qualified,Bowler,Binura Fernando
+3673,18,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Ramesh Mendis
+3683,36,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Gavin Main
+3686,97,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,CB Sole
+3689,125,23.0,False,Insufficient legal pressure balls bowled (23.0 < 60),Bowler,Mark Watt
+3697,627,170.0,True,Qualified,Bowler,Kyle Jamieson
+3720,466,123.0,True,Qualified,Bowler,Craig Young
+3727,151,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Matthew Short
+3771,97,19.0,False,Insufficient legal pressure balls bowled (19.0 < 60),Bowler,Vivian Kingma
+3772,132,56.0,False,Insufficient legal pressure balls bowled (56.0 < 60),Bowler,Logan van Beek
+3775,44,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Sompal Kami
+3782,18,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,M Shahrukh Khan
+3839,54,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Amjad Mahboob
+3871,48,10.0,False,Insufficient legal pressure balls bowled (10.0 < 60),Bowler,Aamir Kaleem
+3876,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Sufyan Mehmood
+3926,49,3.0,False,Insufficient legal pressure balls bowled (3.0 < 60),Bowler,Rahul Tewatia
+3986,36,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Matthew Renshaw
+3995,30,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Donald Tiripano
+4101,1737,583.0,True,Qualified,Bowler,Mitchell Santner
+4106,80,27.0,False,Insufficient legal pressure balls bowled (27.0 < 60),Bowler,Daryl Mitchell
+4111,60,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Khushdil Shah
+4117,1,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Ishan Kishan
+4201,308,115.0,True,Qualified,Bowler,Fareed Malik
+4219,1257,271.0,True,Qualified,Bowler,Krunal Pandya
+4221,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Chris Green
+4229,283,92.0,True,Qualified,Bowler,George Linde
+4235,72,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Sisanda Magala
+4237,310,111.0,True,Qualified,Bowler,Tabraiz Shamsi
+4246,101,9.0,False,Insufficient legal pressure balls bowled (9.0 < 60),Bowler,Nitish Rana
+4265,1052,480.0,True,Qualified,Bowler,T Natarajan
+4276,96,26.0,False,Insufficient legal pressure balls bowled (26.0 < 60),Bowler,Basil Thampi
+4288,90,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Navdeep Saini
+4373,1576,680.0,True,Qualified,Bowler,Mustafizur Rahman
+4391,594,202.0,True,Qualified,Bowler,Liam Livingstone
+4409,1350,535.0,True,Qualified,Bowler,Sam Curran
+4412,30,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Max ODowd
+4417,42,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Karan KC
+4438,90,39.0,False,Insufficient legal pressure balls bowled (39.0 < 60),Bowler,Jasdeep Singh
+4460,120,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Jeffrey Vandersay
+4487,519,180.0,True,Qualified,Bowler,Vyshak Kumar
+4489,1173,468.0,True,Qualified,Bowler,Prasidh Krishna
+4499,228,49.0,False,Insufficient legal pressure balls bowled (49.0 < 60),Bowler,Saqib Mahmood
+4505,120,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Jhye Richardson
+4604,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Mitchell Swepson
+4636,210,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Bjorn Fortuin
+4639,480,118.0,True,Qualified,Bowler,Wellington Masakadza
+4641,798,289.0,True,Qualified,Bowler,Lungi Ngidi
+4658,600,113.0,True,Qualified,Bowler,Nasum Ahmed
+4662,120,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Cole McConchie
+4686,48,15.0,False,Insufficient legal pressure balls bowled (15.0 < 60),Bowler,Joshua Clarkson
+4692,1076,392.0,True,Qualified,Bowler,Lockie Ferguson
+4708,10,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Rinku Singh
+4716,137,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Mayank Dagar
+4722,2747,1064.0,True,Qualified,Bowler,Rashid Khan
+4755,469,239.0,True,Qualified,Bowler,Shivam Dube
+4779,114,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Pieter Willem Mulder
+4780,99,41.0,False,Insufficient legal pressure balls bowled (41.0 < 60),Bowler,Mohammad Saif Hassan
+4790,110,39.0,False,Insufficient legal pressure balls bowled (39.0 < 60),Bowler,Lutho Sipamla
+4793,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Dean Foxcroft
+4807,780,227.0,True,Qualified,Bowler,Joshua Little
+4812,228,47.0,False,Insufficient legal pressure balls bowled (47.0 < 60),Bowler,Harry Tector
+4815,390,61.0,True,Qualified,Bowler,Benjamin White
+4816,1198,325.0,True,Qualified,Bowler,Khaleel Ahmed
+4821,30,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Mahipal Lomror
+4823,789,268.0,True,Qualified,Bowler,Washington Sundar
+4824,203,48.0,False,Insufficient legal pressure balls bowled (48.0 < 60),Bowler,Zeeshan Ansari
+4826,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,George Garton
+4837,641,275.0,True,Qualified,Bowler,Obed McCoy
+4838,90,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Keemo Paul
+4840,384,116.0,True,Qualified,Bowler,Odean Smith
+4842,196,89.0,True,Qualified,Bowler,Shamar Springer
+4853,113,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Glenn Phillips
+4854,132,22.0,False,Insufficient legal pressure balls bowled (22.0 < 60),Bowler,Rachin Ravindra
+4856,453,176.0,True,Qualified,Bowler,Benjamin Sears
+4857,102,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Nathan Smith
+4867,96,9.0,False,Insufficient legal pressure balls bowled (9.0 < 60),Bowler,Wesley Madhevere
+4870,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Kundai Matigimu
+4871,42,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Brandon Mavuta
+4874,846,223.0,True,Qualified,Bowler,Richard Ngarava
+4876,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Milton Shumba
+4881,36,3.0,False,Insufficient legal pressure balls bowled (3.0 < 60),Bowler,Dipendra Airee
+4882,49,29.0,False,Insufficient legal pressure balls bowled (29.0 < 60),Bowler,Kushal Bhurtel
+4895,161,48.0,False,Insufficient legal pressure balls bowled (48.0 < 60),Bowler,Charith Asalanka
+4900,2035,678.0,True,Qualified,Bowler,Wanindu Hasaranga
+4901,120,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Asitha Fernando
+4903,71,10.0,False,Insufficient legal pressure balls bowled (10.0 < 60),Bowler,Lahiru Kumara
+4904,150,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Kamindu Mendis
+4926,832,295.0,True,Qualified,Bowler,Shadab Khan
+4947,108,38.0,False,Insufficient legal pressure balls bowled (38.0 < 60),Bowler,Kasun Rajitha
+4974,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Mohammad Nadeem
+4986,73,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Rovman Powell
+5034,198,26.0,False,Insufficient legal pressure balls bowled (26.0 < 60),Bowler,Murugan Ashwin
+5041,1148,429.0,True,Qualified,Bowler,Mukesh Kumar
+5189,442,166.0,True,Qualified,Bowler,Faheem Ashraf
+5231,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Oshane Thomas
+5379,845,287.0,True,Qualified,Bowler,Mark Adair
+5441,619,199.0,True,Qualified,Bowler,Barry McCarthy
+5547,78,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Nosthush Kenjige
+5561,36,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Brad Wheal
+5562,194,93.0,True,Qualified,Bowler,Richard Gleeson
+5577,465,141.0,True,Qualified,Bowler,Sai Kishore
+5665,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Sanjay Yadav
+5738,624,175.0,True,Qualified,Bowler,Xavier Bartlett
+5750,186,70.0,True,Qualified,Bowler,Ehsan Khan
+5808,155,83.0,True,Qualified,Bowler,Karim Janat
+5809,786,292.0,True,Qualified,Bowler,Naveen ul Haq
+5837,914,186.0,True,Qualified,Bowler,Mahedi Hasan
+5844,72,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Ebadot Hossain
+5866,116,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Patrick Kruger
+5882,30,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Afif Hossain
+5892,215,73.0,True,Qualified,Bowler,Blair Tickner
+5939,753,220.0,True,Qualified,Bowler,Cameron Green
+5940,310,142.0,True,Qualified,Bowler,Riley Meredith
+5944,1806,471.0,True,Qualified,Bowler,Mohammed Siraj
+5977,120,27.0,False,Insufficient legal pressure balls bowled (27.0 < 60),Bowler,Khary Pierre
+5979,764,309.0,True,Qualified,Bowler,Abrar Ahmed
+6025,78,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Henry Shipley
+6097,268,87.0,True,Qualified,Bowler,Brydon Carse
+6160,336,95.0,True,Qualified,Bowler,Chamika Karunaratne
+6161,794,229.0,True,Qualified,Bowler,Rahul Chahar
+6162,56,26.0,False,Insufficient legal pressure balls bowled (26.0 < 60),Bowler,Kulwant Khejroliya
+6166,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Jack Edwards
+6180,48,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Praveen Jayawickrama
+6188,12,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Simi Singh
+6196,120,54.0,False,Insufficient legal pressure balls bowled (54.0 < 60),Bowler,Josh Tongue
+6237,186,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Manimaran Siddharth
+6256,2128,854.0,True,Qualified,Bowler,Varun Chakravarthy
+6272,413,71.0,True,Qualified,Bowler,William Jacks
+6281,427,186.0,True,Qualified,Bowler,Abhishek Sharma
+6284,311,49.0,False,Insufficient legal pressure balls bowled (49.0 < 60),Bowler,Anukul Roy
+6285,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Kamlesh Nagarkoti
+6286,216,107.0,True,Qualified,Bowler,Shivam Mavi
+6287,527,222.0,True,Qualified,Bowler,Yash Thakur
+6297,36,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Matthew Parkinson
+6350,120,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Matthew Kuhnemann
+6354,438,117.0,True,Qualified,Bowler,Spencer Johnson
+6355,990,287.0,True,Qualified,Bowler,Shaheen Afridi
+6356,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Khaled Ahmed
+6359,90,41.0,False,Insufficient legal pressure balls bowled (41.0 < 60),Bowler,Raghu Sharma
+6389,102,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Tanvir Islam
+6396,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Tim David
+6398,271,113.0,True,Qualified,Bowler,Aaron Hardie
+6423,260,56.0,False,Insufficient legal pressure balls bowled (56.0 < 60),Bowler,Riyan Parag
+6436,54,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Qais Ahmad
+6449,31,1.0,False,Insufficient legal pressure balls bowled (1.0 < 60),Bowler,Wafadar Momand
+6450,820,170.0,True,Qualified,Bowler,Mujeeb Ur Rahman
+6460,41,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Ayush Badoni
+6464,3207,1119.0,True,Qualified,Bowler,Arshdeep Singh
+6466,1,1.0,False,Insufficient legal pressure balls bowled (1.0 < 60),Bowler,Atharwa Taide
+6489,84,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Darshan Nalkande
+6503,120,76.0,True,Qualified,Bowler,Zahoor Khan
+6506,72,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Mohammad Imran Randhawa
+6512,678,192.0,True,Qualified,Bowler,Michael Bracewell
+6515,245,68.0,True,Qualified,Bowler,Benjamin Lister
+6518,350,69.0,True,Qualified,Bowler,Daniel Sams
+6523,820,215.0,True,Qualified,Bowler,Blessing Muzarabani
+6566,54,15.0,False,Insufficient legal pressure balls bowled (15.0 < 60),Bowler,Matthew John Fisher
+6574,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Alick Athanaze
+6591,84,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,KM Asif
+6628,592,205.0,True,Qualified,Bowler,Gerald Coetzee
+6643,396,146.0,True,Qualified,Bowler,Hasan Mahmud
+6651,2,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Towhid Hridoy
+6664,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Dion Myers
+6669,654,177.0,True,Qualified,Bowler,Mohsin Khan
+6671,204,33.0,False,Insufficient legal pressure balls bowled (33.0 < 60),Bowler,Lalit Yadav
+6676,1067,272.0,True,Qualified,Bowler,Azmatullah Omarzai
+6677,222,63.0,True,Qualified,Bowler,Mohammad Hasnain
+6683,432,186.0,True,Qualified,Bowler,Mayank Markande
+6697,30,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Shams Mulani
+6725,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Sherfane Rutherford
+6726,1539,556.0,True,Qualified,Bowler,Romario Shepherd
+6772,132,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Chetan Sakariya
+6795,26,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Terrance Hinds
+6797,126,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Dominic Drakes
+6806,1037,330.0,True,Qualified,Bowler,Tushar Deshpande
+6819,7,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Yashasvi Jaiswal
+6926,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Matty Potts
+6932,97,28.0,False,Insufficient legal pressure balls bowled (28.0 < 60),Bowler,Pramod Madushan
+6984,12,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Saqib Zulfiqar
+6985,72,25.0,False,Insufficient legal pressure balls bowled (25.0 < 60),Bowler,Bas de Leede
+6995,72,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Saad Zafar
+7001,54,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Dilon Heyliger
+7002,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Nicholas Kirton
+7008,65,11.0,False,Insufficient legal pressure balls bowled (11.0 < 60),Bowler,Gus Atkinson
+7049,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Kamil Mishara
+7052,255,75.0,True,Qualified,Bowler,Dunith Wellalage
+7059,17,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Nehal Wadhera
+7060,97,9.0,False,Insufficient legal pressure balls bowled (9.0 < 60),Bowler,Arjun Tendulkar
+7094,396,106.0,True,Qualified,Bowler,Curtis Campher
+7120,42,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Rohit Paudel
+7140,42,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Senuran Muthusamy
+7201,72,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Haroon Arshad
+7227,66,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Nijat Masood
+7240,1027,285.0,True,Qualified,Bowler,FazalHaq Farooqi
+7241,48,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Ziaur Rahman
+7250,483,83.0,True,Qualified,Bowler,Mukesh Choudhary
+7269,38,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Sushant Mishra
+7270,836,336.0,True,Qualified,Bowler,Anrich Nortje
+7312,441,105.0,True,Qualified,Bowler,Nandre Burger
+7322,871,242.0,True,Qualified,Bowler,Yash Dayal
+7325,667,120.0,True,Qualified,Bowler,Harpreet Brar
+7327,464,183.0,True,Qualified,Bowler,Rasikh Salam
+7344,790,203.0,True,Qualified,Bowler,Shoriful Islam
+7364,1027,382.0,True,Qualified,Bowler,Haris Rauf
+7403,30,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Lalit Rajbanshi
+7446,9,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Abdul Samad
+7472,535,168.0,True,Qualified,Bowler,Shahbaz Ahmed
+7473,278,69.0,True,Qualified,Bowler,Akash Deep
+7503,2327,906.0,True,Qualified,Bowler,Ravi Bishnoi
+7533,240,56.0,False,Insufficient legal pressure balls bowled (56.0 < 60),Bowler,Simarjeet Singh
+7544,49,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Venkatesh Iyer
+7545,241,75.0,True,Qualified,Bowler,Kuldeep Sen
+7574,282,56.0,False,Insufficient legal pressure balls bowled (56.0 < 60),Bowler,Kumar Kartikeya Singh
+7625,60,20.0,False,Insufficient legal pressure balls bowled (20.0 < 60),Bowler,Suryansh Shedge
+7634,18,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Aaron Jones
+7689,362,93.0,True,Qualified,Bowler,Dilshan Madushanka
+7690,510,125.0,True,Qualified,Bowler,Saim Ayub
+7696,355,129.0,True,Qualified,Bowler,Mohammad Wasim
+7699,399,120.0,True,Qualified,Bowler,Abbas Afridi
+7702,42,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Chamindu Wickramasinghe
+7704,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Pavan Rathnayake
+7709,66,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Ainsley Ndlovu
+7710,12,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Brandon Glover
+7741,552,165.0,True,Qualified,Bowler,Gareth Delany
+7755,48,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Harsh Thaker
+7756,67,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Kaleem Sana
+7808,1317,357.0,True,Qualified,Bowler,Marco Jansen
+7896,223,34.0,False,Insufficient legal pressure balls bowled (34.0 < 60),Bowler,Akash Singh
+7897,61,21.0,False,Insufficient legal pressure balls bowled (21.0 < 60),Bowler,Namboori Tilak Varma
+7903,91,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Shamim Hossain
+7905,677,279.0,True,Qualified,Bowler,Tanzim Sakib
+7912,45,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Vikramjit Singh
+7914,36,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Clayton Floyd
+7916,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Karima Gore
+7920,916,402.0,True,Qualified,Bowler,Nathan Ellis
+7927,54,33.0,False,Insufficient legal pressure balls bowled (33.0 < 60),Bowler,Janak Prakash
+7928,65,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Vinoth Baskaran
+7929,42,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Aryaman Sunil Uchil
+7935,108,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Mohammad Ghazanfar
+7967,1467,556.0,True,Qualified,Bowler,Noor Ahmad
+8005,78,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Zawar Farid
+8009,330,148.0,True,Qualified,Bowler,Junaid Siddique
+8049,576,173.0,True,Qualified,Bowler,Naseem Shah
+8093,42,25.0,False,Insufficient legal pressure balls bowled (25.0 < 60),Bowler,Nikhil Chaudhary
+8141,78,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Auqib Nabi
+8177,352,184.0,True,Qualified,Bowler,Akash Madhwal
+8182,109,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Donovan Ferreira
+8221,565,247.0,True,Qualified,Bowler,Nitish Reddy
+8266,20,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Sumit Kumar 1
+8295,408,70.0,True,Qualified,Bowler,Matthew Forde
+8298,78,25.0,False,Insufficient legal pressure balls bowled (25.0 < 60),Bowler,Ramon Simmonds
+8311,54,35.0,False,Insufficient legal pressure balls bowled (35.0 < 60),Bowler,Dan Mousley
+8326,180,52.0,False,Insufficient legal pressure balls bowled (52.0 < 60),Bowler,Jayden Seales
+8380,1018,408.0,True,Qualified,Bowler,Mohammad Rishad Hossain
+8389,18,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Jayden Lennox
+8424,168,61.0,True,Qualified,Bowler,Tanveer Sangha
+8530,415,175.0,True,Qualified,Bowler,Kartik Tyagi
+8580,138,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Yudhvir Singh
+8611,24,13.0,False,Insufficient legal pressure balls bowled (13.0 < 60),Bowler,Adithya Ashok
+8614,182,65.0,True,Qualified,Bowler,William ORourke
+8623,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Kristian Clarke
+8634,183,84.0,True,Qualified,Bowler,Ashwani Kumar
+8638,138,65.0,True,Qualified,Bowler,Basil Hameed
+8639,96,32.0,False,Insufficient legal pressure balls bowled (32.0 < 60),Bowler,Kartik Meiyappan
+8654,114,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Cooper Connolly
+8661,1132,628.0,True,Qualified,Bowler,Matheesha Pathirana
+8664,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Victor Nyauchi
+8719,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Aryan Lakra
+8723,48,32.0,False,Insufficient legal pressure balls bowled (32.0 < 60),Bowler,Mohammed Faraazuddin
+8726,1,1.0,False,Insufficient legal pressure balls bowled (1.0 < 60),Bowler,Alishan Sharafu
+8727,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Sanchit Sharma
+8746,866,214.0,True,Qualified,Bowler,Vaibhav Arora
+8763,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Duan Jansen
+8805,323,121.0,True,Qualified,Bowler,Ottneil Baartman
+15269,48,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Mohammed Aslam
+15279,66,21.0,False,Insufficient legal pressure balls bowled (21.0 < 60),Bowler,Shiraz Khan
+15280,66,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Sayed Monib
+16498,45,3.0,False,Insufficient legal pressure balls bowled (3.0 < 60),Bowler,Sultan Ahmad
+17424,188,44.0,False,Insufficient legal pressure balls bowled (44.0 < 60),Bowler,Graham Hume
+17430,30,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Conor Olphert
+17911,66,35.0,False,Insufficient legal pressure balls bowled (35.0 < 60),Bowler,Nangeyalia Kharote
+17918,18,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Abdullah Tarakhail
+17919,18,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Mohammad Saleem Safi
+19020,63,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Ateeq Iqbal
+19125,138,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Ayush Shukla
+19145,72,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Aamer Jamal
+19147,99,25.0,False,Insufficient legal pressure balls bowled (25.0 < 60),Bowler,Faraz Akram
+19307,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Tharindu Rathnayake
+19312,775,234.0,True,Qualified,Bowler,Nuwan Thushara
+19315,108,10.0,False,Insufficient legal pressure balls bowled (10.0 < 60),Bowler,Vijayakanth Viyaskanth
+19316,2265,661.0,True,Qualified,Bowler,Maheesh Theekshana
+19530,170,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Shahnawaz Dhani
+19754,24,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Raja Khan
+19781,30,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Mitchell Owen
+19892,6,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Theo van Woerkom
+19902,132,43.0,False,Insufficient legal pressure balls bowled (43.0 < 60),Bowler,Tim Pringle
+19998,36,15.0,False,Insufficient legal pressure balls bowled (15.0 < 60),Bowler,Rajvardhan Hangargekar
+20005,376,106.0,True,Qualified,Bowler,Arshad Khan
+20006,76,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Ramandeep Singh
+20175,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Nandan Yadav
+20229,42,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Mohammad Ali
+20310,42,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Ahmed Daniyal
+20316,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Shahab Alam
+20693,42,11.0,False,Insufficient legal pressure balls bowled (11.0 < 60),Bowler,Kuldip Yadav
+20702,48,16.0,False,Insufficient legal pressure balls bowled (16.0 < 60),Bowler,Tristan Stubbs
+20704,328,82.0,True,Qualified,Bowler,Salman Mirza
+20894,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Aman Khan
+20989,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Vivrant Sharma
+21780,60,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Ernest Masuku
+21784,438,134.0,True,Qualified,Bowler,Brad Evans
+21786,27,1.0,False,Insufficient legal pressure balls bowled (1.0 < 60),Bowler,Tanaka Chivanga
+22134,330,124.0,True,Qualified,Bowler,Luke Jongwe
+22137,134,20.0,False,Insufficient legal pressure balls bowled (20.0 < 60),Bowler,Fionn Hand
+22187,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Ryan Klein
+22188,140,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Aryan Dutt
+22471,305,65.0,True,Qualified,Bowler,Matthew Humphreys
+22565,17,11.0,False,Insufficient legal pressure balls bowled (11.0 < 60),Bowler,Muhammad Waseem
+22920,877,266.0,True,Qualified,Bowler,Jacob Duffy
+23311,87,37.0,False,Insufficient legal pressure balls bowled (37.0 < 60),Bowler,Jacob Bethell
+23467,151,68.0,True,Qualified,Bowler,Gurjapneet Singh
+24017,132,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Brian Bennett
+24346,63,23.0,False,Insufficient legal pressure balls bowled (23.0 < 60),Bowler,Mohamed Shafeeq
+24381,36,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Shariz Ahmad
+24473,95,38.0,False,Insufficient legal pressure balls bowled (38.0 < 60),Bowler,Sonny Baker
+24475,210,58.0,False,Insufficient legal pressure balls bowled (58.0 < 60),Bowler,Rehan Ahmed
+24767,36,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Ripon Mondol
+24779,6,1.0,False,Insufficient legal pressure balls bowled (1.0 < 60),Bowler,Ijaz Ahmadzai
+24812,54,13.0,False,Insufficient legal pressure balls bowled (13.0 < 60),Bowler,Chris Greaves
+24887,6,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Innocent Kaia
+24978,22,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Jack Jarvis
+25011,66,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Liam Mccarthy
+25030,189,33.0,False,Insufficient legal pressure balls bowled (33.0 < 60),Bowler,Zaman Khan
+25048,560,237.0,True,Qualified,Bowler,Umran Malik
+25128,162,56.0,False,Insufficient legal pressure balls bowled (56.0 < 60),Bowler,Nqabayomzi Peter
+25132,156,64.0,True,Qualified,Bowler,Praful Hinge
+25138,192,49.0,False,Insufficient legal pressure balls bowled (49.0 < 60),Bowler,Harsh Dubey
+25213,3,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Dewald Brevis
+25216,108,32.0,False,Insufficient legal pressure balls bowled (32.0 < 60),Bowler,Andile Simelane
+25231,42,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Samay Shrivastava
+25502,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Adnan Idrees
+25507,18,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Edson Silva
+25809,60,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Juanoy Drysdale
+26519,8,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Janith Liyanage
+26663,305,110.0,True,Qualified,Bowler,Kwena Maphaka
+26795,48,22.0,False,Insufficient legal pressure balls bowled (22.0 < 60),Bowler,Joel Davies
+26834,24,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Raj Bawa
+26916,48,11.0,False,Insufficient legal pressure balls bowled (11.0 < 60),Bowler,Yasir Mohammad
+26988,48,21.0,False,Insufficient legal pressure balls bowled (21.0 < 60),Bowler,Jitenkumar Ramanandi
+27004,42,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Hassnain Shah
+27364,51,8.0,False,Insufficient legal pressure balls bowled (8.0 < 60),Bowler,Simranjeet Kang
+27373,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Muhammad Farooq
+27380,60,42.0,False,Insufficient legal pressure balls bowled (42.0 < 60),Bowler,Harshit Kaushik
+27390,60,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Matiullah Khan
+27460,36,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Ali Naseer
+27464,102,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Aayan Afzal Khan
+27466,186,31.0,False,Insufficient legal pressure balls bowled (31.0 < 60),Bowler,Dhruv Parashar
+27504,68,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Dushan Hemantha
+27516,89,30.0,False,Insufficient legal pressure balls bowled (30.0 < 60),Bowler,Ihsanullah Ihsanullah
+27743,192,73.0,True,Qualified,Bowler,DT Doram
+27956,36,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Prashant Solanki
+27959,204,41.0,False,Insufficient legal pressure balls bowled (41.0 < 60),Bowler,Hrithik Shokeen
+27960,493,211.0,True,Qualified,Bowler,Mayank Yadav
+27964,491,105.0,True,Qualified,Bowler,Anshul Kamboj
+27970,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Gurnoor Brar
+28018,174,91.0,True,Qualified,Bowler,Ashok Sharma
+28021,77,23.0,False,Insufficient legal pressure balls bowled (23.0 < 60),Bowler,Saurabh Dubey
+28655,112,28.0,False,Insufficient legal pressure balls bowled (28.0 < 60),Bowler,Muhammad Rohid
+28756,270,81.0,True,Qualified,Bowler,Haider Ali
+28908,19,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Vincent Masekesa
+28911,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,John Masara
+28915,150,44.0,False,Insufficient legal pressure balls bowled (44.0 < 60),Bowler,Trevor Gwandu
+29066,364,113.0,True,Qualified,Bowler,Zakary Foulkes
+29075,36,21.0,False,Insufficient legal pressure balls bowled (21.0 < 60),Bowler,Aadil Ansari
+29080,96,49.0,False,Insufficient legal pressure balls bowled (49.0 < 60),Bowler,Muhammad Khan
+29558,48,26.0,False,Insufficient legal pressure balls bowled (26.0 < 60),Bowler,Muhammad Arfan
+29699,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Ibrahim Takahashi
+29833,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Bashir Ahmad
+29888,901,283.0,True,Qualified,Bowler,Harshit Rana
+30925,108,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Bradley Currie
+31107,72,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Yasin Patel
+31227,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Vidhwath Kaverappa
+31513,6,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Ethan Dsouza
+31835,60,14.0,False,Insufficient legal pressure balls bowled (14.0 < 60),Bowler,Akshay Roopak Puri
+32244,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Tripurana Vijay
+32401,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Akhil Kumar
+32862,305,62.0,True,Qualified,Bowler,Allah Ghazanfar
+33009,36,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,John Turner
+33440,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Adwitya Bhargava
+33443,48,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Sabir Ali
+33969,176,25.0,False,Insufficient legal pressure balls bowled (25.0 < 60),Bowler,Tinotenda Maposa
+34466,42,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Arafat Minhas
+34485,344,166.0,True,Qualified,Bowler,Sufiyan Muqeem
+34522,48,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Brandon McMullen
+34527,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Jasper John Davidson
+34969,48,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Manav Suthar
+35072,18,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Ramakrishna Ghosh
+35102,18,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Zikria Islam
+35122,72,36.0,False,Insufficient legal pressure balls bowled (36.0 < 60),Bowler,Shah Faisal
+35318,252,124.0,True,Qualified,Bowler,Sakib Hussain
+36551,6,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Zishan Motara
+36553,119,23.0,False,Insufficient legal pressure balls bowled (23.0 < 60),Bowler,Jediah Blades
+36981,30,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Himanshu Sharma
+36982,803,322.0,True,Qualified,Bowler,Suyash Sharma
+36983,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Mohit Rathee
+36984,24,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Raghav Goyal
+37052,124,61.0,True,Qualified,Bowler,Naman Dhir
+37731,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Musheer Khan
+37939,93,39.0,False,Insufficient legal pressure balls bowled (39.0 < 60),Bowler,Nahid Rana
+38044,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Mahli Beardman
+38855,442,171.0,True,Qualified,Bowler,Mohammad Saifuddin
+39657,807,279.0,True,Qualified,Bowler,Eshan Malinga
+39991,48,3.0,False,Insufficient legal pressure balls bowled (3.0 < 60),Bowler,Parveen Kumar
+41503,180,63.0,True,Qualified,Bowler,Yash Punja
+42548,204,114.0,True,Qualified,Bowler,Muhammad Jawadullah
+43917,36,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,Krish Bhagat
+45381,24,12.0,False,Insufficient legal pressure balls bowled (12.0 < 60),Bowler,PV Satyanarayan Raju
+45457,70,38.0,False,Insufficient legal pressure balls bowled (38.0 < 60),Bowler,Zach Lion Cachet
+45966,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Prashant Veer
+46066,288,93.0,True,Qualified,Bowler,Vipraj Nigam
+46378,163,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Kyle Klein
+46929,6,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Dian Forrester
+47050,471,194.0,True,Qualified,Bowler,Shamar Joseph
+47371,18,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Zuhaid Zubair
+47403,83,17.0,False,Insufficient legal pressure balls bowled (17.0 < 60),Bowler,Newman Nyamhuri
+47542,12,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Charles Hinze
+47724,108,8.0,False,Insufficient legal pressure balls bowled (8.0 < 60),Bowler,Jahandad Khan
+48557,72,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Vignesh Puthur
+48616,68,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Abdul Saqlain
+50062,63,21.0,False,Insufficient legal pressure balls bowled (21.0 < 60),Bowler,Nqobani Mokoena
+52338,64,61.0,True,Qualified,Bowler,Usman Tariq
+54404,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Benjamin Ito
+56685,190,94.0,True,Qualified,Bowler,Abdullah Ahmadzai
+56817,234,79.0,True,Qualified,Bowler,Shivang Kumar
+56830,66,16.0,False,Insufficient legal pressure balls bowled (16.0 < 60),Bowler,Madhav Tiwari
+57747,6,0.0,False,Insufficient legal pressure balls bowled (0.0 < 60),Bowler,Charlie Cassell
+58134,546,125.0,True,Qualified,Bowler,Digvesh Rathi
+58246,710,237.0,True,Qualified,Bowler,Prince Yadav
+58727,58,24.0,False,Insufficient legal pressure balls bowled (24.0 < 60),Bowler,Abhinandan Singh
+59045,48,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Jai Moondra
+60609,48,18.0,False,Insufficient legal pressure balls bowled (18.0 < 60),Bowler,Navin Bidaisee
+67036,273,135.0,True,Qualified,Bowler,Brijesh Sharma
+67864,48,21.0,False,Insufficient legal pressure balls bowled (21.0 < 60),Bowler,Matt Hollard
+71727,37,6.0,False,Insufficient legal pressure balls bowled (6.0 < 60),Bowler,Razaullah Razaullah

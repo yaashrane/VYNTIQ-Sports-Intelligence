@@ -1,0 +1,16 @@
+{
+  "ball_by_ball_records": 200999,
+  "matches_records": 883,
+  "unique_matches_in_bbb": 867,
+  "competitions_records": 141,
+  "playing_eleven_records": 28381,
+  "player_mappings_records": 6413,
+  "teams_records": 353,
+  "unique_strikers": 888,
+  "unique_bowlers": 647,
+  "unique_players_in_bbb": 958,
+  "unique_players_in_mapping": 1217,
+  "unique_players_in_p11": 1082,
+  "duplicate_bbb_rows": 0,
+  "duplicate_match_rows": 0
+}

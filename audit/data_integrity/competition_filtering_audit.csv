@@ -1,0 +1,4 @@
+comp_category,total_matches,min_date,max_date,abandoned_matches,completed_matches,total_deliveries,in_primary_scope
+IPL,371,2022-03-26,2026-05-31,4.0,367,87687,True
+Other_Domestic_A,30,2024-10-18,2025-11-23,0.0,30,6985,False
+T20I,482,2022-01-22,2026-11-01,12.0,470,106327,True
