@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from backend.app.api.api_v1 import api_v1_router
 from backend.app.core.config import get_settings
+from backend.app.core.database import initialize_database
 from backend.app.core.exceptions import register_exception_handlers
 from backend.app.core.logging import get_logger, setup_logging
 
@@ -29,6 +30,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         settings.VERSION,
         settings.ENVIRONMENT,
     )
+    await initialize_database()
     yield
     # Shutdown sequence
     logger.info("Shutting down %s gracefully.", settings.PROJECT_NAME)
@@ -85,4 +87,3 @@ def create_application() -> FastAPI:
 
 
 app = create_application()
-

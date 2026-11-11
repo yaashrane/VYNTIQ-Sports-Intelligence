@@ -157,9 +157,15 @@ The frontend dashboard will be available at:
 
 ---
 
-## 5. Running Automated Tests
+## 5. Deploying to Render and Vercel
 
-### 5.1 Backend Test Suite (Pytest)
+For free-tier deployment instructions using Render, Vercel, and PostgreSQL, see [docs/DEPLOYMENT_RENDER_VERCEL.md](docs/DEPLOYMENT_RENDER_VERCEL.md). The repository includes a Render Blueprint at [render.yaml](render.yaml) and Vercel SPA routing configuration at [frontend/vercel.json](frontend/vercel.json).
+
+---
+
+## 6. Running Automated Tests
+
+### 6.1 Backend Test Suite (Pytest)
 
 Run all 100 backend domain, integration, and end-to-end pipeline tests:
 
@@ -167,7 +173,7 @@ Run all 100 backend domain, integration, and end-to-end pipeline tests:
 python -m pytest backend/tests -v
 ```
 
-### 5.2 Frontend Test Suite (Vitest)
+### 6.2 Frontend Test Suite (Vitest)
 
 Run all 10 frontend component, layout, and integration tests:
 
@@ -178,7 +184,7 @@ npm run test
 
 ---
 
-## 6. Implementation Status (Current Phase)
+## 7. Implementation Status (Current Phase)
 
 | Milestone / Component | Track | Status | Description |
 | :--- | :---: | :---: | :--- |
@@ -197,10 +203,8 @@ npm run test
 
 ---
 
-## 7. Release Governance & Official Competition Data Status
+## 8. Release Governance & Official Competition Data Status
 
 * **Release Status:** `v1.0.0-rc1` (Integration Complete — Ready for Staging Deployment)
 * **Official Data Gate:** `BLOCKED — OFFICIAL DATA PENDING` (Awaiting delivery of official competition match records).
 * **Automated Test Coverage:** 100/100 Backend Tests Passing (100%), 10/10 Frontend Tests Passing (100%).
-
-
