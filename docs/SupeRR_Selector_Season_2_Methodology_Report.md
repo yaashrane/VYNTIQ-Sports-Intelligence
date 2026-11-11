@@ -1,9 +1,9 @@
-# SupeRR Selector Season 2 — Canonical Methodology Report (V3.3)
+# SupeRR Selector Season 2 — Canonical Methodology Report (V3.6)
 
 **Competition:** Rajasthan Royals — SupeRR Selector Season 2 (Round 1)  
 **Challenge:** Identify the Most Reliable Players Under Pressure  
 **Target:** IPL 2027 Auction Strategy  
-**Dataset Analyzed:** 194,014 Audited Deliveries across 837 Matches with Deliveries (853 Primary Match Records, 16 Abandoned Washouts)  
+**Dataset Analyzed:** 194,014 Audited Deliveries across 837 Matches with Deliveries (853 Primary Match Records, 16 Abandoned Washouts, inclusive of 26 Super Over deliveries: 14 IPL across 2 matches, 12 T20I across 2 matches)  
 **Author:** VYNTIQ Sports Intelligence Platform  
 **Generated PDF File:** `docs/SupeRR_Selector_Season_2_Methodology_Report.pdf`
 
@@ -13,7 +13,7 @@
 
 This submission presents a unified, mathematically reconciled cricket analytics pipeline developed for the Rajasthan Royals war room to identify the most reliable players under extreme match pressure for the IPL 2027 auction. The canonical analytics engine implements verified cricket accounting (0 runs charged to bowlers for byes/leg-byes, non-overstep waist-high beamers correctly classified as illegal no-balls), striker-verified dismissal attribution, complete match count reconciliation (853 primary-scope match records, 837 matches containing ball-by-ball deliveries, 16 abandoned washouts with zero deliveries), and empirical reliability shrinkage ($C = 120$ for batters, $C = 150$ for bowlers). Note that matches containing deliveries are not necessarily completed in full (some were curtailed or affected by weather/DLS adjustments).
 
-Player value is reported via the **Pressure Performance Rating (PPR)** [0–100 scale] and **Pressure Surplus Rating (PSR)** defined as surplus performance relative to the empirical cohort prior median ($R_{\text{median}} = 50.0$). PSR is not a true replacement-level baseline, as franchise cricket lacks a minor league/waiver wire substitute pool; it measures surplus performance above the average qualified peer.
+Player value is reported via the **Pressure Performance Rating (PPR)** [0–100 scale] and **Pressure Surplus Rating (PSR)** defined as surplus performance relative to the empirical cohort prior median ($R_{\text{median}} = 50.0$). PSR is not a replacement-level metric, as franchise cricket lacks a minor league/waiver wire substitute pool; it measures surplus performance above the empirical cohort prior median ($R_{\text{median}} = 50.0$).
 
 ### Top 10 Batters (Unstop Dropdowns 1 to 10)
 
@@ -50,7 +50,7 @@ Player value is reported via the **Pressure Performance Rating (PPR)** [0–100 
 ---
 
 ## 2. Audit Background & Problem Formulation
-T20 matches in high-stakes franchise cricket are decided in clutch leverage windows: the final overs of steep run chases, defending modest totals with dew on the ground, or recovering from top-order Powerplay collapses. Traditional aggregated statistics conflate low-leverage stat-padding with genuine high-pressure reliability. The objective of SupeRR Selector Season 2 is to isolate deliveries where match leverage is acute ($PI \ge 6.5$) and quantify which players systematically outperform replacement level when the game hangs in the balance.
+T20 matches in high-stakes franchise cricket are decided in clutch leverage windows: the final overs of steep run chases, defending modest totals with dew on the ground, or recovering from top-order Powerplay collapses. Traditional aggregated statistics conflate low-leverage stat-padding with genuine high-pressure reliability. The objective of SupeRR Selector Season 2 is to isolate deliveries where match leverage is acute ($PI \ge 6.5$) and quantify which players systematically outperform the empirical cohort prior median when the game hangs in the balance.
 
 ---
 
@@ -58,10 +58,10 @@ T20 matches in high-stakes franchise cricket are decided in clutch leverage wind
 
 | Competition Category | Total Match Records | Matches with Deliveries | Abandoned Matches (No Balls) | Total Deliveries in Dataset | Primary Scope? |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| **Indian Premier League (IPL)** | 371 | 367 | 4 | 87,687 | **Yes** |
-| **International T20 (T20I)** | 482 | 470 | 12 | 106,327 | **Yes** |
-| **Other Domestic / 'A'** | 30 | 30 | 0 | 6,985 | **No (Quarantined)** |
-| **Total Primary Scope** | **853** | **837** | **16** | **194,014** | — |
+| **Indian Premier League (IPL)** | 371 | 367 | 4 | 87,687 | **Yes (incl. 14 Super Over balls across 2 matches)** |
+| **International T20 (T20I)** | 482 | 470 | 12 | 106,327 | **Yes (incl. 12 Super Over balls across 2 matches)** |
+| **Other Domestic / 'A'** | 30 | 30 | 0 | 6,985 | **No (Quarantined; incl. 12 SO balls)** |
+| **Total Primary Scope** | **853** | **837** | **16** | **194,014** | **Yes (incl. 26 Super Over balls across 4 matches)** |
 
 *Note on Completion:* Matches containing deliveries are not assumed to be completed in full (some were rain-shortened, ended prematurely, or adjusted via DLS).
 
@@ -136,6 +136,7 @@ $$PI_{\text{inn1}} = \text{clip}\Big(P_{\text{phase}}(\text{Over}) + P_{\text{co
    - *Pressure Components:* Fixed deterministically at terminal maximum leverage ($10.00$).
    - *Knockout Multiplier:* Bypassed / not applied (Super Overs remain deterministically pegged at 10.00).
    - *Contestability Result:* Not applicable.
+   - *Explicit Scope & Accounting:* Included in the 194,014 primary scope (26 primary SO deliveries: 14 IPL across 2 matches, 12 T20I across 2 matches) and counts toward high-pressure workload qualification ($N_{\text{pressure}} \ge 60$) and player PPR ratings, but excluded from the non-pressure baseline.
    - *Final Clipped PI:* **10.00** (Terminal Extreme Pressure).
 
 ![Figure 2: Pressure by Match Phase](assets/pressure_by_match_phase.png)
@@ -177,7 +178,7 @@ Composite scores normalize metrics using empirical cumulative distribution perce
 1. **Tristan Stubbs (PPR: 82.23 | PSR: +32.23):** 651 HP balls, 168.51 SR (+46.70 delta), 73.0% control. World-class 360-degree death execution.
 2. **David Miller (PPR: 80.34 | PSR: +30.34):** 805 HP balls, 166.83 SR (+47.25 delta). Veteran closer with ice in his veins.
 3. **Suryakumar Yadav (PPR: 80.16 | PSR: +30.16):** 665 HP balls, 189.17 SR (+29.96 delta). Field manipulation genius.
-4. **Naman Dhir (PPR: 79.39 | PSR: +29.39):** 254 HP balls, 196.06 SR (+47.40 delta). Prime domestic auction breakout pick.
+4. **Naman Dhir (PPR: 79.39 | PSR: +29.39):** 254 HP balls, 196.06 SR (+47.40 delta). Exceptional young talent with domestic pedigree; exceptional high-leverage finisher providing significant pressure-performance surplus relative to the empirical cohort median.
 5. **Tilak Varma (PPR: 78.26 | PSR: +28.26):** 904 HP balls, 165.71 SR (+34.86 delta). Heavy-volume clutch accumulator and finisher.
 6. **Shashank Singh (PPR: 77.45 | PSR: +27.45):** 371 HP balls, 173.85 SR (+36.28 delta). Elite middle-to-death acceleration.
 7. **Rishabh Pant (PPR: 76.76 | PSR: +26.76):** 379 HP balls, 178.89 SR (+51.60 delta). Exceptional chase elevation.
@@ -200,7 +201,7 @@ Bowling reliability combines economy suppression, elevation differential, dot-ba
 2. **Sunil Narine (PPR: 77.88 | PSR: +27.88):** 508 HP balls, 6.04 rpo (+1.22 delta), 34 wkts. Legendary defensive spin mastery.
 3. **Abrar Ahmed (PPR: 77.72 | PSR: +27.72):** 309 HP balls, 5.65 rpo (+1.70 delta), 23 wkts. Mystery spinner with deceptive variations.
 4. **Wanindu Hasaranga (PPR: 76.36 | PSR: +26.36):** 678 HP balls, 7.69 rpo (+0.35 delta), 61 wkts. Aggressive wicket-taking threat.
-5. **Mitchell Santner (PPR: 75.66 | PSR: +25.66):** 583 HP balls, 6.97 rpo (+0.64 delta), 41 wkts. Verified sub-7.0 rpo economy.
+5. **Mitchell Santner (PPR: 75.66 | PSR: +25.66):** 583 HP balls, 6.97 rpo (+0.64 delta), 41 wkts. Combined high-pressure economy across 583 legal balls.
 6. **Varun Chakravarthy (PPR: 74.37 | PSR: +24.37):** 854 HP balls, 7.76 rpo (+0.40 delta), 61 wkts. Proven Indian mystery spinner.
 7. **Jamie Overton (PPR: 73.75 | PSR: +23.75):** 257 HP balls, 7.91 rpo (+1.44 delta), 24 wkts. Hard-length enforcer pace.
 8. **Shaheen Afridi (PPR: 73.61 | PSR: +23.61):** 287 HP balls, 7.61 rpo (+0.45 delta), 30 wkts. Opening & death yorker execution.
@@ -211,14 +212,14 @@ Bowling reliability combines economy suppression, elevation differential, dot-ba
 
 ## 12.3 Rajasthan Royals Tactical Integration Blueprint
 
-To address historical tactical vulnerabilities and support informed squad construction at the IPL 2027 auction, Rajasthan Royals should target specific players from the top-10 cohort:
+To support informed squad construction at the IPL 2027 auction, the table below highlights candidate options from the top-10 cohort across key tactical archetypes:
 
 | Target Archetype | Recommended Targets | Tactical Role for RR at Sawai Mansingh Stadium (Jaipur) |
 |:---|:---|:---|
-| **Middle-Order Finisher** | **Tristan Stubbs** (PPR 82.23)<br/>**Naman Dhir** (PPR 79.39) | Solves RR's middle-overs slowdown. Stubbs provides 360-degree boundary hitting against spin and pace at death; Dhir offers high auction surplus as an uncapped/low-base domestic asset. |
-| **Defensive Spin Strangle** | **Mitchell Santner** (PPR 75.66)<br/>**Sunil Narine** (PPR 77.88) | Jaipur's large square boundaries reward defensive spin. Santner (verified 6.97 rpo) and Narine (6.04 rpo) strangle run chases in overs 7–15, forcing low-percentage shots. |
-| **Wicket-Taking Mystery** | **Varun Chakravarthy** (PPR 74.37)<br/>**Wanindu Hasaranga** (PPR 76.36) | Provides attacking breakthrough capacity. Hasaranga (61 wkts) and Chakravarthy (61 wkts) dismantle middle-order partnerships under scoreboard pressure. |
-| **Death Enforcer Pace** | **Jamie Overton** (PPR 73.75)<br/>**Umran Malik** (PPR 73.24) | Complements RR's frontline swing bowlers. Overton hits the deck hard at death (7.91 rpo); Malik offers raw 150 km/h velocity with an elite +2.63 rpo delta under pressure. |
+| **Middle-Order Finisher** | **Tristan Stubbs** (PPR 82.23)<br/>**Naman Dhir** (PPR 79.39) | Potential tactical fit based on the identified player archetype and historical pressure-performance profile. Stubbs provides 360-degree boundary hitting against spin and pace at death; Dhir delivers elite scoring velocity under pressure (196.06 SR, +47.40 delta across 254 HP balls). |
+| **Defensive Spin Strangle** | **Mitchell Santner** (PPR 75.66)<br/>**Sunil Narine** (PPR 77.88) | Potential tactical fit based on the identified player archetype and historical pressure-performance profile. Jaipur's large square boundaries reward defensive spin; Santner (combined high-pressure economy of 6.97 rpo across 583 legal balls) and Narine (6.04 rpo) offer disciplined run restriction in overs 7–15. |
+| **Wicket-Taking Mystery** | **Varun Chakravarthy** (PPR 74.37)<br/>**Wanindu Hasaranga** (PPR 76.36) | Potential tactical fit based on the identified player archetype and historical pressure-performance profile. Offers attacking breakthrough capacity; Hasaranga (61 wkts) and Chakravarthy (61 wkts) demonstrate consistent wicket-taking ability under scoreboard pressure. |
+| **Death Enforcer Pace** | **Jamie Overton** (PPR 73.75)<br/>**Umran Malik** (PPR 73.24) | Potential tactical fit based on the identified player archetype and historical pressure-performance profile. Complements frontline swing options; Overton hits the deck hard at death (7.91 rpo); Malik offers raw velocity with an elite +2.63 rpo delta under pressure. |
 
 > **Auction Availability & Regulatory Qualification Note:** Player recommendations are performance-based candidate evaluations derived from historical match data. They do not imply or confirm that auction availability, franchise retention status, expected clearing price, or overseas player quotas (maximum 8 overseas players per squad, maximum 4 in Playing XI under BCCI regulations) have been independently verified. The Rajasthan Royals war room must integrate real-time regulatory, retention, and purse constraints during auction bidding.
 
@@ -280,7 +281,7 @@ The primary selection ranking is determined by the Combined PPR (evaluated over 
 | **10** | **Rashid Khan** | **72.07** | **+22.07** | **7.38** | 647 / 47 | 8.24 | 417 / 31 | 6.04 |
 
 > **Mathematical Reconciliation & Tactical Interpretation:** A bowler's combined economy rate across multiple tournaments is the exact weighted average of total runs conceded (including wide and no-ball penalties) divided by total legal overs:
-> - **Mitchell Santner:** IPL 6.16 rpo (148 balls, 152 runs) and T20I 7.24 rpo (435 balls, 525 runs) combine exactly to $(152 + 525) / (583 / 6) = 6.9674 \to \mathbf{6.97}$ rpo.
+> - **Mitchell Santner:** IPL 6.16 rpo (148 balls, 152 runs) and T20I 7.24 rpo (435 balls, 525 runs) combine exactly to $(152 + 525) / (583 / 6) = 6.9674 \to \mathbf{6.97}$ rpo (combined high-pressure economy across 583 legal balls).
 > - **Jamie Overton:** IPL 9.21 rpo (101 balls, 155 runs) and T20I 7.08 rpo (156 balls, 184 runs) combine exactly to $(155 + 184) / (257 / 6) = 7.9144 \to \mathbf{7.91}$ rpo.
 > - **Tristan Stubbs:** IPL 171.66 SR (434 balls, 745 runs) and T20I 162.21 SR (217 balls, 352 runs) combine exactly to $(745 + 352) / 651 \times 100 = \mathbf{168.51}$ SR.
 > - **Suryakumar Yadav:** IPL 170.05 SR (424 balls, 721 runs) and T20I 222.82 SR (241 balls, 537 runs) combine exactly to $(721 + 537) / 665 \times 100 = \mathbf{189.17}$ SR.
@@ -311,12 +312,14 @@ The canonical model is retained because death overs in T20 franchise cricket inh
 - **Batters:** Baseline vs. Velocity-Heavy ($\rho = 0.9879$, 90% overlap), Delta-Heavy ($\rho = 0.9319$, 90% overlap), Control-Heavy ($\rho = 0.9766$, 80% overlap).
 - **Bowlers:** Baseline vs. Economy-Heavy ($\rho = 0.9854$, 90% overlap), Delta-Heavy ($\rho = 0.9258$, 80% overlap), Dot-Heavy ($\rho = 0.9712$, 90% overlap).
 
+The rankings demonstrate stability under the tested pressure thresholds and scoring-weight variations. These empirical sensitivity tests confirm model consistency within the observed historical sample, though they do not claim or guarantee that future match performance is guaranteed.
+
 ![Figure 9: Scatter Plot](assets/pressure_vs_normal_scatter.png)
 
 ---
 
 ## 16. Verification of Resolved Inconsistencies
-1. **Mitchell Santner Economy Verified:** Exactly 6.97 rpo across 583 pressure balls (previously 7.04 rpo due to fielding extras).
+1. **Mitchell Santner Economy Verified:** Combined high-pressure economy across 583 legal balls is exactly 6.97 rpo (previously 7.04 rpo due to fielding extras).
 2. **Extras Accounting Corrected:** Bowler runs conceded strictly exclude byes and leg-byes. Non-overstep beamers (`other`) correctly treated as illegal no-balls.
 3. **Striker-Specific Dismissal Alignment:** Non-striker run-outs are properly disassociated from striker dismissals, preserving true batting averages.
 4. **Objective Contestability Boundaries:** Implemented a conservative contestability heuristic (runs needed $> 6 \times$ legal balls remaining, and $\le 2$ runs needed with $\ge 24$ balls remaining) to isolate competitive cricket leverage from uncompetitive garbage time, recognizing that extras and overthrows can yield additional runs without consuming legal balls.
@@ -325,7 +328,10 @@ The canonical model is retained because death overs in T20 franchise cricket inh
 
 ## 17. Edge-Case Handling & Boundary Conditions
 - **Metric-Specific Zero-Denominator Accounting:** Strike rate and boundary frequency are unavailable (NaN) when legal balls faced = 0; economy and wicket rate are unavailable when legal balls bowled = 0. Undefeated batting average convention reports total undefeated runs scored when dismissals = 0 and balls faced > 0.
-- **Super Overs:** Pegged deterministically at terminal leverage ($PI = 10.0$).
+- **Super Over Scope & Operational Workload Accounting:** Across all tiers, the dataset records 38 Super Over deliveries (14 IPL, 12 T20I, 12 Other Domestic). In the primary scope (IPL + T20I), there are exactly **26 recorded Super Over deliveries** across 4 tied matches (14 IPL across 2 matches, 12 T20I across 2 matches). Not all recorded deliveries are legal balls: 2 deliveries were wides and 1 was a non-overstep beamer no-ball. The canonical pipeline executes metric-specific workload accounting:
+  - **Bowling Workload:** Exactly **23 legal balls bowled** (13 IPL, 10 T20I) count toward the 60-ball qualification gate ($N_{\text{pressure}} \ge 60$); 3 illegal deliveries do not. Bowlers conceded 40.0 runs (including 3 penalty extras) and took 6 wickets.
+  - **Batting Workload:** Exactly **24 balls faced by batters** (14 IPL, 10 T20I) count toward the 60-ball qualification gate ($N_{\text{pressure}} \ge 60$); wides are not faced, but the no-ball was faced. Batters scored 37 runs with 7 dismissals (6 bowler dismissals, 1 non-striker run-out).
+  - **Normal Workload Qualification:** **Zero.** Because Super Overs carry $PI = 10.00$ (Extreme Pressure), none enter the non-pressure baseline ($PI < 6.5$). All delivery events are fully audited in `audit/data_integrity/super_over_workload_audit.csv`.
 - **Rain-Shortened DLS Targets:** Revised targets supersede first-innings totals.
 - **Workload Qualification Gates:** Strict minimum workload criteria ($\ge 60$ high-pressure deliveries faced/bowled).
 
@@ -353,7 +359,7 @@ All analytical steps, data cleaning routines, and metric pipelines are fully rep
 ---
 
 ## 20. Conclusion & Strategic Recommendations for RR War Room
-1. **Prioritize Tristan Stubbs and Naman Dhir** to lock in world-class death finishing and high auction surplus value.
-2. **Target Mitchell Santner** as an elite defensive restrictor to control Jaipur's middle overs at a verified 6.97 rpo economy.
+1. **Prioritize Tristan Stubbs and Naman Dhir** to lock in world-class death finishing and high pressure-performance surplus relative to the empirical cohort median.
+2. **Target Mitchell Santner** as an elite defensive restrictor to control Jaipur's middle overs at a combined high-pressure economy of 6.97 rpo across 583 legal balls.
 3. **Pair Wanindu Hasaranga or Varun Chakravarthy** with existing pace assets to maintain aggressive wicket-taking pressure throughout all 20 overs.
 By grounding candidate evaluations in verified high-leverage delivery data rather than unadjusted career totals, the Rajasthan Royals analytics group can systematically support informed squad construction, refine valuation models, and make evidence-backed auction decisions for IPL 2027.

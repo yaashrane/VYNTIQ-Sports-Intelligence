@@ -2,7 +2,7 @@
 
 Computes multi-dimensional pressure ratings using Empirical Cumulative Distribution
 Function (ECDF) percentile normalization, empirical reliability shrinkage,
-and true Pressure Value Over Replacement (P-VOR) against a defined replacement baseline.
+and Pressure Surplus Rating (PSR) relative to the empirical cohort prior median (50.0).
 """
 
 from dataclasses import dataclass
@@ -39,7 +39,7 @@ class RankingConfig:
 
     min_pressure_balls_batter: int = 60
     min_pressure_balls_bowler: int = 60
-    replacement_baseline: float = 50.0  # Replacement player prior median
+    replacement_baseline: float = 50.0  # Empirical cohort prior median
     pressure_threshold: float = 6.5
 
 

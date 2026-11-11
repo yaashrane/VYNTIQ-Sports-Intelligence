@@ -603,3 +603,88 @@ def test_conclusion_and_tactical_wording():
     assert "maximize championship probability" not in md_text
     assert "support informed squad construction, refine valuation models, and make evidence-backed auction decisions for IPL 2027" in md_text
 
+
+def test_v34_editorial_and_methodology_consistency():
+    """Verify V3.4 editorial and methodology corrections:
+    1. Replacement-level terminology is not used to describe the empirical cohort prior median of 50.
+    2. Naman Dhir unverified 'uncapped/low-base' claim removed.
+    3. Mitchell Santner 6.97 RPO explicitly labeled as combined high-pressure economy across 583 legal balls.
+    4. Robustness claims calibrated (rankings demonstrate stability; no future performance guarantees).
+    5. Super Over scope explicitly documented across primary scope, PPR ranking, and workload qualification.
+    """
+    md_text = (DOCS_DIR / "SupeRR_Selector_Season_2_Methodology_Report.md").read_text(encoding="utf-8")
+
+    # 1. Terminology: No claims of 50 being replacement level or outperforming replacement level
+    assert "outperform replacement level" not in md_text
+    assert "empirical cohort prior median" in md_text
+    assert "PSR is not a replacement-level metric" in md_text
+
+    # 2. Naman Dhir: unverified description removed
+    assert "uncapped/low-base" not in md_text
+    assert "196.06 SR" in md_text
+
+    # 3. Santner economy label
+    assert "combined high-pressure economy across 583 legal balls" in md_text
+
+    # 4. Robustness claims calibrated
+    assert "The rankings demonstrate stability under the tested pressure thresholds and scoring-weight variations" in md_text
+    assert "do not claim or guarantee that future match performance is guaranteed" in md_text
+    assert "genuine underlying performance superiority" not in md_text
+
+    # 5. Super Over scope explicitly documented
+    assert "Super Over Scope & Operational Workload Accounting" in md_text
+    assert "26 recorded Super Over deliveries" in md_text
+    assert "count toward the 60-ball qualification gate" in md_text
+
+
+def test_v35_validation_and_editorial_corrections():
+    """Verify V3.5 corrections:
+    1. Correct PSR interpretation (no 'auction surplus', 'surplus value', or 'high auction surplus value').
+    2. Super Over workload accounting (26 primary deliveries, 23 bowler legal balls, 24 batter balls faced).
+    3. Tactical recommendation wording ('Potential tactical fit based on...'; no unverified claims of solving weaknesses).
+    4. Audit CSV exists with 26 rows.
+    """
+    md_text = (DOCS_DIR / "SupeRR_Selector_Season_2_Methodology_Report.md").read_text(encoding="utf-8")
+
+    # 1. PSR interpretation
+    assert "auction surplus" not in md_text.lower()
+    assert "surplus value" not in md_text.lower()
+    assert "pressure-performance surplus relative to the empirical cohort median" in md_text
+
+    # 2. Tactical recommendation wording
+    assert "Solves RR's middle-overs slowdown" not in md_text
+    assert "address historical tactical vulnerabilities" not in md_text
+    assert "Potential tactical fit based on the identified player archetype and historical pressure-performance profile" in md_text
+
+    # 3. Super Over workload accounting & audit CSV
+    so_csv_path = AUDIT_DIR / "data_integrity" / "super_over_workload_audit.csv"
+    assert so_csv_path.exists(), "super_over_workload_audit.csv missing"
+    so_df = pd.read_csv(so_csv_path)
+    assert len(so_df) == 26
+    assert so_df["is_legal_ball"].sum() == 23
+    assert so_df["is_batter_ball_faced"].sum() == 24
+    assert so_df["batter_runs"].sum() == 37
+    assert so_df["bowler_runs_conceded"].sum() == 40.0
+    assert so_df["is_bowler_wicket"].sum() == 6
+
+
+def test_v36_super_over_data_reconciliation():
+    """Verify V3.6 Super Over data reconciliation:
+    1. Page 2, Page 4, and Page 14 agree with 100% exact numerical consistency.
+    2. Primary scope contains exactly 26 Super Over deliveries: 14 IPL across 2 matches and 12 T20I across 2 matches.
+    3. Entire dataset records 38 Super Over deliveries (14 IPL, 12 T20I, 12 Other Domestic).
+    4. No contradictory claims attributing all 26 Super Over deliveries to T20Is.
+    """
+    md_text = (DOCS_DIR / "SupeRR_Selector_Season_2_Methodology_Report.md").read_text(encoding="utf-8")
+
+    # Reconciled counts in inventory table and text
+    assert "14 Super Over balls across 2 matches" in md_text
+    assert "12 Super Over balls across 2 matches" in md_text
+    assert "26 Super Over balls across 4 matches" in md_text
+    assert "26 primary SO deliveries: 14 IPL across 2 matches, 12 T20I across 2 matches" in md_text
+    assert "Across all tiers, the dataset records 38 Super Over deliveries (14 IPL, 12 T20I, 12 Other Domestic)" in md_text
+
+    # No contradictory claims attributing all 26 to T20I
+    assert "26 T20I SO deliveries" not in md_text
+    assert "106,327 | **Yes (incl. 26 Super Over balls)**" not in md_text
+
