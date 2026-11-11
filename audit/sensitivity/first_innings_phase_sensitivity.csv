@@ -1,0 +1,2 @@
+model_comparison,inn1_death_deliveries,deliveries_reclassified_to_moderate,pct_inn1_death_reclassified,batter_spearman_rho,batter_kendall_tau,batter_top10_overlap_pct,bowler_spearman_rho,bowler_kendall_tau,bowler_top10_overlap_pct
+Canonical Phase Base (7.0) vs Contextual Cushion (5.5 if CRR>=9.5 & W<=2),25066,1459,5.82,0.9897,0.9397,70.0,0.9864,0.9163,100.0

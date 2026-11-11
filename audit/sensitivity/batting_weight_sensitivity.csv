@@ -1,0 +1,5 @@
+weight_scheme,w_sr,w_delta,w_control,w_avg,spearman_rho_vs_baseline,top10_overlap_pct
+Baseline,0.35,0.25,0.2,0.2,1.0,100.0
+Velocity_Heavy (50% SR),0.5,0.2,0.15,0.15,0.9879,90.0
+Delta_Heavy (50% Delta),0.2,0.5,0.15,0.15,0.9318,90.0
+Control_Heavy (40% Control),0.25,0.2,0.4,0.15,0.9766,80.0

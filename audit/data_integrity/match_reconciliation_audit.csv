@@ -1,0 +1,4 @@
+competition_category,total_match_records,matches_with_deliveries,abandoned_matches_no_deliveries,total_deliveries,primary_scope
+IPL,371,367,4,87687,True
+T20I,482,470,12,106327,True
+Other_Domestic_A,30,30,0,6985,False

@@ -1,0 +1,5 @@
+weight_scheme,w_econ,w_delta,w_dot,w_wkt,spearman_rho_vs_baseline,top10_overlap_pct
+Baseline,0.35,0.25,0.2,0.2,1.0,100.0
+Economy_Heavy (50% Econ),0.5,0.2,0.15,0.15,0.9865,90.0
+Delta_Heavy (50% Delta),0.2,0.5,0.15,0.15,0.9662,90.0
+Dot_Heavy (40% Dot),0.25,0.2,0.4,0.15,0.9752,100.0

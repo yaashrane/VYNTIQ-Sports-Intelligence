@@ -1,3 +1,5 @@
-comparison,role,spearman_rho,kendall_tau,top10_overlap_pct
-Standard (PI>=6.5) vs Strict (PI>=7.5),Batter,0.7805,0.6033,60.0
-Standard (PI>=6.5) vs Broad (PI>=5.5),Batter,0.9098,0.76,40.0
+role,comparison,standard_cohort_size,alternative_cohort_size,spearman_rho,kendall_tau,top10_overlap_pct
+Batter,Standard (PI>=6.5) vs Strict (PI>=7.5),241,127,0.7805,0.6033,60.0
+Batter,Standard (PI>=6.5) vs Broad (PI>=5.5),241,292,0.9002,0.7485,40.0
+Bowler,Standard (PI>=6.5) vs Strict (PI>=7.5),224,130,0.7556,0.5675,70.0
+Bowler,Standard (PI>=6.5) vs Broad (PI>=5.5),224,256,0.8938,0.723,80.0
